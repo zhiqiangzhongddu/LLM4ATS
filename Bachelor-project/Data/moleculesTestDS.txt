@@ -1,0 +1,16 @@
+CCC
+CC(=O)C
+CCNC
+CC=O
+O
+C=C
+COC
+C#C
+CCO
+C#N
+c1c(N(=O)=O)cccc1
+CC(C)CO
+C1CCCCC1
+FC(F)F
+F/C=C/F
+CC1CCC/C(C)=C1/C=C/C(C)=C/C=C/C(C)=C/C=C/C=C(C)/C=C/C=C(C)/C=C/C2=C(C)/CCCC2(C)C
