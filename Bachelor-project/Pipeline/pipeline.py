@@ -85,8 +85,7 @@ if __name__ == "__main__":
     
     # Calculate the values of the mordred descriptors
     if "Mordred 2D descriptors" in table_of_props.keys():
-        MordClass = OurMordredClass(props)
-        # mordvals = MordClass.get_specific_mordred_values(mols,["atom-bond connectivity index","Graovac-Ghorbani atom-bond connectivity index", "acidic group count"])
+        MordClass = OurMordredClass(table_of_props["Modred 2D descriptors"])
         mordvals = MordClass.get_mordred_values(mols)
         table_of_vals = add_vals_to_table(table_of_vals, mordvals)
     
