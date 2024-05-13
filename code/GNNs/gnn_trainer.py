@@ -55,7 +55,6 @@ class GNNTrainer():
         self.optimizer = self.setup_optimizers()
         trainable_params = sum(p.numel() for p in self.model.parameters() if p.requires_grad)
         print("Num. of parameters: {}".format(trainable_params))
-        # print(summary(model=model, list(train_loader)[0].x, edge_index))
 
     def preprocess_data(self):
         # Preprocess data
@@ -119,7 +118,6 @@ class GNNTrainer():
 
     def _get_evaluator(self):
         self.evaluator = Evaluator(name=self.dataset)
-    
     
     def _train(self, loader):
         self.model.train()
@@ -228,7 +226,7 @@ class GNNTrainer():
         print('Best epoch: ', best_val_epoch)
         print('Best validation score: {:.4f}'.format(valid_curve[best_val_epoch]))
         print('Test score: {:.4f}'.format(test_curve[best_val_epoch]))
-        self.save_predictions(pred=pred_list[best_val_epoch])
+        # self.save_predictions(pred=pred_list[best_val_epoch])
 
     @torch.no_grad()
     def save_predictions(self, pred):

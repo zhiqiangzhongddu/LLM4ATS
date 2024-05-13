@@ -55,7 +55,6 @@ class GNNPreTrainer():
         self.optimizer = self.setup_optimizers()
         trainable_params = sum(p.numel() for p in self.model.parameters() if p.requires_grad)
         print("Num. of parameters: {}".format(trainable_params))
-        # print(summary(model=model, list(train_loader)[0].x, edge_index))
 
     def preprocess_data(self):
         # Preprocess data
@@ -65,6 +64,14 @@ class GNNPreTrainer():
         )
         dataset = dataloader.dataset
         split_idx = dataset.get_idx_split()
+        dataset._data.y = torch.cat(
+            (dataset.y,
+             torch.rand_like(dataset.y)), dim=1 # replace it with pretrain target
+        )
+        # dataset._data.x = torch.cat(
+        #     (dataset.x[:, :self.pretrain_target],
+        #      dataset.x[:, self.pretrain_target + 1:]), dim=1
+        # )
 
         train_loader = DataLoader(
             dataset[split_idx["train"]], batch_size=self.batch_size, shuffle=True,
@@ -120,57 +127,6 @@ class GNNPreTrainer():
     def _get_evaluator(self):
         self.evaluator = Evaluator(name=self.dataset)
 
-    def _train(self, loader):
-        self.model.train()
-
-        for step, batch in enumerate(tqdm(loader, desc="Iteration")):
-            batch = batch.to(self.device)
-
-            if batch.x.shape[0] == 1 or batch.batch[-1] == 0:
-                pass
-            else:
-                pred = self.model.to(self.device)(batch)
-                self.optimizer.zero_grad()
-                is_labeled = batch.y == batch.y
-                if "classification" in self.task_type:
-                    loss = self.cls_criterion(
-                        pred.to(torch.float32)[is_labeled],
-                        batch.y.to(torch.float32)[is_labeled]
-                    )
-                else:
-                    loss = self.reg_criterion(
-                        pred.to(torch.float32)[is_labeled],
-                        batch.y.to(torch.float32)[is_labeled]
-                    )
-                loss.backward()
-                self.optimizer.step()
-
-    @time_logger
-    @torch.no_grad()
-    def eval(self, loader):
-        self.model.eval()
-        y_true = []
-        y_pred = []
-
-        for step, batch in enumerate(tqdm(loader, desc="Iteration")):
-            batch = batch.to(self.device)
-
-            if batch.x.shape[0] == 1:
-                pass
-            else:
-                with torch.no_grad():
-                    pred = self.model.to(self.device)(batch)
-
-                y_true.append(batch.y.view(pred.shape).detach().cpu())
-                y_pred.append(pred.detach().cpu())
-
-        y_true = torch.cat(y_true, dim=0).numpy()
-        y_pred = torch.cat(y_pred, dim=0).numpy()
-
-        input_dict = {"y_true": y_true, "y_pred": y_pred}
-
-        return self.evaluator.eval(input_dict)
-
     @time_logger
     @torch.no_grad()
     def get_pred(self, loader):
@@ -192,8 +148,59 @@ class GNNPreTrainer():
 
         return y_pred
 
+    def _pretrain(self, loader):
+        self.model.train()
+
+        for step, batch in enumerate(tqdm(loader, desc="Iteration")):
+            batch = batch.to(self.device)
+
+            if batch.x.shape[0] == 1 or batch.batch[-1] == 0:
+                pass
+            else:
+                pred = self.model.to(self.device)(batch)
+                self.optimizer.zero_grad()
+                is_labeled = batch.y[:, 1] == batch.y[:, 1]
+                if "classification" in self.task_type:
+                    loss = self.cls_criterion(
+                        pred.to(torch.float32)[is_labeled],
+                        batch.y[:, 1].to(torch.float32)[is_labeled]
+                    )
+                else:
+                    loss = self.reg_criterion(
+                        pred.to(torch.float32)[is_labeled],
+                        batch.y[:, 1].to(torch.float32)[is_labeled]
+                    )
+                loss.backward()
+                self.optimizer.step()
+
     @time_logger
-    def train_and_eval(self):
+    @torch.no_grad()
+    def eval_pretrain(self, loader):
+        self.model.eval()
+        y_true = []
+        y_pred = []
+
+        for step, batch in enumerate(tqdm(loader, desc="Iteration")):
+            batch = batch.to(self.device)
+
+            if batch.x.shape[0] == 1:
+                pass
+            else:
+                with torch.no_grad():
+                    pred = self.model.to(self.device)(batch)
+
+                y_true.append(batch.y[:, 1].view(pred.shape).detach().cpu())
+                y_pred.append(pred.detach().cpu())
+
+        y_true = torch.cat(y_true, dim=0).numpy()
+        y_pred = torch.cat(y_pred, dim=0).numpy()
+
+        input_dict = {"y_true": y_true, "y_pred": y_pred}
+
+        return self.evaluator.eval(input_dict)
+
+    @time_logger
+    def pretrain_and_eval(self):
 
         train_curve = []
         valid_curve = []
@@ -203,12 +210,12 @@ class GNNPreTrainer():
         for epoch in range(1, self.epochs + 1):
             print("=====Epoch {}=====".format(epoch))
             print('Training...')
-            self._train(self.train_loader)
+            self._pretrain(self.train_loader)
 
             print('Evaluating...')
-            train_perf = self.eval(self.train_loader)
-            valid_perf = self.eval(self.valid_loader)
-            test_perf = self.eval(self.test_loader)
+            train_perf = self.eval_pretrain(self.train_loader)
+            valid_perf = self.eval_pretrain(self.valid_loader)
+            test_perf = self.eval_pretrain(self.test_loader)
 
             print('Train: ', train_perf, 'Validation: ', valid_perf, 'Test: ', test_perf)
             train_curve.append(train_perf[self.eval_metric])
@@ -228,6 +235,97 @@ class GNNPreTrainer():
         print('Best validation score: {:.4f}'.format(valid_curve[best_val_epoch]))
         print('Test score: {:.4f}'.format(test_curve[best_val_epoch]))
         self.save_predictions(pred=pred_list[best_val_epoch])
+
+    def _finetune(self, loader):
+        self.replace_model = self.setup_model()
+        self.model.graph_pred_linear = self.replace_model.graph_pred_linear
+
+        self.model.train()
+
+        for step, batch in enumerate(tqdm(loader, desc="Iteration")):
+            batch = batch.to(self.device)
+
+            if batch.x.shape[0] == 1 or batch.batch[-1] == 0:
+                pass
+            else:
+                pred = self.model.to(self.device)(batch)
+                self.optimizer.zero_grad()
+                is_labeled = batch.y[:, 0] == batch.y[:, 0]
+                if "classification" in self.task_type:
+                    loss = self.cls_criterion(
+                        pred.to(torch.float32)[is_labeled],
+                        batch.y[:, 0].to(torch.float32)[is_labeled]
+                    )
+                else:
+                    loss = self.reg_criterion(
+                        pred.to(torch.float32)[is_labeled],
+                        batch.y[:, 0].to(torch.float32)[is_labeled]
+                    )
+                loss.backward()
+                self.optimizer.step()
+
+    @time_logger
+    @torch.no_grad()
+    def eval_finetune(self, loader):
+        self.model.eval()
+        y_true = []
+        y_pred = []
+
+        for step, batch in enumerate(tqdm(loader, desc="Iteration")):
+            batch = batch.to(self.device)
+
+            if batch.x.shape[0] == 1:
+                pass
+            else:
+                with torch.no_grad():
+                    pred = self.model.to(self.device)(batch)
+
+                y_true.append(batch.y[:, 0].view(pred.shape).detach().cpu())
+                y_pred.append(pred.detach().cpu())
+
+        y_true = torch.cat(y_true, dim=0).numpy()
+        y_pred = torch.cat(y_pred, dim=0).numpy()
+
+        input_dict = {"y_true": y_true, "y_pred": y_pred}
+
+        return self.evaluator.eval(input_dict)
+
+    @time_logger
+    def finetune_and_eval(self):
+
+        train_curve = []
+        valid_curve = []
+        test_curve = []
+        pred_list = []
+
+        for epoch in range(1, self.epochs + 1):
+            print("=====Epoch {}=====".format(epoch))
+            print('Training...')
+            self._finetune(self.train_loader)
+
+            print('Evaluating...')
+            train_perf = self.eval_finetune(self.train_loader)
+            valid_perf = self.eval_finetune(self.valid_loader)
+            test_perf = self.eval_finetune(self.test_loader)
+
+            print('Train: ', train_perf, 'Validation: ', valid_perf, 'Test: ', test_perf)
+            train_curve.append(train_perf[self.eval_metric])
+            valid_curve.append(valid_perf[self.eval_metric])
+            test_curve.append(test_perf[self.eval_metric])
+
+            print('Obtaining predictions...')
+            pred = self.get_pred(self.data_loader)
+            pred_list.append(pred)
+
+        if 'classification' in self.task_type:
+            best_val_epoch = np.argmax(np.array(valid_curve))
+        else:
+            best_val_epoch = np.argmin(np.array(valid_curve))
+
+        print('Best epoch: ', best_val_epoch)
+        print('Best validation score: {:.4f}'.format(valid_curve[best_val_epoch]))
+        print('Test score: {:.4f}'.format(test_curve[best_val_epoch]))
+        # self.save_predictions(pred=pred_list[best_val_epoch])
 
     @torch.no_grad()
     def save_predictions(self, pred):
