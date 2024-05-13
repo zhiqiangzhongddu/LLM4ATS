@@ -4,7 +4,7 @@ from torch_geometric.nn import global_add_pool, global_mean_pool, global_max_poo
 from code.GNNs.gnn_conv import GNN_node, GNN_node_Virtualnode
 
 
-class HierarchicalGNN(torch.nn.Module):
+class HierarchicalGNNEncoder(torch.nn.Module):
 
     def __init__(
             self, num_tasks, num_layer=5, emb_dim=300, g_emb_dim=768,
@@ -16,7 +16,7 @@ class HierarchicalGNN(torch.nn.Module):
             virtual_node (bool): whether to add virtual node or not
         '''
 
-        super(HierarchicalGNN, self).__init__()
+        super(HierarchicalGNNEncoder, self).__init__()
 
         self.num_layer = num_layer
         self.drop_ratio = drop_ratio
@@ -62,15 +62,50 @@ class HierarchicalGNN(torch.nn.Module):
         else:
             raise ValueError("Invalid graph pooling type.")
 
+    def forward(self, batched_data):
+        h_node = self.gnn_node(batched_data)
+
+        h_graph = self.pool(h_node, batched_data.batch)
+
+        return h_graph
+
+
+class HierarchicalGNN(torch.nn.Module):
+
+    def __init__(
+            self, num_tasks, num_layer=5, emb_dim=300, g_emb_dim=768,
+            gnn_type='gin', virtual_node=True, residual=False,
+            drop_ratio=0.5, JK="last", graph_pooling="mean"
+    ):
+        '''
+            num_tasks (int): number of labels to be predicted
+            virtual_node (bool): whether to add virtual node or not
+        '''
+
+        super(HierarchicalGNN, self).__init__()
+
+        # self.num_layer = num_layer
+        # self.drop_ratio = drop_ratio
+        # self.JK = JK
+        self.emb_dim = emb_dim
+        self.g_emb_dim = g_emb_dim
+        self.num_tasks = num_tasks
+        # self.graph_pooling = graph_pooling
+
+        self.encoder = HierarchicalGNNEncoder(
+            num_tasks=num_tasks, num_layer=num_layer, emb_dim=emb_dim,
+            g_emb_dim=g_emb_dim, gnn_type=gnn_type, virtual_node=virtual_node,
+            residual=residual, drop_ratio=drop_ratio, JK=JK, graph_pooling=graph_pooling
+        )
+
         if graph_pooling == "set2set":
             self.graph_pred_linear = torch.nn.Linear(2 * (self.emb_dim + self.g_emb_dim), self.num_tasks)
         else:
             self.graph_pred_linear = torch.nn.Linear(self.emb_dim + self.g_emb_dim, self.num_tasks)
 
     def forward(self, batched_data):
-        h_node = self.gnn_node(batched_data)
 
-        h_graph = self.pool(h_node, batched_data.batch)
+        h_graph = self.encoder(batched_data)
 
         if self.g_emb_dim > 0:
             return self.graph_pred_linear(torch.concat((h_graph, batched_data.graph_x), dim=1))
@@ -79,4 +114,4 @@ class HierarchicalGNN(torch.nn.Module):
 
 
 if __name__ == '__main__':
-    HierarchicalGNN(num_tasks = 10)
+    HierarchicalGNN(num_tasks=10)
