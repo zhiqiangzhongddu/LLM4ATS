@@ -1,0 +1,268 @@
+Message template: form_3, Number of tournaments: 10, Target task: level of toxicity, Number of features: 20
+
+NumHDonors: 7
+NumRotatableBonds: 7
+fr_halogen: 6
+NumHAcceptors: 5
+TPSA: 5
+fr_nitro: 5
+fr_ether: 5
+NumAromaticRings: 4
+fr_ester: 4
+fr_amide: 4
+Lipinski rule of five: 3
+NumValenceElectrons: 3
+fr_imidazole: 3
+MolWT: 3
+fr_aldehyde: 3
+fr_urea: 3
+MolLogP: 3
+fr_aniline: 3
+NumHeteroatoms: 3
+RingCount: 2
+LabuteASA: 2
+PEOE_VSA1: 2
+nHDon: 2
+nHAcc: 2
+fr_sulfide: 2
+fr_amine: 2
+fr_phenol: 2
+fr_isocyan: 2
+MolMR: 2
+BertzCT: 2
+PEOE_VSA5: 1
+PEOE_VSA6: 1
+PEOE_VSA7: 1
+MOE MR VSA Descriptor 7 ( 3.05 <= x <  3.63): 1
+MOE MR VSA Descriptor 9 ( 3.80 <= x <  4.00): 1
+MOE logP VSA Descriptor 8 ( 0.25 <= x <  0.30): 1
+MOE logP VSA Descriptor 3: 1
+MOE logP VSA Descriptor 2: 1
+EState VSA Descriptor 1: 1
+logP: 1
+NumHBD: 1
+EState_VSA10: 1
+fr_prisulfonamd: 1
+fr_methoxy: 1
+number of heavy atoms: 1
+number of C atoms: 1
+number of N atoms: 1
+number of O atoms: 1
+number of F atoms: 1
+number of Cl atoms: 1
+num_HBD: 1
+fr_NH2: 1
+Heavy Atom Count: 1
+num_HBA: 1
+frac_SP3_carbons: 1
+mol_volume: 1
+num_aliphatic_rings: 1
+fr_Ar_N: 1
+fr_sulfonamd: 1
+ExactMolWT: 1
+fr_nitrile: 1
+fr_azide: 1
+fr_Ar_OH: 1
+fr_Al_OH: 1
+fr_Al_COO: 1
+fr_hdrzone: 1
+fr_oxime: 1
+fr_nitro_arom_nonortho: 1
+fr_phos_ester: 1
+MinAbsEStateIndex: 1
+MaxAbsEStateIndex: 1
+Zagreb1: 1
+Zagreb2: 1
+BalabanJ: 1
+Ipc: 1
+HallKierAlpha: 1
+Kappa1: 1
+ALogP: 1
+APol: 1
+PSA: 1
+NumSaturatedRings: 1
+acid group count: 1
+basic group count: 1
+fractionCSP3: 1
+fr_alcohol: 1
+Moran coefficient of lag 8 weighted by gasteiger charge: 1
+Number of heavy atoms: 1
+Number of C atoms: 1
+Aromatic atoms count: 1
+SpMax of adjacency matrix: 1
+Moreau-Broto autocorrelation of lag 0 weighted by intrinsic state: 1
+Moreau-Broto autocorrelation of lag 2 weighted by valence electrons: 1
+Moreau-Broto autocorrelation of lag 3 weighted by valence electrons: 1
+Spectral diameter from Barysz matrix weighted by atomic number: 1
+total hydrophobic surface area: 1
+SlogP_VSA8: 1
+Labute's Approximate Surface Area: 1
+fr_dihydropyridine: 1
+fr_halogen_noHalo: 1
+total polar surface area: 1
+fr_nitro_arom: 1
+fr_isothiocyan: 1
+fr_azo: 1
+fr_cyano: 1
+fr_acid: 1
+lipinski_failure: 1
+n_N: 1
+n_O: 1
+n_S: 1
+
+
+--------------------------------------------------
+
+Message template: form_2, Number of tournaments: 10, Target task: level of toxicity, Number of features: 5
+
+NumHAcceptors: 6
+MolLogP: 5
+TPSA: 5
+NumHDonors: 5
+number of heavy atoms: 3
+number of hetero atoms: 2
+Bertz CT: 2
+number of heteroatoms: 1
+NumRotatableBonds: 1
+fr_halogen: 1
+Number of ddssSe: 1
+Sum of constitutional weighted by ionization potential: 1
+Number of sssssAs: 1
+Sum of aasC: 1
+Larry coefficient of lag 1 weighted by polarizability: 1
+Lipinski rule of five: 1
+Number of heavy atoms: 1
+SlogP_VSA5: 1
+total hydrophobic surface area: 1
+total polar surface area: 1
+fr_alcohol_noTert: 1
+Averaged Moreau-Broto Autocorrelation of Lag 0 weighted by Valence Electrons: 1
+Moran coefficient of lag 1 weighted by gasteiger charge: 1
+Geary coefficient of lag 1 weighted by mass: 1
+First highest eigenvalue of Burden matrix weighted by gasteiger charge: 1
+Balaban's J index: 1
+SlogP_VSA1: 1
+number of halogen atoms: 1
+aromatic atoms count: 1
+
+
+--------------------------------------------------
+
+Message template: form_3, Number of tournaments: 10, Target task: level of toxicity, Number of features: 5
+
+Lipinski rule of five: 6
+TPSA: 6
+number of heavy atoms: 4
+MolLogP: 4
+Sum of constitutional weighted by ionization potential: 2
+Bertz CT: 2
+number of hetero atoms: 1
+number of halogen atoms: 1
+mean of constitutional weighted by pauling EN: 1
+Moran coefficient of lag 1 weighted by gasteiger charge: 1
+Moreau-Broto autocorrelation of lag 1 weighted by sigma electrons: 1
+Moran coefficient of lag 1 weighted by atomic number: 1
+BertzCT: 1
+SlogP_VSA6: 1
+Sum of constitutional weighted by vdw volume: 1
+NumRotatableBonds: 1
+fr_nitro_arom: 1
+averaged moreau-broto autocorrelation of lag 1 weighted by valence electrons: 1
+averaged moreau-broto autocorrelation of lag 2 weighted by valence electrons: 1
+averaged moreau-broto autocorrelation of lag 4 weighted by valence electrons: 1
+averaged moreau-broto autocorrelation of lag 5 weighted by valence electrons: 1
+MOE MR VSA Descriptor 1 (-inf < x < 1.29): 1
+total polar surface area: 1
+ETA core count: 1
+Labute's Approximate Surface Area: 1
+Moreau-Broto autocorrelation of lag 2 weighted by valence electrons: 1
+number of heteroatoms: 1
+Number of hydrogen bond acceptors: 1
+normalized Randic-like eigenvector-based index from Barysz matrix weighted by atomic number: 1
+max of aaS: 1
+Number of hydrogen bond acceptor: 1
+Number of hydrogen bond donor: 1
+
+
+--------------------------------------------------
+
+Message template: form_4, Number of tournaments: 10, Target task: level of toxicity, Number of features: 5
+
+NumHAcceptors: 7
+TPSA: 7
+MolLogP: 6
+acidic group count: 4
+basic group count: 4
+NumHDonors: 4
+total polar surface area: 3
+Lipinski rule of five: 3
+fr_halogen: 2
+number of hydrogen bond acceptor: 2
+Relative negative charge: 1
+fr_nitro: 1
+number of hydrogen bond donor: 1
+total hydrophobic surface area: 1
+SpDiam of adjacency matrix: 1
+Moran coefficient of lag 1 weighted by gasteiger charge: 1
+Geary coefficient of lag 5 weighted by ionization potential: 1
+fr_sulfonamd: 1
+
+
+--------------------------------------------------
+
+Message template: form_4, Number of tournaments: 10, Target task: blood-brain barrier permeability, Number of features: 5
+
+number of hetero atoms: 5
+TPSA: 5
+total polar surface area: 5
+number of heavy atoms: 4
+NumHAcceptors: 4
+NumHDonors: 4
+Lipinski rule of five: 4
+MolLogP: 3
+Number of hydrogen bond acceptor: 1
+Labute's Approximate Surface Area: 1
+sum of NH2: 1
+number of hydrogen bond acceptor: 1
+Ghose filter: 1
+Filter-it™ LogS: 1
+number of halogen atoms: 1
+acidic group count: 1
+basic group count: 1
+fr_nitro: 1
+fr_sulfonamd: 1
+
+
+--------------------------------------------------
+
+Message template: form_4, Number of tournaments: 10, Target task: lipophilicity, Number of features: 5
+
+MolLogP: 9
+total hydrophobic surface area: 5
+Lipinski rule of five: 4
+SlogP_VSA1: 3
+TPSA: 3
+SlogP_VSA2: 3
+MOE logP VSA Descriptor 1 (-inf < x < -0.40): 2
+MOE logP VSA Descriptor 2 (-0.40 <= x < -0.20): 2
+relative hydrophobic surface area: 2
+Bertz CT: 2
+Lipinski LogS: 1
+MOE logP VSA Descriptor 9 ( 0.30 <= x <  0.40): 1
+SlogP_VSA4: 1
+MOE logP VSA Descriptor 3 (-0.20 <= x < 0.00): 1
+SlogP_VSA8: 1
+SlogP_VSA9: 1
+Moreau-broto autocorrelation of lag 1 weighted by mass: 1
+moreau-broto autocorrelation of lag 1 weighted by valence electrons: 1
+Ghose filter: 1
+hybridization ratio: 1
+Labute's Approximate Surface Area: 1
+LogEE of adjacency matrix: 1
+NumHDonors: 1
+fr_ester: 1
+fr_sulfide: 1
+
+
+--------------------------------------------------
+
