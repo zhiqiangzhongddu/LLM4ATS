@@ -207,6 +207,9 @@ class GNN_node_Virtualnode(torch.nn.Module):
             torch.zeros(batch[-1].item() + 1).to(edge_index.dtype).to(edge_index.device)
         )
 
+        x = x.type(torch.LongTensor)
+        
+
         h_list = [self.atom_encoder(x)]
         for layer in range(self.num_layer):
             ### add message from virtual nodes to graph nodes

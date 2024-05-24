@@ -193,7 +193,7 @@ if __name__ == "__main__":
         # Create a tensor storing the table of values to pass to the GNN pretrainer
         pretrain_values = torch.tensor(df.values)
         # Run the pre-training and finetuning of the model
-        gnn_pretrainer = GNNPreTrainer(cfg=cfg, aux_values=pretrain_values, use_QM9=True)
+        gnn_pretrainer = GNNPreTrainer(cfg=cfg, aux_values=pretrain_values, use_QM9=False)
         gnn_pretrainer.pretrain_and_eval()
         gnn_pretrainer.finetune_and_eval()
     

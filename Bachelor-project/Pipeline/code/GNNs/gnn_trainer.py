@@ -15,6 +15,7 @@ from code.utils import time_logger, project_root_path, init_path
 class GNNTrainer():
     def __init__(self, cfg):
         self.dataset = cfg.dataset
+        self.name_of_target_task = cfg.dataset
         self.feature = cfg.data.feature
         self.lm_model_name = cfg.lm.model.name
         self.seed = cfg.seed
@@ -222,11 +223,15 @@ class GNNTrainer():
             best_val_epoch = np.argmax(np.array(valid_curve))
         else:
             best_val_epoch = np.argmin(np.array(valid_curve))
-
+        results = ""
         print('Best epoch: ', best_val_epoch)
         print('Best validation score: {:.4f}'.format(valid_curve[best_val_epoch]))
         print('Test score: {:.4f}'.format(test_curve[best_val_epoch]))
         # self.save_predictions(pred=pred_list[best_val_epoch])
+        results += 'Best epoch: ' + str(best_val_epoch) + "\n"
+        results += 'Best validation score: {:.4f}'.format(valid_curve[best_val_epoch]) + "\n"
+        results += 'Test score: {:.4f}'.format(test_curve[best_val_epoch]) + "\n\n"
+        self.save_results(results=results)
 
     @torch.no_grad()
     def save_predictions(self, pred):
@@ -234,3 +239,10 @@ class GNNTrainer():
 
         init_path(dir_or_file=file_path)
         torch.save(pred, file_path)
+
+    @torch.no_grad()
+    def save_results(self, results):
+        file_path = "{}/train_results.txt".format(self.output_dir)
+        f = open(file_path, "w")
+        f.write(f"Results of normal training of {self.name_of_target_task} with {self.epochs} epochs\n" + results)
+        f.close()

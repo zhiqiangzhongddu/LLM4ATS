@@ -1,0 +1,5 @@
+Results of normal training of ogbg-molbbbp with 100 epochs
+Best epoch: 92
+Best validation score: 0.9559
+Test score: 0.6780
+

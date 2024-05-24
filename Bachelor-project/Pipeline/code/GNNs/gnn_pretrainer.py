@@ -35,7 +35,8 @@ class GNNPreTrainer():
         self.pretrain_num_tasks = len(aux_values[0])
         self.pretrain_task_type = "regression"
         self.pretrain_values = aux_values
-        self.name_of_taget_task = cfg.dataset
+        self.name_of_target_task = cfg.dataset
+        self.pretrain_one_at_a_time = True
 
         self._get_evaluator()
         self.cls_criterion = torch.nn.BCEWithLogitsLoss()
@@ -401,7 +402,7 @@ class GNNPreTrainer():
 
     @torch.no_grad()
     def save_results(self, results):
-        file_path = "{}/results.txt".format(self.output_dir)
+        file_path = "{}/finetune_1at_a_time_results.txt".format(self.output_dir) if self.pretrain_one_at_a_time else "{}/finetune_results.txt".format(self.output_dir)
         f = open(file_path, "w")
-        f.write(f"Results of pre-training and finetuning of {self.name_of_taget_task}\n" + results)
+        f.write(f"Results of pre-training and finetuning of {self.name_of_target_task} with {self.epochs} epochs\n" + results)
         f.close()
