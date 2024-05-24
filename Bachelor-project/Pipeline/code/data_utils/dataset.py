@@ -1,9 +1,13 @@
 import pandas as pd
 import torch
+from torch_geometric import loader
 from ogb.graphproppred import PygGraphPropPredDataset
 from pathlib import PurePath
 
 from code.data_utils.utils import load_llm_outputs, load_embeddings, project_root_path
+
+from torch_geometric.datasets import QM9
+from torch_geometric.data.dataset import Dataset
 
 
 class DatasetLoader():
@@ -23,9 +27,12 @@ class DatasetLoader():
 
     def load_data(self):
         # Download and process data at root
-        dataset = PygGraphPropPredDataset(
-            name=self.name, root=PurePath(project_root_path, "data")
-        )
+        if self.name == "QM9":
+            dataset = QM9(root=PurePath(project_root_path, "data"))
+        else:
+            dataset = PygGraphPropPredDataset(
+                name=self.name, root=PurePath(project_root_path, "data")
+            )
 
         if self.text == '':
             text = None
@@ -146,3 +153,4 @@ class LMDataset(torch.utils.data.Dataset):
 
     def __len__(self):
         return len(self.encodings["input_ids"])
+

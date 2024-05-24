@@ -1,3 +1,4 @@
 Pipeline/apikey.txt
 Pipeline/googleapikey.txt
-
+Pipeline/data/raw
+Pipeline/data/processed

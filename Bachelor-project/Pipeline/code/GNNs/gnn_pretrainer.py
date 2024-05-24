@@ -14,7 +14,7 @@ from code.utils import time_logger, project_root_path, init_path
 from code.GNNs.our_evaluate import OurEvaluator
 
 class GNNPreTrainer():
-    def __init__(self, cfg, aux_values):
+    def __init__(self, cfg, aux_values, use_QM9=False):
         self.dataset = cfg.dataset
         self.feature = cfg.data.feature
         self.lm_model_name = cfg.lm.model.name
@@ -35,6 +35,7 @@ class GNNPreTrainer():
         self.pretrain_num_tasks = len(aux_values[0])
         self.pretrain_task_type = "regression"
         self.pretrain_values = aux_values
+        self.name_of_taget_task = cfg.dataset
 
         self._get_evaluator()
         self.cls_criterion = torch.nn.BCEWithLogitsLoss()
@@ -53,7 +54,6 @@ class GNNPreTrainer():
                 "{}-{}-{}-seed{}".format(self.model_name, self.feature, self.lm_model_name, self.seed)
             )
 
-        
         self.dataset, self.train_loader, self.valid_loader, self.test_loader, self.data_loader = self.preprocess_data()
 
         self.eval_metric = self.dataset.eval_metric
@@ -63,10 +63,18 @@ class GNNPreTrainer():
         self.num_classes = self.dataset.num_classes
         self.g_emb_dim = self.dataset.data.g_x.size(1) if hasattr(self.dataset._data, 'graph_x') else 0
 
+        # -----------TESTING-------------
+        if use_QM9: 
+            self.dataset = "QM9"
+            self.dataset, self.train_loader, self.valid_loader, self.test_loader, self.data_loader = self.preprocess_QM_data()
+            self.pretrain_num_tasks = self.dataset.y.shape[1]
+
         self.model = self.setup_model(pretrain=True) # Set the model to use pre-training number of tasks
         self.optimizer = self.setup_optimizers()
         trainable_params = sum(p.numel() for p in self.model.parameters() if p.requires_grad)
         print("Num. of parameters: {}".format(trainable_params))
+
+
 
     def preprocess_data(self):
         # Preprocess data
@@ -76,10 +84,7 @@ class GNNPreTrainer():
         )
         dataset = dataloader.dataset
         split_idx = dataset.get_idx_split()
-        # dataset._data.y = torch.cat(
-        #     (dataset.y,
-        #      torch.randint_like(dataset.y, high=2)), dim=1 # replace it with pretrain target
-        # )
+       
         dataset._data.y = torch.cat(
             (dataset.y,
              self.pretrain_values), dim=1 # replace it with pretrain target
@@ -89,7 +94,6 @@ class GNNPreTrainer():
         #     (dataset.x[:, :self.pretrain_target],
         #      dataset.x[:, self.pretrain_target + 1:]), dim=1
         # )
-
         train_loader = DataLoader(
             dataset[split_idx["train"]], batch_size=self.batch_size, shuffle=True,
         )
@@ -106,6 +110,42 @@ class GNNPreTrainer():
 
         return dataset, train_loader, valid_loader, test_loader, data_loader
 
+    def preprocess_QM_data(self):
+        # Preprocess data
+        dataloader = DatasetLoader(
+            name=self.dataset, text='', feature=self.feature,
+            lm_model_name=self.lm_model_name, seed=self.seed
+        )
+        dataset = dataloader.dataset
+
+        PEMP_props_idx = [3, 4, 7, 10, 14]
+        print(dataset.y.shape)
+        dataset.y = dataset.y[:,PEMP_props_idx]
+        print(dataset.y.shape)
+
+        dataset._data.y = torch.cat(
+            (dataset.y,
+             dataset.y), dim=1 # replace it with pretrain target
+        )
+        print(dataset._data.y.shape)
+    
+        training_dataset = dataset[:0.8]
+      
+        train_loader = DataLoader(
+            training_dataset[:0.8], batch_size=self.batch_size, shuffle=True,
+        )
+        valid_loader = DataLoader(
+            training_dataset[0.8:], batch_size=self.batch_size, shuffle=False,
+        )
+        test_loader = DataLoader(
+            dataset[0.8:], batch_size=self.batch_size, shuffle=False,
+        )
+
+        data_loader = DataLoader(
+            dataset, batch_size=self.batch_size, shuffle=False,
+        )
+
+        return dataset, train_loader, valid_loader, test_loader, data_loader
         
 
     def setup_model(self, pretrain):
@@ -343,15 +383,25 @@ class GNNPreTrainer():
             best_val_epoch = np.argmax(np.array(valid_curve))
         else:
             best_val_epoch = np.argmin(np.array(valid_curve))
-
+        results = ""
         print('Best epoch: ', best_val_epoch)
         print('Best validation score: {:.4f}'.format(valid_curve[best_val_epoch]))
         print('Test score: {:.4f}'.format(test_curve[best_val_epoch]))
+        results += 'Best epoch: ' + str(best_val_epoch) + "\n"
+        results += 'Best validation score: {:.4f}'.format(valid_curve[best_val_epoch]) + "\n"
+        results += 'Test score: {:.4f}'.format(test_curve[best_val_epoch]) + "\n\n"
+        self.save_results(results=results)
         # self.save_predictions(pred=pred_list[best_val_epoch])
 
     @torch.no_grad()
     def save_predictions(self, pred):
         file_path = "{}/predictions.pt".format(self.output_dir)
-
         init_path(dir_or_file=file_path)
         torch.save(pred, file_path)
+
+    @torch.no_grad()
+    def save_results(self, results):
+        file_path = "{}/results.txt".format(self.output_dir)
+        f = open(file_path, "w")
+        f.write(f"Results of pre-training and finetuning of {self.name_of_taget_task}\n" + results)
+        f.close()

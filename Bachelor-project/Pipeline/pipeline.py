@@ -9,6 +9,7 @@ from descriptor_calculators.RDKitDescriptors import get_RDKit_values
 import argparse as ap
 from plotting import analyse, get_task_description
 from code.GNNs.gnn_pretrainer import GNNPreTrainer
+from code.GNNs.gnn_trainer import GNNTrainer
 from code.utils import set_seed
 from code.config import cfg, update_cfg
 import pathlib
@@ -192,15 +193,16 @@ if __name__ == "__main__":
         # Create a tensor storing the table of values to pass to the GNN pretrainer
         pretrain_values = torch.tensor(df.values)
         # Run the pre-training and finetuning of the model
-        gnn_pretrainer = GNNPreTrainer(cfg=cfg, aux_values=pretrain_values)
+        gnn_pretrainer = GNNPreTrainer(cfg=cfg, aux_values=pretrain_values, use_QM9=True)
         gnn_pretrainer.pretrain_and_eval()
         gnn_pretrainer.finetune_and_eval()
-
-        pass
-        # Implement code section for pretraining
     
     
     if args.train:
-        # Implement code section for training
-        pass
+        set_seed(cfg.seed)
+        cfg.dataset = f"ogbg-mol{args.target_task}"
+        cfg.gnn.train.epochs = args.epochs
+        cfg.gnn.model.name = args.model
+        gnn_trainer = GNNTrainer(cfg=cfg)
+        gnn_trainer.train_and_eval()
     
