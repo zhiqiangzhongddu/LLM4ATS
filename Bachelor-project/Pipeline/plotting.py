@@ -137,7 +137,7 @@ def tox21_plot(labels, smiles, aux_tasks, all_mord_descriptors, form):
     ticks = [3.6, 3.8, 4.0, 4.2, 4.4, 4.6, 4.8, 5.0, 5.2, 5.4]
     plt.xticks(rotation=45, ha='right'); plt.yticks(ticks=np.array(ticks), labels=[f"{np.exp(i):.2f}%" for i in ticks])
     plt.axhline(y = np.log(100), color = 'r', linestyle = '-') 
-    plt.savefig(str(path_to_dir) + f"/response_analysis/tox21_{form}_tasks_{len(total_tasks)}.png")
+    plt.savefig(str(path_to_dir) + f"/response_analysis/tox21/{form}_tasks_{len(total_tasks)}.png")
     plt.show()
 
 
@@ -149,16 +149,15 @@ def get_task_description(target):
 
 
 
-def one_label_reg_plot(labels, smiles, aux_tasks, all_mord_descriptors, target_task, form):
+def one_label_reg_plot(labels, smiles, aux_tasks, all_mord_descriptors, target_task, form, random_props):
     labels = [float(i) for i in labels]
-    fig, ax = plt.subplots()
+    total_tasks = aux_tasks[0] + aux_tasks[1]
+
+    fig, axs = plt.subplots(len(total_tasks), sharex=True)
     mols = []
     # Compute mol format from each smiles string
     for i in smiles:
         mols.append(Chem.MolFromSmiles(i))
-    
-    total_tasks = aux_tasks[0] + aux_tasks[1]
-    #f = open(str(path_to_dir) + "/response_analysis/results.txt", "w")
     
     # v has size 'number of mols' x 'number of aux tasks'
     MordClass = OurMordredClass(aux_tasks[0], all_mord_descriptors)
@@ -171,24 +170,25 @@ def one_label_reg_plot(labels, smiles, aux_tasks, all_mord_descriptors, target_t
     print(v2.shape)
     v = np.concatenate((v1, v2), axis=0)
     print(v.shape)
-
+    colors = ["b","g","r","c","m","y","k"]
     for j, p in enumerate(total_tasks):
         values = v[j]
         # Skip if value is an error msg
         if is_value_valid(values[0]):
-            values = values/np.amax(values)
-            ax.scatter(x=labels, y=values, s=2, label=p)
-    ax.legend()
+            axs[j].scatter(x=labels, y=values, s=2, label=p, color=colors[j%len(colors)])
+            axs[j].legend()
 
     # Plot the value of the pre_training task as a function of the molecule label
-    plt.title(f"Auxiliary task value as a function of {get_task_description(target_task)} of molecules."); plt.xlabel(f"{get_task_description(target_task)} of molecules"); plt.ylabel("Normalized auxiliary task value")
+    fig.suptitle(f"Auxiliary task value as a function of {get_task_description(target_task)} of molecules."); plt.xlabel(f"{get_task_description(target_task)} of molecules")
     amax = np.amax(np.array(labels))
     amin = np.amin(np.array(labels))
     get_mid = lambda amax,amin: amin+(amax-amin)/2
     mid = get_mid(amax, amin)
-    ticks = [amin, get_mid(mid,amin), mid, get_mid(amax,mid), amax]
+    deci = 2
+    ticks = [round(amin,deci), round(get_mid(mid,amin),deci), round(mid,deci), round(get_mid(amax,mid),deci), round(amax,deci)]
     plt.xticks(ticks=np.array(ticks), labels=np.array(ticks))
-    plt.savefig(str(path_to_dir) + f"/response_analysis/{target_task}_{form}_tasks_{len(total_tasks)}")
+    if random_props: plt.savefig(str(path_to_dir) + f"/response_analysis/{target_task}/random_tasks_{len(total_tasks)}.png")
+    else: plt.savefig(str(path_to_dir) + f"/response_analysis/{target_task}/{form}_tasks_{len(total_tasks)}.png")
     plt.show()
 
 
@@ -223,11 +223,11 @@ def one_label_clas_plot(labels, smiles, aux_tasks, all_mord_descriptors, target_
     ticks = [3.4, 3.6, 3.8, 4.0, 4.2, 4.4, 4.6, 4.8, 5.0, 5.2]
     plt.xticks(rotation=45, ha='right'); plt.yticks(ticks=np.array(ticks), labels=[f"{np.exp(i):.2f}%" for i in ticks])
     plt.axhline(y = np.log(100), color = 'r', linestyle = '-') 
-    plt.savefig(str(path_to_dir) + f"/response_analysis/{target_task}_{form}_tasks_{len(total_tasks)}")
+    plt.savefig(str(path_to_dir) + f"/response_analysis/{target_task}/{form}_tasks_{len(total_tasks)}.png")
     plt.show()
 
 # Function to be called from within pipeline.py
-def analyse(aux_tasks, all_mord_descriptors, target_task, form):
+def analyse(aux_tasks, all_mord_descriptors, target_task, form, random_props):
     labels, smiles = [], []
 
     if target_task == "tox21":
@@ -246,7 +246,7 @@ def analyse(aux_tasks, all_mord_descriptors, target_task, form):
         l, s = extract_data(target_task)
         ccat = np.concatenate((np.transpose(np.array(l)[:, np.newaxis]), np.transpose(np.array(s)[:, np.newaxis])), axis=0) 
         labels_and_smiles = np.transpose(np.array(sorted(ccat.T, key=lambda x: x[0])))
-        one_label_reg_plot(labels_and_smiles[0], labels_and_smiles[1], aux_tasks, all_mord_descriptors, target_task, form)
+        one_label_reg_plot(labels_and_smiles[0], labels_and_smiles[1], aux_tasks, all_mord_descriptors, target_task, form, random_props=random_props)
 
     
 

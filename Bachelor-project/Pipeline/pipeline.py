@@ -181,7 +181,7 @@ if __name__ == "__main__":
         else: list_of_props.append([])
         if "RDKit 2D descriptors" in table_of_props.keys(): list_of_props.append(table_of_props['RDKit 2D descriptors'])
         else: list_of_props.append([])
-        analyse(list_of_props, LLMClass.all_desc_wo_des["Mordred 2D descriptors"], args.target_task, args.msg_form)
+        analyse(list_of_props, LLMClass.all_desc_wo_des["Mordred 2D descriptors"], args.target_task, args.msg_form, args.random_properties)
 
     if args.pretrain:
         set_seed(cfg.seed)
