@@ -373,6 +373,30 @@ Centered Moreau-Broto Autocorrelation of Lag 8 Weighted by Mass: 1
 
 --------------------------------------------------
 
+Message template: form_4, Number of tournaments: 10, Target task: solubility, Number of features: 5
+
+TPSA: 8
+NumHAcceptors: 6
+NumHDonors: 5
+MolLogP: 5
+Lipinski rule of five: 2
+Filter-it™ LogS: 2
+MolWT: 1
+SlogP_VSA1: 1
+LogS: 1
+total hydrophobic surface area: 1
+total polar surface area: 1
+Labute's Approximate Surface Area: 1
+MOE logP VSA Descriptor 9: 1
+SlogP_VSA4: 1
+LogP (Octanol/Water Partition Coefficient): 1
+Hydrogen Bond Donor Count: 1
+Hydrogen Bond Acceptor Count: 1
+Molecular Weight: 1
+
+
+--------------------------------------------------
+
 Message template: form_4, Number of tournaments: 10, Target task: level of toxicity, Number of features: 5
 
 NumHAcceptors: 8

@@ -199,7 +199,10 @@ class our_LLM_class:
         for key in self.all_descriptors:
             if self.all_desc_inc[key]:
                 props += self.all_descriptors[key]
-        return random.sample(props, self.aux_tasks)
+        res = random.sample(props, self.aux_tasks)
+        for i,e in enumerate(res):
+            res[i] = e.split(":")[0]
+        return res
     
     # Function that reuses previous LLM filtered properties
     def use_prev_prop(self):
