@@ -195,3 +195,30 @@ moran coefficient of lag 2 weighted by sanderson EN: 1
 
 --------------------------------------------------
 
+Message template: form_4, Number of tournaments: 20, Target task: level of toxicity, Number of features: 5
+
+LogEE of adjacency matrix: 12
+averaged moreau-broto autocorrelation of lag 2 weighted by sanderson EN: 7
+moran coefficient of lag 3 weighted by atomic numbenumber of halogen atoms: 7
+averaged and centered moreau-broto autocorrelation of lag 8 weighted by mass: 6
+averaged moreau-broto autocorrelation of lag 8 weighted by sanderson EN: 3
+averaged moreau-broto autocorrelation of lag 1 weighted by sanderson EN: 2
+number of halogen atoms: 1
+averaged and centered moreau-broto autocorrelation of lag 2 weighted by polarizability: 1
+averaged and centered moreau-broto autocorrelation of lag 2 weighted by mass: 1
+moran coefficient of lag 3 weighted by atomic numbeSlogP_VSA1: 1
+LabuteASA: 1
+TPSA: 1
+MolLogP: 1
+NumHAcceptornumber of halogen atoms: 1
+SpMax of adjacency matrix: 1
+number of hetero atomnumber of halogen atoms: 1
+averaged and centered moreau-broto autocorrelation of lag 8 weighted by polarizability: 1
+moran coefficient of lag 3 weighted by masnumber of halogen atoms: 1
+number of hetero atoms: 1
+SpAD of adjacency matrinumber of halogen atoms: 1
+averaged and centered moreau-broto autocorrelation of lag 1 weighted by gasteiger charge: 1
+
+
+--------------------------------------------------
+
