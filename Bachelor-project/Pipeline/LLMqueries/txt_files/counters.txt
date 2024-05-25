@@ -266,3 +266,110 @@ fr_sulfide: 1
 
 --------------------------------------------------
 
+Message template: form_4, Number of tournaments: 10, Target task: level of toxicity, Number of features: 20
+
+LabuteASA: 5
+MolLogP: 4
+NumHAcceptors: 4
+TPSA: 4
+fr_nitro: 4
+total polar surface area: 4
+NumHDonors: 3
+fr_nitro_arom: 3
+fr_sulfone: 3
+fr_sulfonamd: 2
+fr_phos_acid: 2
+fr_tetrazole: 2
+fr_thiocyan: 2
+total hydrophobic surface area: 2
+relative negative charge: 2
+relative positive charge: 2
+relative negative charge surface area: 2
+relative positive charge surface area: 2
+sum of dO: 2
+sum of aaO: 2
+acidic group count: 2
+basic group count: 2
+number of hetero atoms: 2
+PEOE_VSA14: 2
+NumRotatableBonds: 2
+fr_halogen: 2
+fr_phenol: 2
+fr_oxime: 2
+fr_aniline: 2
+fr_ketone: 2
+SMR_VSA3: 1
+SlogP_VSA1: 1
+SlogP_VSA2: 1
+SlogP_VSA4: 1
+EState_VSA1: 1
+EState_VSA2: 1
+fr_quatN: 1
+fr_sulfide: 1
+relative hydrophobic surface area: 1
+relative polar surface area: 1
+sum of constitutional weighted by mass: 1
+sum of constitutional weighted by polarizability: 1
+sum of constitutional weighted by ionization potential: 1
+mean of constitutional weighted by mass: 1
+sum of sssN: 1
+sum of ssssN: 1
+sum of ssO: 1
+sssSiH: 1
+ssSiH2: 1
+fr_piperdine: 1
+number of sOH: 1
+number of sCl: 1
+number of dNH: 1
+sum of aaNH: 1
+sum of aaN: 1
+number of hydrogen bond acceptor: 1
+PEOE_VSA4: 1
+SlogP_VSA6: 1
+PEOE_VSA1: 1
+PEOE_VSA2: 1
+PEOE_VSA3: 1
+fr_pyridine: 1
+NumAromaticRings: 1
+MolWT: 1
+ExactMolWT: 1
+fr_imine: 1
+fr_amide: 1
+MOE Charge VSA Descriptor 11 (0.15 <= x < 0.20): 1
+MOE MR VSA Descriptor 9 (3.80 <= x < 4.00): 1
+Estrada-like index from detourn matrix: 1
+Moran coefficient of lag 1 weighted by gasteiger charge: 1
+NumBridgeheadAtoms: 1
+NumSaturatedRings: 1
+PE0E_VSA2: 1
+PE0E_VSA6: 1
+PEOE_VSA13: 1
+SlogP_VSA7: 1
+EState_VSA3: 1
+fr_NH2: 1
+Estrada-like index from Barysz matrix weighted by mass: 1
+coefficient sum of the last eigenvector from Barysz matrix weighted by mass: 1
+logarithmic coefficient sum of the last eigenvector from Barysz matrix weighted by mass: 1
+graph energy from Barysz matrix weighted by mass: 1
+spectral absolute diviation from Barysz matrix weighted by mass: 1
+spectral mean absolute diviation from Barysz matrix weighted by mass: 1
+difference in charged partial surface area (version 5): 1
+fractional charged partial negative surface area (version 5): 1
+fractional charged partial positive surface area (version 5): 1
+surface weighted charged partial negative surface area (version 5): 1
+Estrada-like index from Barysz matrix weighted by vdw volume: 1
+normalized Randic-like eigenvector-based index from Barysz matrix weighted by mass: 1
+Randic-like eigenvector-based index from Barysz matrix weighted by vdw volume: 1
+number of Halogen atoms: 1
+fr_urea: 1
+fr_nitrile: 1
+fr_lactam: 1
+Ipc: 1
+PBF: 1
+BertzCT: 1
+center moreau-broto autocorrelation of lag 5 weighted by atomic number: 1
+Centered Moreau-Broto Autocorrelation of Lag 8 Weighted by Mass: 1
+
+
+--------------------------------------------------
+

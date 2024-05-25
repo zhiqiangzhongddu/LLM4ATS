@@ -14,7 +14,7 @@ from code.utils import time_logger, project_root_path, init_path
 from code.GNNs.our_evaluate import OurEvaluator
 
 class GNNPreTrainer():
-    def __init__(self, cfg, aux_values, use_QM9=False):
+    def __init__(self, cfg, aux_values, use_QM9=False, one_at_a_time=False, random_props=False):
         self.dataset = cfg.dataset
         self.feature = cfg.data.feature
         self.lm_model_name = cfg.lm.model.name
@@ -30,12 +30,21 @@ class GNNPreTrainer():
 
 
         # Our own addings
+        self.random_props = random_props
         # pre-training parameters
+        if one_at_a_time:
+            self.pretrain_num_tasks = 1
+            self.pretrain_task_type = "regression"
+            self.pretrain_values = [[aux_values[i][j]] for i in range(len(aux_values)) for j in range(len(aux_values[i]))]
+            self.len_pretrain_values = len(aux_values[0])
+        else:
+            self.pretrain_num_tasks = len(aux_values[0])
+            self.pretrain_task_type = "regression"
+            self.pretrain_values = aux_values
+            
         self.pretrain_eval_metric = 'rmse'
-        self.pretrain_num_tasks = len(aux_values[0])
-        self.pretrain_task_type = "regression"
-        self.pretrain_values = aux_values
-        self.name_of_taget_task = cfg.dataset
+        self.name_of_target_task = cfg.dataset   
+        self.pretrain_one_at_a_time = one_at_a_time
 
         self._get_evaluator()
         self.cls_criterion = torch.nn.BCEWithLogitsLoss()
@@ -84,12 +93,24 @@ class GNNPreTrainer():
         )
         dataset = dataloader.dataset
         split_idx = dataset.get_idx_split()
-       
-        dataset._data.y = torch.cat(
+        
+        if self.pretrain_one_at_a_time:
+            res = dataset.y.clone().detach()
+            for i in range(self.len_pretrain_values-1):
+                temp = dataset.y.clone().detach()
+                res = torch.cat(
+                    (res,temp), dim=0
+                )
+            dataset.y = res
+            dataset._data.y = torch.cat(
+                (dataset.y,
+                torch.tensor(self.pretrain_values)), dim=1 # replace it with pretrain target
+            )
+        else:
+            dataset._data.y = torch.cat(
             (dataset.y,
-             self.pretrain_values), dim=1 # replace it with pretrain target
+             torch.tensor(self.pretrain_values)), dim=1 # replace it with pretrain target
         )
-        print(dataset._data.y.shape)
         # dataset._data.x = torch.cat(
         #     (dataset.x[:, :self.pretrain_target],
         #      dataset.x[:, self.pretrain_target + 1:]), dim=1
@@ -119,9 +140,7 @@ class GNNPreTrainer():
         dataset = dataloader.dataset
 
         PEMP_props_idx = [3, 4, 7, 10, 14]
-        print(dataset.y.shape)
         dataset.y = dataset.y[:,PEMP_props_idx]
-        print(dataset.y.shape)
 
         dataset._data.y = torch.cat(
             (dataset.y,
@@ -401,7 +420,8 @@ class GNNPreTrainer():
 
     @torch.no_grad()
     def save_results(self, results):
-        file_path = "{}/results.txt".format(self.output_dir)
+        file_path = "{}/finetune_1at_a_time_results.txt".format(self.output_dir) if self.pretrain_one_at_a_time else "{}/finetune_results.txt".format(self.output_dir)
+        if self.random_props: file_path = "{}/finetune_random.txt".format(self.output_dir)
         f = open(file_path, "w")
-        f.write(f"Results of pre-training and finetuning of {self.name_of_taget_task}\n" + results)
+        f.write(f"Results of pre-training and finetuning of {self.name_of_target_task} with {self.epochs} epochs\n" + results)
         f.close()

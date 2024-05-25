@@ -87,3 +87,111 @@ centered moreau-broto autocorrelation of lag 2 weighted by sanderson EN: 1
 
 --------------------------------------------------
 
+Message template: form_4, Number of tournaments: 10, Target task: level of toxicity, Number of features: 5
+
+averaged moreau-broto autocorrelation of lag 4 weighted by ionization potential: 8
+averaged moreau-broto autocorrelation of lag 0 weighted by ionization potential: 7
+averaged moreau-broto autocorrelation of lag 1 weighted by ionization potential: 7
+averaged moreau-broto autocorrelation of lag 2 weighted by ionization potential: 7
+averaged moreau-broto autocorrelation of lag 3 weighted by ionization potential: 7
+averaged moreau-broto autocorrelation of lag 0 weighted by gasteiger charge: 1
+averaged moreau-broto autocorrelation of lag 1 weighted by gasteiger charge: 1
+averaged moreau-broto autocorrelation of lag 2 weighted by gasteiger charge: 1
+averaged moreau-broto autocorrelation of lag 3 weighted by gasteiger charge: 1
+averaged moreau-broto autocorrelation of lag 4 weighted by gasteiger charge: 1
+averaged moreau-broto autocorrelation of lag 8 weighted by ionization potential: 1
+averaged moreau-broto autocorrelation of lag 7 weighted by ionization potential: 1
+averaged moreau-broto autocorrelation of lag 6 weighted by ionization potential: 1
+averaged moreau-broto autocorrelation of lag 5 weighted by ionization potential: 1
+moreau-broto autocorrelation of lag 0 weighted by ionization potential: 1
+moreau-broto autocorrelation of lag 1 weighted by ionization potential: 1
+moreau-broto autocorrelation of lag 2 weighted by ionization potential: 1
+moreau-broto autocorrelation of lag 3 weighted by ionization potential: 1
+moreau-broto autocorrelation of lag 4 weighted by ionization potential: 1
+
+
+--------------------------------------------------
+
+Message template: form_4, Number of tournaments: 10, Target task: level of toxicity, Number of features: 20
+
+Graovac-Ghorbani atom-bond connectivity index: 10
+acidic group count: 10
+basic group count: 10
+SpAbs of adjacency matrix: 10
+SpMax of adjacency matrix: 10
+SpDiam of adjacency matrix: 10
+SpAD of adjacency matrix: 10
+SpMAD of adjacency matrix: 10
+LogEE of adjacency matrix: 10
+VE1 of adjacency matrix: 10
+VE2 of adjacency matrix: 10
+VE3 of adjacency matrix: 10
+VR1 of adjacency matrix: 10
+VR2 of adjacency matrix: 10
+VR3 of adjacency matrix: 10
+aromatic atoms count: 10
+aromatic bonds count: 10
+number of all atoms: 10
+number of heavy atomatom-bond connectivity index: 9
+atom-bond connectivity index: 1
+
+
+--------------------------------------------------
+
+Message template: form_4, Number of tournaments: 10, Target task: level of toxicity, Number of features: 20
+
+total polar surface area: 2
+relative hydrophobic surface area: 2
+relative polar surface area: 2
+partial negative surface area (version 1): 2
+partial positive surface area (version 1): 2
+difference in charged partial surface area (version 1): 2
+fractional charged partial negative surface area (version 1): 2
+fractional charged partial positive surface area (version 1): 2
+relative negative charge: 2
+relative positive charge: 2
+relative negative charge surface area: 2
+relative positive charge surface area: 2
+number of sOH: 2
+number of ssO: 2
+number of hetero atoms: 2
+number of halogen atoms: 2
+moreau-broto autocorrelation of lag 2 weighted by sanderson EN: 2
+moreau-broto autocorrelation of lag 1 weighted by pauling EN: 2
+moreau-broto autocorrelation of lag 2 weighted by pauling EN: 2
+moreau-broto autocorrelation of lag 1 weighted by allred-rocow EN: 2
+moreau-broto autocorrelation of lag 2 weighted by allred-rocow EN: 2
+averaged moreau-broto autocorrelation of lag 1 weighted by sanderson EN: 2
+total hydrophobic surface area: 1
+surface weighted charged partial negative surface area (version 1): 1
+surface weighted charged partial positive surface area (version 1): 1
+number of dO: 1
+number of aaacidic group count: 1
+basic group count: 1
+moreau-broto autocorrelation of lag 0 weighted by sanderson EN: 1
+moreau-broto autocorrelation of lag 1 weighted by sanderson EN: 1
+moreau-broto autocorrelation of lag 0 weighted by pauling EN: 1
+moreau-broto autocorrelation of lag 0 weighted by allred-rocow EN: 1
+averaged moreau-broto autocorrelation of lag 0 weighted by sanderson EN: 1
+averaged moreau-broto autocorrelation of lag 2 weighted by sanderson EN: 1
+averaged moreau-broto autocorrelation of lag 0 weighted by pauling EN: 1
+averaged moreau-broto autocorrelation of lag 1 weighted by pauling EN: 1
+averaged moreau-broto autocorrelation of lag 2 weighted by pauling Etotal hydrophobic surface area: 1
+number of sNH2: 1
+TPSA: 1
+NumHAcceptors: 1
+NumHDonorLogEE of adjacency matrix: 1
+aromatic atoms count: 1
+moreau-broto autocorrelation of lag 3 weighted by sanderson EN: 1
+averaged moreau-broto autocorrelation of lag 2 weighted by pauling EN: 1
+averaged moreau-broto autocorrelation of lag 1 weighted by allred-rocow EN: 1
+centered moreau-broto autocorrelation of lag 1 weighted by sanderson EN: 1
+centered moreau-broto autocorrelation of lag 2 weighted by pauling EN: 1
+centered moreau-broto autocorrelation of lag 1 weighted by allred-rocow EN: 1
+averaged and centered moreau-broto autocorrelation of lag 2 weighted by sanderson EN: 1
+averaged and centered moreau-broto autocorrelation of lag 1 weighted by pauling EN: 1
+moran coefficient of lag 2 weighted by sanderson EN: 1
+
+
+--------------------------------------------------
+

@@ -45,7 +45,7 @@ class GCNConv(MessagePassing):
         super(GCNConv, self).__init__(aggr='add')
 
         self.linear = torch.nn.Linear(emb_dim, emb_dim)
-        self.root_emb = torch.nn.Embedding(1, emb_dim)
+        self.root_emb = torch.nn.Embedding(663, emb_dim)
         self.bond_encoder = BondEncoder(emb_dim = emb_dim)
 
     def forward(self, x, edge_index, edge_attr):
@@ -167,7 +167,7 @@ class GNN_node_Virtualnode(torch.nn.Module):
         self.atom_encoder = AtomEncoder(emb_dim)
 
         ### set the initial virtual node embedding to 0.
-        self.virtualnode_embedding = torch.nn.Embedding(1, emb_dim)
+        self.virtualnode_embedding = torch.nn.Embedding(663, emb_dim)
         torch.nn.init.constant_(self.virtualnode_embedding.weight.data, 0)
 
         ### List of GNNs
@@ -206,7 +206,7 @@ class GNN_node_Virtualnode(torch.nn.Module):
         virtualnode_embedding = self.virtualnode_embedding(
             torch.zeros(batch[-1].item() + 1).to(edge_index.dtype).to(edge_index.device)
         )
-
+        x = x.type(torch.cuda.LongTensor)
         h_list = [self.atom_encoder(x)]
         for layer in range(self.num_layer):
             ### add message from virtual nodes to graph nodes

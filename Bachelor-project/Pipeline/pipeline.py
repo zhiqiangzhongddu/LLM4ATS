@@ -150,6 +150,7 @@ if __name__ == "__main__":
     # THIS IS WHERE YOU CAN IMPLEMENT YOUR OWN PIPELINE FOR CALCULATING DESCRIPTORS    
     
     # Prints the computed values to a given file if arg is set
+    print(len(table_of_vals)*len(table_of_vals[0]))
 
         
     print("Printing values to file")
@@ -193,7 +194,7 @@ if __name__ == "__main__":
         # Create a tensor storing the table of values to pass to the GNN pretrainer
         pretrain_values = torch.tensor(df.values)
         # Run the pre-training and finetuning of the model
-        gnn_pretrainer = GNNPreTrainer(cfg=cfg, aux_values=pretrain_values, use_QM9=True)
+        gnn_pretrainer = GNNPreTrainer(cfg=cfg, aux_values=pretrain_values, use_QM9=False, one_at_a_time=False, random_props=args.random_properties)
         gnn_pretrainer.pretrain_and_eval()
         gnn_pretrainer.finetune_and_eval()
     

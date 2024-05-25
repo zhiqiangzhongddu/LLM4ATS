@@ -234,3 +234,10 @@ class GNNTrainer():
 
         init_path(dir_or_file=file_path)
         torch.save(pred, file_path)
+
+    @torch.no_grad()
+    def save_results(self, results):
+        file_path = "{}/train_results.txt".format(self.output_dir)
+        f = open(file_path, "w")
+        f.write(f"Results of normal training of {self.name_of_target_task} with {self.epochs} epochs\n" + results)
+        f.close()

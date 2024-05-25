@@ -36,7 +36,7 @@ class our_gemini_LLM_class:
 
     
     # 45 properties per query
-    props_per_query = 45
+    props_per_query = 500
     
     # Number of tournaments
     NO_tournaments = 10
@@ -46,9 +46,10 @@ class our_gemini_LLM_class:
     
     # Whether the descriptors from a given source should be included in the tournament
     all_desc_inc = {}
+    all_desc_wo_des = {}
     
     # Whether to print the queries and responses to a file
-    save_conversation = False
+    save_conversation = True
 
     # Name of the file to store the conversation with chat-GPT
     conversation_file = ""
@@ -86,7 +87,9 @@ class our_gemini_LLM_class:
         "threshold": "BLOCK_NONE",
     },
 ]
-    model = genai.GenerativeModel('gemini-pro', generation_config=gen_config, safety_settings=safety_settings)
+    # model = genai.GenerativeModel('gemini-pro', generation_config=gen_config, safety_settings=safety_settings)
+    model = genai.GenerativeModel('gemini-1.5-pro-latest', generation_config=gen_config, safety_settings=safety_settings, system_instruction=query_attempts['form_4'][0]['content'])
+
 
     
     # Initialize class and read all the possible properties/descriptors
@@ -108,9 +111,9 @@ class our_gemini_LLM_class:
             output = self.model.generate_content(self.message[1]['content'])
         else:
             output = self.model.generate_content(query)
-
-        if output.candidates[0].finish_reason != "STOP":
-            raise Exception(f"The model did not finish generating the content. Please try again. Error code: {output.candidates[0].finish_reason}")            
+        
+        if str(output.candidates[0].finish_reason) != "FinishReason.STOP":
+            raise Exception(f"The model did not finish generating the content. Please try again. Error code: ",str(output.candidates[0].finish_reason))            
 
         output = output.candidates[0].content.parts[0].text
 
@@ -128,7 +131,6 @@ class our_gemini_LLM_class:
         if prefix_name in self.template_set:
             self.message_name = prefix_name
             self.message = copy.deepcopy(self.template_set[prefix_name])
-            # self.model = genai.GenerativeModel('gemini-1.5-pro-latest', generation_config=self.gen_config, safety_settings=self.safety_settings, system_instruction=self.message[0]['content'])
             if self.message_name != 'form_4':
                 self.prefix_str = self.message[1]['content'].format(self.aux_tasks, self.target_task, self.anwser_format)
         else:
@@ -200,6 +202,8 @@ class our_gemini_LLM_class:
             if self.message_name in ['form_4']:
                 queries.append(query_attempts[self.message_name][1]['content'].format(query,self.aux_tasks, self.target_task, self.aux_tasks))
             else: queries.append(self.prefix_str + query)
+        print(f"Number of queries: {len(queries)}")
+
         return queries
         
     # Recursively calls chat-GPT until the number of suggested properties is 'aux_tasks'
@@ -225,10 +229,8 @@ class our_gemini_LLM_class:
             if s == '' or s[0] != "-":
                 continue
             result = result + s[2:] + "\n"
-        
-        print("result: ",len(result.split("\n")))
-        
-        return result
+                
+        return result[:-2]
 
     # Selects random properties. Does not call chat-GPT.
     def get_random_properties(self):
