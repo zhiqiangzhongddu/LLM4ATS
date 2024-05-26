@@ -397,3 +397,84 @@ Molecular Weight: 1
 
 --------------------------------------------------
 
+Message template: form_4, Number of tournaments: 10, Target task: level of toxicity, Number of features: 5
+
+NumHAcceptors: 8
+MolLogP: 8
+TPSA: 7
+NumHDonors: 7
+fr_halogen: 3
+Lipinski rule of five: 3
+fr_nitro_arom: 2
+acidic group count: 2
+basic group count: 2
+fr_nitro: 1
+SlogP_VSA1: 1
+Ghose filter: 1
+
+
+--------------------------------------------------
+
+Message template: form_4, Number of tournaments: 10, Target task: level of toxicity, Number of features: 5
+
+NumHAcceptors: 7
+NumHDonors: 6
+TPSA: 6
+acidic group count: 4
+MolLogP: 4
+Lipinski rule of five: 4
+basic group count: 2
+number of halogen atoms: 2
+Ghose filter: 1
+Bertz CT: 1
+total hydrophobic surface area: 1
+fr_halogen: 1
+MolWT: 1
+
+
+--------------------------------------------------
+
+Message template: form_4, Number of tournaments: 20, Target task: level of toxicity, Number of features: 5
+
+TPSA: 16
+MolLogP: 12
+NumHAcceptors: 10
+NumHDonors: 10
+Lipinski rule of five: 7
+total polar surface area: 5
+total hydrophobic surface area: 4
+fr_nitro: 3
+fr_halogen: 2
+number of halogen atoms: 2
+number of hydrogen bond acceptor: 2
+acidic group count: 1
+basic group count: 1
+Acidic group count: 1
+Basic group count: 1
+fr_sulfonamd: 1
+MOE logP VSA Descriptor 1: 1
+MOE Charge VSA Descriptor 3 (-0.25 <= x < -0.20): 1
+fr_nitro_arom: 1
+sum of sssCH: 1
+eccentric connectivity index: 1
+NumAromaticRings: 1
+number of sssCH: 1
+fr_Nitro_arom: 1
+ExactMolWT: 1
+number of heavy atoms: 1
+number of hetero atoms: 1
+number of hydrogen bond donor: 1
+detour index: 1
+number of aromatic bonds in non-kekulized structure: 1
+Logarithmic Randic-like eigenvector-based index from Barysz matrix weighted by mass: 1
+Estrada-like index from distance matrix: 1
+Moreau-Broto autocorrelation of lag 1 weighted by Pauling EN: 1
+number of hydrogen bond acceptor : 1
+number of hydrogen bond donor : 1
+LabuteASA: 1
+moreau-broto autocorrelation of lag 5 weighted by sanderson EN: 1
+number of hydrogen bond acceptors: 1
+
+
+--------------------------------------------------
+

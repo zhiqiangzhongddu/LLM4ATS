@@ -87,8 +87,7 @@ class our_gemini_LLM_class:
         "threshold": "BLOCK_NONE",
     },
 ]
-    # model = genai.GenerativeModel('gemini-pro', generation_config=gen_config, safety_settings=safety_settings)
-    model = genai.GenerativeModel('gemini-1.5-pro-latest', generation_config=gen_config, safety_settings=safety_settings, system_instruction=query_attempts['form_4'][0]['content'])
+    model = genai.GenerativeModel('gemini-pro', generation_config=gen_config, safety_settings=safety_settings)
 
 
     
@@ -131,6 +130,9 @@ class our_gemini_LLM_class:
         if prefix_name in self.template_set:
             self.message_name = prefix_name
             self.message = copy.deepcopy(self.template_set[prefix_name])
+            
+            self.model = genai.GenerativeModel('gemini-1.5-pro-latest', generation_config=self.gen_config, safety_settings=self.safety_settings, system_instruction=query_attempts[self.message_name][0]['content'])
+
             if self.message_name != 'form_4':
                 self.prefix_str = self.message[1]['content'].format(self.aux_tasks, self.target_task, self.anwser_format)
         else:

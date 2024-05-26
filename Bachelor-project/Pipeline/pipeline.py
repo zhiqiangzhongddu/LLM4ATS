@@ -60,6 +60,7 @@ if __name__ == "__main__":
     parser.add_argument('--save_conversation', type=bool, default=False, action=ap.BooleanOptionalAction, help="Whether to save the conversation with the LLM, type=bool")
     parser.add_argument('--conversation_file', type=str, default='conversation', help="Name of the conversation file, type=str")
     parser.add_argument('--use_prev_llm_props', type=bool, default=False, action=ap.BooleanOptionalAction, help="Whether to use the properties from the previous LLM attempts, type=bool")
+    parser.add_argument('--NOTour' , type=int, default=10, help="# of tournaments, type=int")
 
     args = parser.parse_args()
     if args.LLM == "openai":
@@ -77,6 +78,7 @@ if __name__ == "__main__":
     LLMClass.save_conversation = args.save_conversation
     LLMClass.conversation_file = str(path_to_dir) +"/LLMqueries/txt_files/" +args.conversation_file+".txt"
     LLMClass.prev_prop_flag = args.use_prev_llm_props
+    LLMClass.NO_tournaments = args.NOTour
 
     # Select some random properties if arg is set to True, else ask the LLM for suggestions
     if args.random_properties:
