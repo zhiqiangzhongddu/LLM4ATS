@@ -80,7 +80,7 @@ def calc_avg(values, labels):
 # labels and smiles: list of 12 lists, each 'number of labeled mols for that target' long.
 # labels: the labels of the labeled molecules.
 # smiles: the smiles strings of the labeled molecules.
-def tox21_plot(labels, smiles, aux_tasks, all_mord_descriptors, form):
+def tox21_plot(labels, smiles, aux_tasks, all_mord_descriptors, form, random_props):
     print("Performing analysis of the properties suggested by the LLM")
     fig, ax = plt.subplots()
     mols = []
@@ -137,7 +137,8 @@ def tox21_plot(labels, smiles, aux_tasks, all_mord_descriptors, form):
     ticks = [3.6, 3.8, 4.0, 4.2, 4.4, 4.6, 4.8, 5.0, 5.2, 5.4]
     plt.xticks(rotation=45, ha='right'); plt.yticks(ticks=np.array(ticks), labels=[f"{np.exp(i):.2f}%" for i in ticks])
     plt.axhline(y = np.log(100), color = 'r', linestyle = '-') 
-    plt.savefig(str(path_to_dir) + f"/response_analysis/tox21/{form}_tasks_{len(total_tasks)}.png")
+    if random_props: plt.savefig(str(path_to_dir) + f"/response_analysis/tox21/random_tasks_{len(total_tasks)}.png")
+    else: plt.savefig(str(path_to_dir) + f"/response_analysis/tox21/{form}_tasks_{len(total_tasks)}.png")
     plt.show()
 
 
@@ -192,7 +193,7 @@ def one_label_reg_plot(labels, smiles, aux_tasks, all_mord_descriptors, target_t
     plt.show()
 
 
-def one_label_clas_plot(labels, smiles, aux_tasks, all_mord_descriptors, target_task, form):
+def one_label_clas_plot(labels, smiles, aux_tasks, all_mord_descriptors, target_task, form, random_props):
     fig, ax = plt.subplots()
     mols = []
     # Compute mol format from each smiles string
@@ -223,7 +224,8 @@ def one_label_clas_plot(labels, smiles, aux_tasks, all_mord_descriptors, target_
     ticks = [3.4, 3.6, 3.8, 4.0, 4.2, 4.4, 4.6, 4.8, 5.0, 5.2]
     plt.xticks(rotation=45, ha='right'); plt.yticks(ticks=np.array(ticks), labels=[f"{np.exp(i):.2f}%" for i in ticks])
     plt.axhline(y = np.log(100), color = 'r', linestyle = '-') 
-    plt.savefig(str(path_to_dir) + f"/response_analysis/{target_task}/{form}_tasks_{len(total_tasks)}.png")
+    if random_props: plt.savefig(str(path_to_dir) + f"/response_analysis/{target_task}/random_tasks_{len(total_tasks)}.png")
+    else: plt.savefig(str(path_to_dir) + f"/response_analysis/{target_task}/{form}_tasks_{len(total_tasks)}.png")
     plt.show()
 
 # Function to be called from within pipeline.py
@@ -236,11 +238,11 @@ def analyse(aux_tasks, all_mord_descriptors, target_task, form, random_props):
             l = np.array([int(float(i)) for i in l])
             labels.append(l)
             smiles.append(s)
-        tox21_plot(labels, smiles, aux_tasks, all_mord_descriptors, form)
+        tox21_plot(labels, smiles, aux_tasks, all_mord_descriptors, form, random_props=random_props)
 
     if target_task == "bbbp":
         l, s = extract_data(target_task)
-        one_label_clas_plot(l, s, aux_tasks, all_mord_descriptors, target_task, form)
+        one_label_clas_plot(l, s, aux_tasks, all_mord_descriptors, target_task, form, random_props=random_props)
 
     if target_task == "esol" or target_task == "lipo":
         l, s = extract_data(target_task)
