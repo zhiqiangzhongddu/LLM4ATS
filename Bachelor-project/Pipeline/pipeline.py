@@ -15,6 +15,7 @@ from code.config import cfg, update_cfg
 import pathlib
 import torch
 import numpy as np
+import random
 
 # from code import main_PreTrainFineTune
 # from descriptor_calculators.QMproperties.QMproperties import get_QMprops_from_list
@@ -61,6 +62,8 @@ if __name__ == "__main__":
     parser.add_argument('--conversation_file', type=str, default='conversation', help="Name of the conversation file, type=str")
     parser.add_argument('--use_prev_llm_props', type=bool, default=False, action=ap.BooleanOptionalAction, help="Whether to use the properties from the previous LLM attempts, type=bool")
     parser.add_argument('--NOTour' , type=int, default=10, help="# of tournaments, type=int")
+    parser.add_argument('--rand_props_seed', type=int, default=random.randint(1, 10000), help="Seed to be used when selecting random properties, type=int")
+
 
     args = parser.parse_args()
     if args.LLM == "openai":
@@ -79,6 +82,7 @@ if __name__ == "__main__":
     LLMClass.conversation_file = str(path_to_dir) +"/LLMqueries/txt_files/" +args.conversation_file+".txt"
     LLMClass.prev_prop_flag = args.use_prev_llm_props
     LLMClass.NO_tournaments = args.NOTour
+    LLMClass.random_props_seed = args.rand_props_seed
 
     # Select some random properties if arg is set to True, else ask the LLM for suggestions
     if args.random_properties:
@@ -183,7 +187,7 @@ if __name__ == "__main__":
         else: list_of_props.append([])
         if "RDKit 2D descriptors" in table_of_props.keys(): list_of_props.append(table_of_props['RDKit 2D descriptors'])
         else: list_of_props.append([])
-        analyse(list_of_props, LLMClass.all_desc_wo_des["Mordred 2D descriptors"], args.target_task, args.msg_form, args.random_properties)
+        analyse(list_of_props, LLMClass.all_desc_wo_des["Mordred 2D descriptors"], args.target_task, args.msg_form, args.random_properties, args.rand_props_seed)
 
     if args.pretrain:
         set_seed(cfg.seed)
@@ -196,7 +200,7 @@ if __name__ == "__main__":
         # Create a tensor storing the table of values to pass to the GNN pretrainer
         pretrain_values = torch.tensor(df.values)
         # Run the pre-training and finetuning of the model
-        gnn_pretrainer = GNNPreTrainer(cfg=cfg, aux_values=pretrain_values, use_QM9=False, one_at_a_time=False, random_props=args.random_properties)
+        gnn_pretrainer = GNNPreTrainer(cfg=cfg, aux_values=pretrain_values, rand_props_seed = args.rand_props_seed, use_QM9=False, one_at_a_time=False, random_props=args.random_properties)
         gnn_pretrainer.pretrain_and_eval()
         gnn_pretrainer.finetune_and_eval()
     

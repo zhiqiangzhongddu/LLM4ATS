@@ -14,7 +14,7 @@ from code.utils import time_logger, project_root_path, init_path
 from code.GNNs.our_evaluate import OurEvaluator
 
 class GNNPreTrainer():
-    def __init__(self, cfg, aux_values, use_QM9=False, one_at_a_time=False, random_props=False):
+    def __init__(self, cfg, aux_values, rand_props_seed, use_QM9=False, one_at_a_time=False, random_props=False):
         self.dataset = cfg.dataset
         self.feature = cfg.data.feature
         self.lm_model_name = cfg.lm.model.name
@@ -31,6 +31,7 @@ class GNNPreTrainer():
 
         # Our own addings
         self.random_props = random_props
+        self.rand_props_seed = rand_props_seed
         # pre-training parameters
         if one_at_a_time:
             self.pretrain_num_tasks = 1
@@ -421,7 +422,7 @@ class GNNPreTrainer():
     @torch.no_grad()
     def save_results(self, results):
         file_path = "{}/finetune_1at_a_time_results.txt".format(self.output_dir) if self.pretrain_one_at_a_time else "{}/finetune_results.txt".format(self.output_dir)
-        if self.random_props: file_path = "{}/finetune_random.txt".format(self.output_dir)
+        if self.random_props: file_path = "{}/finetune_seed_{}.txt".format(self.output_dir, self.rand_props_seed)
         f = open(file_path, "w")
         f.write(f"Results of pre-training and finetuning of {self.name_of_target_task} with {self.epochs} epochs\n" + results)
         f.close()

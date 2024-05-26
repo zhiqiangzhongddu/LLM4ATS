@@ -58,6 +58,10 @@ class our_LLM_class:
     
     # Whether to use properties from previous LLM runs
     prev_prop_flag = False
+
+    # Seed to be used when selecting random properties
+    random_props_seed = 42 # placeholder
+
     
     
     # Initialize class and read all the possible properties/descriptors
@@ -123,6 +127,8 @@ class our_LLM_class:
             lst = lst + self.__get_final_result(queries)
         lst = lst.split("\n")[0:-1]
         for i,e in enumerate(lst):
+            if e.split(":")[0][-4] == "type":
+                continue
             lst[i] = e.split(":")[0]
         cnt = Counter(lst)
         cnt = dict(sorted(cnt.items(), key=lambda item: item[1], reverse=True))
@@ -199,9 +205,13 @@ class our_LLM_class:
         for key in self.all_descriptors:
             if self.all_desc_inc[key]:
                 props += self.all_descriptors[key]
+        random.seed(self.random_props_seed)
         res = random.sample(props, self.aux_tasks)
         for i,e in enumerate(res):
-            res[i] = e.split(":")[0]
+            if e.split(":")[0][-4:] == "type":
+                continue
+            else:
+                res[i] = e.split(":")[0]
         return res
     
     # Function that reuses previous LLM filtered properties
