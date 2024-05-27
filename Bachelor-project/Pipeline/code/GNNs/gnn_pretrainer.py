@@ -160,7 +160,6 @@ class GNNPreTrainer():
         test_loader = DataLoader(
             dataset[0.8:], batch_size=self.batch_size, shuffle=False,
         )
-
         data_loader = DataLoader(
             dataset, batch_size=self.batch_size, shuffle=False,
         )
