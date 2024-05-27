@@ -201,6 +201,7 @@ class our_LLM_class:
 
     # Selects random properties. Does not call chat-GPT.
     def get_random_properties(self):
+        print(self.random_props_seed)
         props = []
         for key in self.all_descriptors:
             if self.all_desc_inc[key]:

@@ -478,3 +478,139 @@ number of hydrogen bond acceptors: 1
 
 --------------------------------------------------
 
+Message template: form_4, Number of tournaments: 20, Target task: level of toxicity, Number of features: 10
+
+TPSA: 15
+total polar surface area: 11
+MolLogP: 10
+NumHAcceptors: 10
+NumHDonors: 10
+fr_nitro: 8
+basic group count: 7
+acidic group count: 7
+total hydrophobic surface area: 6
+Lipinski rule of five: 6
+number of hetero atoms: 5
+number of hydrogen bond acceptor: 5
+fr_nitro_arom: 5
+number of hydrogen bond donor: 5
+fr_halogen: 4
+LabuteASA: 4
+number of O atoms: 2
+NumAromaticRings: 2
+NumHeteroatoms: 2
+fr_urea: 2
+relative hydrophobic surface area: 2
+relative polar surface area: 2
+Ghose filter: 2
+fr_N_O: 2
+fr_phos_acid: 2
+number of halogen atoms: 2
+acid group count: 1
+fr_amine: 1
+number of oxygen atoms: 1
+number of nitrogen atoms: 1
+Filter-it™ LogS: 1
+molecular framework ratio: 1
+McGowan volume: 1
+surface weighted charged partial negative surface area (version 3): 1
+PEOE_VSA13: 1
+PEOE_VSA14: 1
+SMR_VSA1: 1
+MolWT: 1
+fr_phenol: 1
+ExactMolWT: 1
+number of heavy atoms: 1
+sum of sssC: 1
+sum of sOH: 1
+max of sNH3: 1
+3D-MoRSE weighted by mass (distance = 6): 1
+3D-MoRSE weighted by mass (distance = 7): 1
+3D-MoRSE weighted by mass (distance = 8): 1
+3D-MoRSE weighted by mass (distance = 1): 1
+Estrada-like index from Barysz matrix weighted by pauling EN: 1
+PEOE_VSA1: 1
+Estrada-like index from detourn matrix: 1
+fr_nitro_arom_nonortho: 1
+Estrada-like index from Barysz matrix weighted by mass: 1
+LogP (lipophilicity): 1
+Number of hydrogen bond donors: 1
+Number of hydrogen bond acceptors: 1
+Polar surface area: 1
+Topological polar surface area: 1
+Number of chiral centers: 1
+number of N atoms: 1
+number of Cl atoms: 1
+SlogP_VSA7: 1
+MOE MR VSA Descriptor 1 (-inf < x < 1.29): 1
+NumRotatableBonds: 1
+SlogP_VSA4: 1
+
+
+--------------------------------------------------
+
+Message template: form_4, Number of tournaments: 20, Target task: solubility, Number of features: 5
+
+NumHAcceptors: 12
+TPSA: 11
+MolLogP: 10
+NumHDonors: 10
+SlogP_VSA2: 5
+fr_nitro_arom: 5
+NumRotatableBonds: 5
+Filter-it™ LogS: 5
+Lipinski rule of five: 4
+MolWT: 4
+LabuteASA: 4
+NumAromaticRings: 3
+SlogP_VSA1: 3
+fr_halogen: 3
+total hydrophobic surface area: 3
+total polar surface area: 3
+NumHeteroatoms: 2
+SlogP_VSA3: 2
+SlogP_VSA4: 2
+MolMR: 2
+number of hydrogen bond acceptor: 2
+fr_amide: 2
+fr_ester: 2
+fr_nitro: 2
+fr_phenol: 2
+SlogP_VSA9: 1
+ExactMolWT: 1
+NumBridgeheadAtoms: 1
+EState_VSA1: 1
+EState_VSA2: 1
+3D-MoRSE (distance = 2): 1
+3D-MoRSE (distance = 4): 1
+3D-MoRSE (distance = 6): 1
+3D-MoRSE (distance = 8): 1
+3D-MoRSE weighted by mass (distance = 20): 1
+Heavy Atom Count: 1
+FractionCSP3: 1
+BCUT2D: 1
+number of O atoms: 1
+number of halogen atoms: 1
+sum of sOH: 1
+sum of sF: 1
+summed EState index: 1
+MOE Charge VSA Descriptor 8: 1
+MOE Charge VSA Descriptor 9: 1
+MOE Charge VSA Descriptor 10: 1
+MOE logP VSA Descriptor 10: 1
+EState VSA Descriptor 10: 1
+MOE logP VSA Descriptor 10 ( 0.40 <= x <  0.50): 1
+gravitational index: 1
+fr_N_O: 1
+NumValenceElectrons: 1
+fr_COO: 1
+Filter-it LogS: 1
+number of hydrogen bond donor: 1
+McGowan volume: 1
+Estrada-like index from detourn matrix: 1
+MOE MR VSA Descriptor 9 (3.80 <= x < 4.00): 1
+EState VSA Descriptor 8 (2.05 <= x < 4.69): 1
+
+
+--------------------------------------------------
+

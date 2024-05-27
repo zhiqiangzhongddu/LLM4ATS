@@ -104,7 +104,7 @@ if __name__ == "__main__":
                 table_of_props[key].append(prop)
                 break
     
-    print("Out list content: \n", props)
+    print("\nOut list content: ", *props, sep='\n')
 
     
     # Prints the selected properties to a given file if arg is set
@@ -156,7 +156,7 @@ if __name__ == "__main__":
     # THIS IS WHERE YOU CAN IMPLEMENT YOUR OWN PIPELINE FOR CALCULATING DESCRIPTORS    
     
     # Prints the computed values to a given file if arg is set
-    print(len(table_of_vals)*len(table_of_vals[0]))
+    # print(len(table_of_vals)*len(table_of_vals[0]))
 
         
     print("Printing values to file")
@@ -189,6 +189,8 @@ if __name__ == "__main__":
         else: list_of_props.append([])
         analyse(list_of_props, LLMClass.all_desc_wo_des["Mordred 2D descriptors"], args.target_task, args.msg_form, args.random_properties, args.rand_props_seed)
 
+
+
     if args.pretrain:
         set_seed(cfg.seed)
         cfg.dataset = f"ogbg-mol{args.target_task}"
@@ -196,6 +198,9 @@ if __name__ == "__main__":
         cfg.gnn.model.name = args.model
         # Extract the computed values
         df = pd.read_csv(str(path_to_dir) + f'/computed_values/{args.target_task}_vals.csv')
+        print("Properties usable: ",df.shape[1])
+
+        # print("df.count: ", df.count())
         df = df.dropna(axis=1, how='all')
         # Create a tensor storing the table of values to pass to the GNN pretrainer
         pretrain_values = torch.tensor(df.values)
