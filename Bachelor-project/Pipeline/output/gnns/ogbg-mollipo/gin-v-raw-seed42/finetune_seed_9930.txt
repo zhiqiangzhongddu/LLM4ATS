@@ -1,0 +1,5 @@
+Results of pre-training and finetuning of ogbg-mollipo with 200 epochs
+Best epoch: 197
+Best validation score: 1.1187
+Test score: 1.0723
+
