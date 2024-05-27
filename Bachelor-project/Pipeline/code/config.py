@@ -13,7 +13,7 @@ def set_cfg(cfg):
     # Model name
     # cfg.model = 'gnn'
     # Cuda device number, used for machine with multiple gpus
-    cfg.device = 0
+    cfg.device = 7
     # Whether to use Demo Test mode
     cfg.demo_test = False
     # Number of samples for demo test

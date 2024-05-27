@@ -223,10 +223,16 @@ class GNNTrainer():
         else:
             best_val_epoch = np.argmin(np.array(valid_curve))
 
+        results = ""
         print('Best epoch: ', best_val_epoch)
         print('Best validation score: {:.4f}'.format(valid_curve[best_val_epoch]))
         print('Test score: {:.4f}'.format(test_curve[best_val_epoch]))
         # self.save_predictions(pred=pred_list[best_val_epoch])
+
+        results += 'Best epoch: ' + str(best_val_epoch) + "\n"
+        results += 'Best validation score: {:.4f}'.format(valid_curve[best_val_epoch]) + "\n"
+        results += 'Test score: {:.4f}'.format(test_curve[best_val_epoch]) + "\n\n"
+        self.save_results(results=results)
 
     @torch.no_grad()
     def save_predictions(self, pred):

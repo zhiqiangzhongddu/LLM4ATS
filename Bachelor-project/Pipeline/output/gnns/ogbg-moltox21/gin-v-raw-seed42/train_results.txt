@@ -1,0 +1,3 @@
+Best epoch:  175
+Best validation score: 0.7882
+Test score: 0.7394

@@ -1,25 +1,25 @@
 
 Biological target NR-AR has 7265 labeled molecules
 
-Average value of '9-ordered path count' for non-toxic mols: 53.629528464634845
-Average value of '9-ordered path count' for toxic mols: 199.63754045307442
-Difference: 372.25%
+Average value of 'molecular distance edge between secondary n and tertiary n' for non-toxic mols: 0.7864796168962467
+Average value of 'molecular distance edge between secondary n and tertiary n' for toxic mols: 0.5237456043086417
+Difference: 66.59%
 
-Average value of '5-ordered chi cluster weighted by sigma electrons' for non-toxic mols: 0.3834497791196302
-Average value of '5-ordered chi cluster weighted by sigma electrons' for toxic mols: 1.0267497806509303
-Difference: 267.77%
+Average value of 'average coefficient of the last eigenvector from distance matrix' for non-toxic mols: 0.26254343901952737
+Average value of 'average coefficient of the last eigenvector from distance matrix' for toxic mols: 0.2118987137986876
+Difference: 80.71%
 
-Average value of 'vsa estate descriptor 6 ( 6.00 <= x <  6.07)' for non-toxic mols: 5.738430624517672
-Average value of 'vsa estate descriptor 6 ( 6.00 <= x <  6.07)' for toxic mols: 4.100073784218843
-Difference: 71.45%
+Average value of 'moran coefficient of lag 1 weighted by allred-rocow en' for non-toxic mols: -0.0556341177111196
+Average value of 'moran coefficient of lag 1 weighted by allred-rocow en' for toxic mols: -0.0512190454411025
+Difference: 92.06%
 
-Average value of 'centered moreau-broto autocorrelation of lag 6 weighted by sigma electrons' for non-toxic mols: -2.215560848692527
-Average value of 'centered moreau-broto autocorrelation of lag 6 weighted by sigma electrons' for toxic mols: 0.4837329303851593
-Difference: -21.83%
+Average value of '5-ordered complementary information content' for non-toxic mols: 0.736165815596218
+Average value of '5-ordered complementary information content' for toxic mols: 0.5536289036590729
+Difference: 75.20%
 
-Average value of 'averaged and centered moreau-broto autocorrelation of lag 8 weighted by sigma electrons' for non-toxic mols: 0.033047213310926526
-Average value of 'averaged and centered moreau-broto autocorrelation of lag 8 weighted by sigma electrons' for toxic mols: 0.003007254211984167
-Difference: 9.10%
+Average value of 'moran coefficient of lag 3 weighted by sanderson en' for non-toxic mols: -0.06452535121209638
+Average value of 'moran coefficient of lag 3 weighted by sanderson en' for toxic mols: -0.04064098529245044
+Difference: 62.98%
 
 
 
@@ -27,25 +27,25 @@ Difference: 9.10%
 
 Biological target NR-AR-LBD has 6758 labeled molecules
 
-Average value of '9-ordered path count' for non-toxic mols: 49.93835301334151
-Average value of '9-ordered path count' for toxic mols: 206.88185654008439
-Difference: 414.27%
+Average value of 'molecular distance edge between secondary n and tertiary n' for non-toxic mols: 0.7741413156181557
+Average value of 'molecular distance edge between secondary n and tertiary n' for toxic mols: 0.5679862607790851
+Difference: 73.37%
 
-Average value of '5-ordered chi cluster weighted by sigma electrons' for non-toxic mols: 0.3708052030038206
-Average value of '5-ordered chi cluster weighted by sigma electrons' for toxic mols: 1.0632061168433389
-Difference: 286.73%
+Average value of 'average coefficient of the last eigenvector from distance matrix' for non-toxic mols: 0.26542351732576575
+Average value of 'average coefficient of the last eigenvector from distance matrix' for toxic mols: 0.21570230469504909
+Difference: 81.27%
 
-Average value of 'vsa estate descriptor 6 ( 6.00 <= x <  6.07)' for non-toxic mols: 5.502825233721429
-Average value of 'vsa estate descriptor 6 ( 6.00 <= x <  6.07)' for toxic mols: 3.9098618065540243
-Difference: 71.05%
+Average value of 'moran coefficient of lag 1 weighted by allred-rocow en' for non-toxic mols: -0.05685079107447317
+Average value of 'moran coefficient of lag 1 weighted by allred-rocow en' for toxic mols: -0.040108968335478334
+Difference: 70.55%
 
-Average value of 'centered moreau-broto autocorrelation of lag 6 weighted by sigma electrons' for non-toxic mols: -2.015600117859229
-Average value of 'centered moreau-broto autocorrelation of lag 6 weighted by sigma electrons' for toxic mols: -0.042920910170179925
-Difference: 2.13%
+Average value of '5-ordered complementary information content' for non-toxic mols: 0.7382052764069534
+Average value of '5-ordered complementary information content' for toxic mols: 0.5776171553823539
+Difference: 78.25%
 
-Average value of 'averaged and centered moreau-broto autocorrelation of lag 8 weighted by sigma electrons' for non-toxic mols: 0.03509950134937282
-Average value of 'averaged and centered moreau-broto autocorrelation of lag 8 weighted by sigma electrons' for toxic mols: 0.016475588432864733
-Difference: 46.94%
+Average value of 'moran coefficient of lag 3 weighted by sanderson en' for non-toxic mols: -0.06677704359815001
+Average value of 'moran coefficient of lag 3 weighted by sanderson en' for toxic mols: -0.04386768158682504
+Difference: 65.69%
 
 
 
@@ -53,25 +53,25 @@ Difference: 46.94%
 
 Biological target NR-AhR has 6549 labeled molecules
 
-Average value of '9-ordered path count' for non-toxic mols: 54.752464971458224
-Average value of '9-ordered path count' for toxic mols: 67.62369791666667
-Difference: 123.51%
+Average value of 'molecular distance edge between secondary n and tertiary n' for non-toxic mols: 0.7890730916675368
+Average value of 'molecular distance edge between secondary n and tertiary n' for toxic mols: 0.6768959763397145
+Difference: 85.78%
 
-Average value of '5-ordered chi cluster weighted by sigma electrons' for non-toxic mols: 0.4086649658183459
-Average value of '5-ordered chi cluster weighted by sigma electrons' for toxic mols: 0.3394025680175891
-Difference: 83.05%
+Average value of 'average coefficient of the last eigenvector from distance matrix' for non-toxic mols: 0.2662027370259316
+Average value of 'average coefficient of the last eigenvector from distance matrix' for toxic mols: 0.24455409205034004
+Difference: 91.87%
 
-Average value of 'vsa estate descriptor 6 ( 6.00 <= x <  6.07)' for non-toxic mols: 4.887025102478529
-Average value of 'vsa estate descriptor 6 ( 6.00 <= x <  6.07)' for toxic mols: 9.524121587421062
-Difference: 194.89%
+Average value of 'moran coefficient of lag 1 weighted by allred-rocow en' for non-toxic mols: -0.056329402943876956
+Average value of 'moran coefficient of lag 1 weighted by allred-rocow en' for toxic mols: -0.06285295905326124
+Difference: 111.58%
 
-Average value of 'centered moreau-broto autocorrelation of lag 6 weighted by sigma electrons' for non-toxic mols: -1.8968693902839295
-Average value of 'centered moreau-broto autocorrelation of lag 6 weighted by sigma electrons' for toxic mols: -2.691785031675847
-Difference: 141.91%
+Average value of '5-ordered complementary information content' for non-toxic mols: 0.7734501940587528
+Average value of '5-ordered complementary information content' for toxic mols: 0.4739971288101017
+Difference: 61.28%
 
-Average value of 'averaged and centered moreau-broto autocorrelation of lag 8 weighted by sigma electrons' for non-toxic mols: 0.0356848801028972
-Average value of 'averaged and centered moreau-broto autocorrelation of lag 8 weighted by sigma electrons' for toxic mols: 0.020104029635192373
-Difference: 56.34%
+Average value of 'moran coefficient of lag 3 weighted by sanderson en' for non-toxic mols: -0.06462155832606481
+Average value of 'moran coefficient of lag 3 weighted by sanderson en' for toxic mols: -0.06124860383462973
+Difference: 94.78%
 
 
 
@@ -79,25 +79,25 @@ Difference: 56.34%
 
 Biological target NR-Aromatase has 5821 labeled molecules
 
-Average value of '9-ordered path count' for non-toxic mols: 48.24144176779569
-Average value of '9-ordered path count' for toxic mols: 110.05
-Difference: 228.12%
+Average value of 'molecular distance edge between secondary n and tertiary n' for non-toxic mols: 0.7777063286285625
+Average value of 'molecular distance edge between secondary n and tertiary n' for toxic mols: 0.8175006440319855
+Difference: 105.12%
 
-Average value of '5-ordered chi cluster weighted by sigma electrons' for non-toxic mols: 0.3557501702443953
-Average value of '5-ordered chi cluster weighted by sigma electrons' for toxic mols: 0.6200079504821429
-Difference: 174.28%
+Average value of 'average coefficient of the last eigenvector from distance matrix' for non-toxic mols: 0.2700931625917953
+Average value of 'average coefficient of the last eigenvector from distance matrix' for toxic mols: 0.21700374337736036
+Difference: 80.34%
 
-Average value of 'vsa estate descriptor 6 ( 6.00 <= x <  6.07)' for non-toxic mols: 4.928739028535342
-Average value of 'vsa estate descriptor 6 ( 6.00 <= x <  6.07)' for toxic mols: 8.669875698135689
-Difference: 175.90%
+Average value of 'moran coefficient of lag 1 weighted by allred-rocow en' for non-toxic mols: -0.0617054171175755
+Average value of 'moran coefficient of lag 1 weighted by allred-rocow en' for toxic mols: -0.03066155514147013
+Difference: 49.69%
 
-Average value of 'centered moreau-broto autocorrelation of lag 6 weighted by sigma electrons' for non-toxic mols: -1.819097736749037
-Average value of 'centered moreau-broto autocorrelation of lag 6 weighted by sigma electrons' for toxic mols: -4.269889430746185
-Difference: 234.73%
+Average value of '5-ordered complementary information content' for non-toxic mols: 0.7484791661657801
+Average value of '5-ordered complementary information content' for toxic mols: 0.6775009784051069
+Difference: 90.52%
 
-Average value of 'averaged and centered moreau-broto autocorrelation of lag 8 weighted by sigma electrons' for non-toxic mols: 0.03899253841022833
-Average value of 'averaged and centered moreau-broto autocorrelation of lag 8 weighted by sigma electrons' for toxic mols: 0.0033917013549080656
-Difference: 8.70%
+Average value of 'moran coefficient of lag 3 weighted by sanderson en' for non-toxic mols: -0.07016929884689106
+Average value of 'moran coefficient of lag 3 weighted by sanderson en' for toxic mols: -0.023213873206277012
+Difference: 33.08%
 
 
 
@@ -105,25 +105,25 @@ Difference: 8.70%
 
 Biological target NR-ER has 6193 labeled molecules
 
-Average value of '9-ordered path count' for non-toxic mols: 49.06407407407407
-Average value of '9-ordered path count' for toxic mols: 81.33291298865069
-Difference: 165.77%
+Average value of 'molecular distance edge between secondary n and tertiary n' for non-toxic mols: 0.7860850774548497
+Average value of 'molecular distance edge between secondary n and tertiary n' for toxic mols: 0.6813928985292405
+Difference: 86.68%
 
-Average value of '5-ordered chi cluster weighted by sigma electrons' for non-toxic mols: 0.3731950151063552
-Average value of '5-ordered chi cluster weighted by sigma electrons' for toxic mols: 0.4619569626483538
-Difference: 123.78%
+Average value of 'average coefficient of the last eigenvector from distance matrix' for non-toxic mols: 0.2692859776179195
+Average value of 'average coefficient of the last eigenvector from distance matrix' for toxic mols: 0.24087459796114027
+Difference: 89.45%
 
-Average value of 'vsa estate descriptor 6 ( 6.00 <= x <  6.07)' for non-toxic mols: 4.903764365161108
-Average value of 'vsa estate descriptor 6 ( 6.00 <= x <  6.07)' for toxic mols: 7.599280306060465
-Difference: 154.97%
+Average value of 'moran coefficient of lag 1 weighted by allred-rocow en' for non-toxic mols: -0.059576387185770976
+Average value of 'moran coefficient of lag 1 weighted by allred-rocow en' for toxic mols: -0.0545764174429578
+Difference: 91.61%
 
-Average value of 'centered moreau-broto autocorrelation of lag 6 weighted by sigma electrons' for non-toxic mols: -1.918091214130303
-Average value of 'centered moreau-broto autocorrelation of lag 6 weighted by sigma electrons' for toxic mols: -1.9528744679056085
-Difference: 101.81%
+Average value of '5-ordered complementary information content' for non-toxic mols: 0.7489105183102918
+Average value of '5-ordered complementary information content' for toxic mols: 0.6346472234860279
+Difference: 84.74%
 
-Average value of 'averaged and centered moreau-broto autocorrelation of lag 8 weighted by sigma electrons' for non-toxic mols: 0.037668623454110976
-Average value of 'averaged and centered moreau-broto autocorrelation of lag 8 weighted by sigma electrons' for toxic mols: 0.01413357302632646
-Difference: 37.52%
+Average value of 'moran coefficient of lag 3 weighted by sanderson en' for non-toxic mols: -0.06979831845652391
+Average value of 'moran coefficient of lag 3 weighted by sanderson en' for toxic mols: -0.052919742714846084
+Difference: 75.82%
 
 
 
@@ -131,25 +131,25 @@ Difference: 37.52%
 
 Biological target NR-ER-LBD has 6955 labeled molecules
 
-Average value of '9-ordered path count' for non-toxic mols: 54.331415594246785
-Average value of '9-ordered path count' for toxic mols: 107.41142857142857
-Difference: 197.70%
+Average value of 'molecular distance edge between secondary n and tertiary n' for non-toxic mols: 0.7801366461060969
+Average value of 'molecular distance edge between secondary n and tertiary n' for toxic mols: 0.6396437304504448
+Difference: 81.99%
 
-Average value of '5-ordered chi cluster weighted by sigma electrons' for non-toxic mols: 0.3884986776539632
-Average value of '5-ordered chi cluster weighted by sigma electrons' for toxic mols: 0.5985253107759833
-Difference: 154.06%
+Average value of 'average coefficient of the last eigenvector from distance matrix' for non-toxic mols: 0.264274144397393
+Average value of 'average coefficient of the last eigenvector from distance matrix' for toxic mols: 0.23170721145803905
+Difference: 87.68%
 
-Average value of 'vsa estate descriptor 6 ( 6.00 <= x <  6.07)' for non-toxic mols: 5.418227912068759
-Average value of 'vsa estate descriptor 6 ( 6.00 <= x <  6.07)' for toxic mols: 7.041621870149476
-Difference: 129.96%
+Average value of 'moran coefficient of lag 1 weighted by allred-rocow en' for non-toxic mols: -0.05529521470038017
+Average value of 'moran coefficient of lag 1 weighted by allred-rocow en' for toxic mols: -0.06815239078227237
+Difference: 123.25%
 
-Average value of 'centered moreau-broto autocorrelation of lag 6 weighted by sigma electrons' for non-toxic mols: -2.033807940914708
-Average value of 'centered moreau-broto autocorrelation of lag 6 weighted by sigma electrons' for toxic mols: -1.5825734597205638
-Difference: 77.81%
+Average value of '5-ordered complementary information content' for non-toxic mols: 0.7313834943810503
+Average value of '5-ordered complementary information content' for toxic mols: 0.6712205692016228
+Difference: 91.77%
 
-Average value of 'averaged and centered moreau-broto autocorrelation of lag 8 weighted by sigma electrons' for non-toxic mols: 0.03203477087088726
-Average value of 'averaged and centered moreau-broto autocorrelation of lag 8 weighted by sigma electrons' for toxic mols: 0.02673441123769731
-Difference: 83.45%
+Average value of 'moran coefficient of lag 3 weighted by sanderson en' for non-toxic mols: -0.06707914885943102
+Average value of 'moran coefficient of lag 3 weighted by sanderson en' for toxic mols: -0.046674619023617726
+Difference: 69.58%
 
 
 
@@ -157,25 +157,25 @@ Difference: 83.45%
 
 Biological target NR-PPAR-gamma has 6450 labeled molecules
 
-Average value of '9-ordered path count' for non-toxic mols: 50.755906768837804
-Average value of '9-ordered path count' for toxic mols: 78.31182795698925
-Difference: 154.29%
+Average value of 'molecular distance edge between secondary n and tertiary n' for non-toxic mols: 0.7797977455074238
+Average value of 'molecular distance edge between secondary n and tertiary n' for toxic mols: 0.8612115329195497
+Difference: 110.44%
 
-Average value of '5-ordered chi cluster weighted by sigma electrons' for non-toxic mols: 0.3833207013781501
-Average value of '5-ordered chi cluster weighted by sigma electrons' for toxic mols: 0.41115144012817906
-Difference: 107.26%
+Average value of 'average coefficient of the last eigenvector from distance matrix' for non-toxic mols: 0.2679002088485899
+Average value of 'average coefficient of the last eigenvector from distance matrix' for toxic mols: 0.2367333034640359
+Difference: 88.37%
 
-Average value of 'vsa estate descriptor 6 ( 6.00 <= x <  6.07)' for non-toxic mols: 5.082887177434726
-Average value of 'vsa estate descriptor 6 ( 6.00 <= x <  6.07)' for toxic mols: 8.59431482324948
-Difference: 169.08%
+Average value of 'moran coefficient of lag 1 weighted by allred-rocow en' for non-toxic mols: -0.05843691287579574
+Average value of 'moran coefficient of lag 1 weighted by allred-rocow en' for toxic mols: -0.05418590929883195
+Difference: 92.73%
 
-Average value of 'centered moreau-broto autocorrelation of lag 6 weighted by sigma electrons' for non-toxic mols: -1.75153376892924
-Average value of 'centered moreau-broto autocorrelation of lag 6 weighted by sigma electrons' for toxic mols: -3.724023678125806
-Difference: 212.62%
+Average value of '5-ordered complementary information content' for non-toxic mols: 0.7392830357192046
+Average value of '5-ordered complementary information content' for toxic mols: 0.6433985192373745
+Difference: 87.03%
 
-Average value of 'averaged and centered moreau-broto autocorrelation of lag 8 weighted by sigma electrons' for non-toxic mols: 0.036356999773879774
-Average value of 'averaged and centered moreau-broto autocorrelation of lag 8 weighted by sigma electrons' for toxic mols: 0.01426968441109307
-Difference: 39.25%
+Average value of 'moran coefficient of lag 3 weighted by sanderson en' for non-toxic mols: -0.06775057388702743
+Average value of 'moran coefficient of lag 3 weighted by sanderson en' for toxic mols: -0.04587675621945532
+Difference: 67.71%
 
 
 
@@ -183,25 +183,25 @@ Difference: 39.25%
 
 Biological target SR-ARE has 5832 labeled molecules
 
-Average value of '9-ordered path count' for non-toxic mols: 37.065848670756644
-Average value of '9-ordered path count' for toxic mols: 72.10509554140127
-Difference: 194.53%
+Average value of 'molecular distance edge between secondary n and tertiary n' for non-toxic mols: 0.7684537885837245
+Average value of 'molecular distance edge between secondary n and tertiary n' for toxic mols: 0.7584534062002055
+Difference: 98.70%
 
-Average value of '5-ordered chi cluster weighted by sigma electrons' for non-toxic mols: 0.3285747821176676
-Average value of '5-ordered chi cluster weighted by sigma electrons' for toxic mols: 0.4885803727084695
-Difference: 148.70%
+Average value of 'average coefficient of the last eigenvector from distance matrix' for non-toxic mols: 0.27590575090543423
+Average value of 'average coefficient of the last eigenvector from distance matrix' for toxic mols: 0.2439784476105514
+Difference: 88.43%
 
-Average value of 'vsa estate descriptor 6 ( 6.00 <= x <  6.07)' for non-toxic mols: 4.832628038899367
-Average value of 'vsa estate descriptor 6 ( 6.00 <= x <  6.07)' for toxic mols: 7.253140025442261
-Difference: 150.09%
+Average value of 'moran coefficient of lag 1 weighted by allred-rocow en' for non-toxic mols: -0.05882956939866334
+Average value of 'moran coefficient of lag 1 weighted by allred-rocow en' for toxic mols: -0.05193703460713594
+Difference: 88.28%
 
-Average value of 'centered moreau-broto autocorrelation of lag 6 weighted by sigma electrons' for non-toxic mols: -1.6876655778604757
-Average value of 'centered moreau-broto autocorrelation of lag 6 weighted by sigma electrons' for toxic mols: -2.0917835714426403
-Difference: 123.95%
+Average value of '5-ordered complementary information content' for non-toxic mols: 0.7637434298309743
+Average value of '5-ordered complementary information content' for toxic mols: 0.6303628933045831
+Difference: 82.54%
 
-Average value of 'averaged and centered moreau-broto autocorrelation of lag 8 weighted by sigma electrons' for non-toxic mols: 0.04259312341804658
-Average value of 'averaged and centered moreau-broto autocorrelation of lag 8 weighted by sigma electrons' for toxic mols: 0.019081644224947233
-Difference: 44.80%
+Average value of 'moran coefficient of lag 3 weighted by sanderson en' for non-toxic mols: -0.07209378473073752
+Average value of 'moran coefficient of lag 3 weighted by sanderson en' for toxic mols: -0.05035882859424903
+Difference: 69.85%
 
 
 
@@ -209,25 +209,25 @@ Difference: 44.80%
 
 Biological target SR-ATADS has 7072 labeled molecules
 
-Average value of '9-ordered path count' for non-toxic mols: 55.03481198589894
-Average value of '9-ordered path count' for toxic mols: 94.40530303030303
-Difference: 171.54%
+Average value of 'molecular distance edge between secondary n and tertiary n' for non-toxic mols: 0.7731671985464799
+Average value of 'molecular distance edge between secondary n and tertiary n' for toxic mols: 0.7525621491256471
+Difference: 97.33%
 
-Average value of '5-ordered chi cluster weighted by sigma electrons' for non-toxic mols: 0.3997596820665757
-Average value of '5-ordered chi cluster weighted by sigma electrons' for toxic mols: 0.3955169538625631
-Difference: 98.94%
+Average value of 'average coefficient of the last eigenvector from distance matrix' for non-toxic mols: 0.2635147952532493
+Average value of 'average coefficient of the last eigenvector from distance matrix' for toxic mols: 0.24204152898550704
+Difference: 91.85%
 
-Average value of 'vsa estate descriptor 6 ( 6.00 <= x <  6.07)' for non-toxic mols: 5.41321904532707
-Average value of 'vsa estate descriptor 6 ( 6.00 <= x <  6.07)' for toxic mols: 8.407951114503508
-Difference: 155.32%
+Average value of 'moran coefficient of lag 1 weighted by allred-rocow en' for non-toxic mols: -0.056679828181832315
+Average value of 'moran coefficient of lag 1 weighted by allred-rocow en' for toxic mols: -0.04523057934229719
+Difference: 79.80%
 
-Average value of 'centered moreau-broto autocorrelation of lag 6 weighted by sigma electrons' for non-toxic mols: -1.9808925869039253
-Average value of 'centered moreau-broto autocorrelation of lag 6 weighted by sigma electrons' for toxic mols: -3.0043749551939727
-Difference: 151.67%
+Average value of '5-ordered complementary information content' for non-toxic mols: 0.7327780733726417
+Average value of '5-ordered complementary information content' for toxic mols: 0.5779330450952888
+Difference: 78.87%
 
-Average value of 'averaged and centered moreau-broto autocorrelation of lag 8 weighted by sigma electrons' for non-toxic mols: 0.03477991577182614
-Average value of 'averaged and centered moreau-broto autocorrelation of lag 8 weighted by sigma electrons' for toxic mols: -0.013497319467825926
-Difference: -38.81%
+Average value of 'moran coefficient of lag 3 weighted by sanderson en' for non-toxic mols: -0.06529890867166577
+Average value of 'moran coefficient of lag 3 weighted by sanderson en' for toxic mols: -0.0629736237071768
+Difference: 96.44%
 
 
 
@@ -235,25 +235,25 @@ Difference: -38.81%
 
 Biological target SR-HSE has 6467 labeled molecules
 
-Average value of '9-ordered path count' for non-toxic mols: 46.81410992616899
-Average value of '9-ordered path count' for toxic mols: 64.64516129032258
-Difference: 138.09%
+Average value of 'molecular distance edge between secondary n and tertiary n' for non-toxic mols: 0.7830594768302951
+Average value of 'molecular distance edge between secondary n and tertiary n' for toxic mols: 0.5504233564768233
+Difference: 70.29%
 
-Average value of '5-ordered chi cluster weighted by sigma electrons' for non-toxic mols: 0.3684910300041749
-Average value of '5-ordered chi cluster weighted by sigma electrons' for toxic mols: 0.4176430081683194
-Difference: 113.34%
+Average value of 'average coefficient of the last eigenvector from distance matrix' for non-toxic mols: 0.2687699643231632
+Average value of 'average coefficient of the last eigenvector from distance matrix' for toxic mols: 0.2538335942667333
+Difference: 94.44%
 
-Average value of 'vsa estate descriptor 6 ( 6.00 <= x <  6.07)' for non-toxic mols: 5.3185041980589896
-Average value of 'vsa estate descriptor 6 ( 6.00 <= x <  6.07)' for toxic mols: 7.173574746640186
-Difference: 134.88%
+Average value of 'moran coefficient of lag 1 weighted by allred-rocow en' for non-toxic mols: -0.05682894805826686
+Average value of 'moran coefficient of lag 1 weighted by allred-rocow en' for toxic mols: -0.05699837994543331
+Difference: 100.30%
 
-Average value of 'centered moreau-broto autocorrelation of lag 6 weighted by sigma electrons' for non-toxic mols: -1.8419856919949686
-Average value of 'centered moreau-broto autocorrelation of lag 6 weighted by sigma electrons' for toxic mols: -2.5927069644935035
-Difference: 140.76%
+Average value of '5-ordered complementary information content' for non-toxic mols: 0.7267803576738783
+Average value of '5-ordered complementary information content' for toxic mols: 0.7416306471004374
+Difference: 102.04%
 
-Average value of 'averaged and centered moreau-broto autocorrelation of lag 8 weighted by sigma electrons' for non-toxic mols: 0.0371870309563951
-Average value of 'averaged and centered moreau-broto autocorrelation of lag 8 weighted by sigma electrons' for toxic mols: 0.03211681362743374
-Difference: 86.37%
+Average value of 'moran coefficient of lag 3 weighted by sanderson en' for non-toxic mols: -0.06940763636731627
+Average value of 'moran coefficient of lag 3 weighted by sanderson en' for toxic mols: -0.050231751989460116
+Difference: 72.37%
 
 
 
@@ -261,25 +261,25 @@ Difference: 86.37%
 
 Biological target SR-MMP has 5810 labeled molecules
 
-Average value of '9-ordered path count' for non-toxic mols: 46.37551103843009
-Average value of '9-ordered path count' for toxic mols: 90.88888888888889
-Difference: 195.98%
+Average value of 'molecular distance edge between secondary n and tertiary n' for non-toxic mols: 0.8133021015760503
+Average value of 'molecular distance edge between secondary n and tertiary n' for toxic mols: 0.679316279645495
+Difference: 83.53%
 
-Average value of '5-ordered chi cluster weighted by sigma electrons' for non-toxic mols: 0.351433676956919
-Average value of '5-ordered chi cluster weighted by sigma electrons' for toxic mols: 0.5682145327233353
-Difference: 161.68%
+Average value of 'average coefficient of the last eigenvector from distance matrix' for non-toxic mols: 0.27256258218573176
+Average value of 'average coefficient of the last eigenvector from distance matrix' for toxic mols: 0.22976304382108287
+Difference: 84.30%
 
-Average value of 'vsa estate descriptor 6 ( 6.00 <= x <  6.07)' for non-toxic mols: 4.321051930778644
-Average value of 'vsa estate descriptor 6 ( 6.00 <= x <  6.07)' for toxic mols: 8.758705696592562
-Difference: 202.70%
+Average value of 'moran coefficient of lag 1 weighted by allred-rocow en' for non-toxic mols: -0.06286899919431879
+Average value of 'moran coefficient of lag 1 weighted by allred-rocow en' for toxic mols: -0.0476253982777935
+Difference: 75.75%
 
-Average value of 'centered moreau-broto autocorrelation of lag 6 weighted by sigma electrons' for non-toxic mols: -1.49982330836468
-Average value of 'centered moreau-broto autocorrelation of lag 6 weighted by sigma electrons' for toxic mols: -3.1761613151715684
-Difference: 211.77%
+Average value of '5-ordered complementary information content' for non-toxic mols: 0.7526406030875209
+Average value of '5-ordered complementary information content' for toxic mols: 0.6394272241693892
+Difference: 84.96%
 
-Average value of 'averaged and centered moreau-broto autocorrelation of lag 8 weighted by sigma electrons' for non-toxic mols: 0.03900473832449412
-Average value of 'averaged and centered moreau-broto autocorrelation of lag 8 weighted by sigma electrons' for toxic mols: 0.028491357862420442
-Difference: 73.05%
+Average value of 'moran coefficient of lag 3 weighted by sanderson en' for non-toxic mols: -0.0717420947900563
+Average value of 'moran coefficient of lag 3 weighted by sanderson en' for toxic mols: -0.04641659788898489
+Difference: 64.70%
 
 
 
@@ -287,25 +287,25 @@ Difference: 73.05%
 
 Biological target SR-p53 has 6774 labeled molecules
 
-Average value of '9-ordered path count' for non-toxic mols: 52.089277279168634
-Average value of '9-ordered path count' for toxic mols: 131.46099290780143
-Difference: 252.38%
+Average value of 'molecular distance edge between secondary n and tertiary n' for non-toxic mols: 0.7711290391584076
+Average value of 'molecular distance edge between secondary n and tertiary n' for toxic mols: 1.0531052850068856
+Difference: 136.57%
 
-Average value of '5-ordered chi cluster weighted by sigma electrons' for non-toxic mols: 0.38118051094791794
-Average value of '5-ordered chi cluster weighted by sigma electrons' for toxic mols: 0.6111733147779741
-Difference: 160.34%
+Average value of 'average coefficient of the last eigenvector from distance matrix' for non-toxic mols: 0.26663073691175165
+Average value of 'average coefficient of the last eigenvector from distance matrix' for toxic mols: 0.22680662257266937
+Difference: 85.06%
 
-Average value of 'vsa estate descriptor 6 ( 6.00 <= x <  6.07)' for non-toxic mols: 5.2292663577289
-Average value of 'vsa estate descriptor 6 ( 6.00 <= x <  6.07)' for toxic mols: 7.81130866917424
-Difference: 149.38%
+Average value of 'moran coefficient of lag 1 weighted by allred-rocow en' for non-toxic mols: -0.05616253673973061
+Average value of 'moran coefficient of lag 1 weighted by allred-rocow en' for toxic mols: -0.07507361459210314
+Difference: 133.67%
 
-Average value of 'centered moreau-broto autocorrelation of lag 6 weighted by sigma electrons' for non-toxic mols: -1.8855299353688781
-Average value of 'centered moreau-broto autocorrelation of lag 6 weighted by sigma electrons' for toxic mols: -3.9850149349755606
-Difference: 211.35%
+Average value of '5-ordered complementary information content' for non-toxic mols: 0.7376406834441326
+Average value of '5-ordered complementary information content' for toxic mols: 0.5708253901303636
+Difference: 77.39%
 
-Average value of 'averaged and centered moreau-broto autocorrelation of lag 8 weighted by sigma electrons' for non-toxic mols: 0.03439187666794008
-Average value of 'averaged and centered moreau-broto autocorrelation of lag 8 weighted by sigma electrons' for toxic mols: 0.02143914074177359
-Difference: 62.34%
+Average value of 'moran coefficient of lag 3 weighted by sanderson en' for non-toxic mols: -0.06762304770976343
+Average value of 'moran coefficient of lag 3 weighted by sanderson en' for toxic mols: -0.04421669676308576
+Difference: 65.39%
 
 
 
