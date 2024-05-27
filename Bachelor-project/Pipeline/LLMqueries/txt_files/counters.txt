@@ -614,3 +614,46 @@ EState VSA Descriptor 8 (2.05 <= x < 4.69): 1
 
 --------------------------------------------------
 
+Message template: form_4, Number of tournaments: 20, Target task: lipophilicity, Number of features: 5
+
+MolLogP: 17
+total hydrophobic surface area: 10
+SlogP_VSA1: 9
+SlogP_VSA2: 7
+Lipinski rule of five: 6
+Bertz CT: 4
+TPSA: 4
+SlogP_VSA4: 4
+MOE logP VSA Descriptor 1 (-inf < x < -0.40): 3
+MOE logP VSA Descriptor 2 (-0.40 <= x < -0.20): 2
+sum of ssssC: 2
+NumHAcceptors: 2
+NumHDonors: 2
+relative hydrophobic surface area: 2
+Labute's Approximate Surface Area: 2
+total polar surface area: 2
+SlogP_VSA3: 2
+MOE logP VSA Descriptor 1: 1
+MOE logP VSA Descriptor 2: 1
+partial positive surface area (version 4): 1
+MOE logP VSA Descriptor 3 (-0.20 <= x < 0.00): 1
+SlogP_VSA5: 1
+number of halogen atoms: 1
+fr_ether: 1
+fr_phenol: 1
+LogP (Partition coefficient): 1
+Molecular weight: 1
+hybridization ratio: 1
+averaged moreau-broto autocorrelation of lag 1 weighted by vdw volume: 1
+centered moreau-broto autocorrelation of lag 0 weighted by vdw volume: 1
+sum of constitutional weighted by vdw volume: 1
+MolLogP (XLogP): 1
+Filter-it™ LogS: 1
+Number of C atoms: 1
+Number of H atoms: 1
+NumRotatableBonds: 1
+MolMR: 1
+
+
+--------------------------------------------------
+
