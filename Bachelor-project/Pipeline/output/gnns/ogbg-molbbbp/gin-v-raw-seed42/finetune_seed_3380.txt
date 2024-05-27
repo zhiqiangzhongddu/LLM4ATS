@@ -1,0 +1,5 @@
+Results of pre-training and finetuning of ogbg-molbbbp with 200 epochs
+Best epoch: 186
+Best validation score: 0.8368
+Test score: 0.5322
+
