@@ -7,16 +7,15 @@ from ogb.graphproppred import PygGraphPropPredDataset
 
 # all = open('Pipeline/data/ogbg_molesol/mapping/esol.csv', 'r').read().split("\n")[1:]
 # smiles = []
-
 path = "Pipeline/data/QM9/QM9_pyg/raw/"
 
-ds = PygGraphPropPredDataset(name = "QM9", root = "Pipeline/data/QM9")
-print(ds[20])
-print(len(ds))
-ds = PygGraphPropPredDataset(name = "ogbg-molesol")
-print(ds[0].y)
-print(len(ds))
-exit()
+
+
+
+# exit()
+# ds = PygGraphPropPredDataset(name = "ogbg-molesol")
+# print(ds[0].y)
+# print(len(ds))
 # for i in all:
 #     temp = i.split(",")
 #     if temp[-1][-1] == "\"" or temp[-1][-2:] == " \"":
@@ -72,58 +71,61 @@ for i in range(len(edge_feat)):
             # f.write(str(edge_feat[i][j][0])+","+str(edge_feat[i][j][1])+","+str(edge_feat[i][j][2]) + "\n")
         total_counter += 1
 
-edge_feat = res
-f = open(path+"edge-feat.csv", "w")
-for i in edge_feat:
-    for j in i:
-        f.write(str(j)+",")    
-    f.write("\n")
+# edge_feat = res
+# f = open(path+"edge-feat.csv", "w")
+# for i in edge_feat:
+#     for j in i:
+#         f.write(str(j)+",")    
+#     f.write("\n")
 # with open(path+"edge-feat.csv", 'rb') as f_in, gzip.open(path+"edge-feat.csv.gz", 'wb') as f_out:
 #     shutil.copyfileobj(f_in, f_out)
 # os.remove(path+"edge-feat.csv")
 
-f = open(path+"edge.csv", "w")
-for i in edge:
-    for j in i:
-        f.write(str(j[0])+","+str(j[1])+ "\n")
+# f = open(path+"edge.csv", "w")
+# for i in edge:
+#     for j in i:
+#         f.write(str(j[0])+","+str(j[1])+ "\n")
 # with open(path+"edge.csv", 'rb') as f_in, gzip.open(path+"edge.csv.gz", 'wb') as f_out:
 #     shutil.copyfileobj(f_in, f_out)
 # os.remove(path+"edge.csv")
 
-f = open(path+"num-edge-list.csv", "w")
-for i in num_edge_list:
-    f.write(str(int(i)) + "\n")
+# f = open(path+"num-edge-list.csv", "w")
+# for i in num_edge_list:
+#     f.write(str(int(i)) + "\n")
 # with open(path+"num-edge-list.csv", 'rb') as f_in, gzip.open(path+"num-edge-list.csv.gz", 'wb') as f_out:
 #     shutil.copyfileobj(f_in, f_out)
 # os.remove(path+"num-edge-list.csv")
 
 
-f = open(path+"num-node-list.csv", "w")
-for i in num_node_list:
-    f.write(str(int(i)) + "\n")
+# f = open(path+"num-node-list.csv", "w")
+# for i in num_node_list:
+#     f.write(str(int(i)) + "\n")
+
 # with open(path+"num-node-list.csv", 'rb') as f_in, gzip.open(path+"num-node-list.csv.gz", 'wb') as f_out:
 #     shutil.copyfileobj(f_in, f_out)
+
 # os.remove(path+"num-node-list.csv")
 
-f = open(path+"node-feat.csv", "w")
+# f = open(path+"node-feat.csv", "w")
 
-for i in node_feat:
-    for j in i:
-        res = ""
-        for k in j:
-            res += str(k)+","
-        res = res[:-1]
-        res += "\n"
-        f.write(res)
+# for i in node_feat:
+#     for j in i:
+#         res = ""
+#         for k in j:
+#             res += str(k)+","
+#         res = res[:-1]
+#         res += "\n"
+#         f.write(res)
 
 # with open(path+"node-feat.csv", 'rb') as f_in, gzip.open(path+"node-feat.csv.gz", 'wb') as f_out:
 #     shutil.copyfileobj(f_in, f_out)
 # os.remove(path+"node-feat.csv")
 
-f = open(path+"graph-label.csv", "w")
-for i in range(len(graph_label)):
-    f.write(str(graph_label[i]) + "\n")
-    
+
+
+# f = open(path+"graph-label.csv", "w")
+# for i in range(1,133886):
+#     f.write(str(i) + "\n")
 # with open(path+"graph-label.csv", 'rb') as f_in, gzip.open(path+"graph-label.csv.gz", 'wb') as f_out:
 #     shutil.copyfileobj(f_in, f_out)
 # os.remove(path+"graph-label.csv")
@@ -132,5 +134,5 @@ for i in range(len(graph_label)):
 
 
 
-
-
+ds = PygGraphPropPredDataset(name = "QM9", root = "Pipeline/data/QM9")
+print(ds)
