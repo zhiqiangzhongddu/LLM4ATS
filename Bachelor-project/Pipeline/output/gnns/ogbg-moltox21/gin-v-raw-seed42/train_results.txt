@@ -1,3 +1,4 @@
+Results of normal training of ogbg-moltox21 with 200 epochs
 Best epoch:  175
 Best validation score: 0.7882
 Test score: 0.7394
