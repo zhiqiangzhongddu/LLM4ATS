@@ -1,0 +1,5 @@
+Results of pre-training and finetuning of ogbg-moltox21 with 200 epochs
+Best epoch: 183
+Best validation score: 0.7647
+Test score: 0.7198
+
