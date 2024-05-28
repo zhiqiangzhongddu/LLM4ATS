@@ -1,0 +1,4 @@
+Results of normal training of ogbg-molesol with 200 epochs
+Best epoch:  122
+Best validation score: 1.9413
+Test score: 1.9460

@@ -1,0 +1,5 @@
+Results of normal training of ogbg-mollipo with 200 epochs
+Best epoch: 157
+Best validation score: 1.2648
+Test score: 1.2106
+

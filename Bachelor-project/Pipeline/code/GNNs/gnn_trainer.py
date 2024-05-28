@@ -45,6 +45,7 @@ class GNNTrainer():
             )
 
         self.dataset, self.train_loader, self.valid_loader, self.test_loader, self.data_loader = self.preprocess_data()
+        self.name_of_target_task = cfg.dataset
         self.eval_metric = self.dataset.eval_metric
         self.num_tasks = self.dataset.num_tasks
         self.task_type = self.dataset.task_type
