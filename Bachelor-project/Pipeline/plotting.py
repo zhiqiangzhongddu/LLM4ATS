@@ -7,6 +7,7 @@ from descriptor_calculators.MordredDescriptors import OurMordredClass
 from descriptor_calculators.RDKitDescriptors import get_RDKit_values
 from rdkit import Chem
 import pathlib
+import string
 
 path_to_dir = pathlib.Path(__file__).parent.resolve()
 
@@ -76,6 +77,17 @@ def calc_avg(values, labels):
         else: avg0 += v; count0 += 1
     return avg0/count0, avg1/count1
 
+def shorten_prop_name(p, all_props):
+    words = p.split()
+    max_words = 3
+    
+    if len(words) > max_words:
+        p = ""
+        for w in words[:max_words]:
+            p = p + w + " "
+        p = p[:-1] + "..."
+    return p
+
 
 # labels and smiles: list of 12 lists, each 'number of labeled mols for that target' long.
 # labels: the labels of the labeled molecules.
@@ -131,7 +143,8 @@ def tox21_plot(labels, smiles, aux_tasks, all_mord_descriptors, form, random_pro
     print("Plotting result of analysis")
     ax.grid(True)
     for i, p in enumerate(res):
-        ax.scatter(x=targets, y=np.log(p), s=30, label=total_tasks[i])
+        aux_name = shorten_prop_name(total_tasks[i], total_tasks)
+        ax.scatter(x=targets, y=np.log(p), s=30, label=aux_name)
     ax.legend()
     plt.title("Relative difference in computed value of labeled data from tox21"); plt.xlabel("Biological targets"); plt.ylabel("The relative difference of aux. props.")
     ticks = [3.6, 3.8, 4.0, 4.2, 4.4, 4.6, 4.8, 5.0, 5.2, 5.4]
@@ -176,6 +189,7 @@ def one_label_reg_plot(labels, smiles, aux_tasks, all_mord_descriptors, target_t
         values = v[j]
         # Skip if value is an error msg
         if is_value_valid(values[0]):
+            p = shorten_prop_name(p, total_tasks)
             axs[j].scatter(x=labels, y=values, s=2, label=p, color=colors[j%len(colors)])
             axs[j].legend()
 
@@ -219,7 +233,8 @@ def one_label_clas_plot(labels, smiles, aux_tasks, all_mord_descriptors, target_
         diff = (avg1/avg0)*100
         results.append(diff)
     ax.grid(True)
-    ax.scatter(x=total_tasks, y=np.log(results))
+    alphabet = [(f"prop {p}") for p in string.ascii_lowercase]
+    ax.scatter(x=alphabet[:len(total_tasks)], y=np.log(results))
     plt.title(f"Relative difference in computed value of labeled data from {target_task}"); plt.xlabel("Auxiliary targets"); plt.ylabel("The relative difference of aux. props.")
     ticks = [3.4, 3.6, 3.8, 4.0, 4.2, 4.4, 4.6, 4.8, 5.0, 5.2]
     plt.xticks(rotation=45, ha='right'); plt.yticks(ticks=np.array(ticks), labels=[f"{np.exp(i):.2f}%" for i in ticks])
