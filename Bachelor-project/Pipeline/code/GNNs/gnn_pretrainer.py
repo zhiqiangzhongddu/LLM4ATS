@@ -75,10 +75,9 @@ class GNNPreTrainer():
 
         # -----------TESTING-------------
         if use_QM9: 
-            self.dataset = "QM9"
+            self.pretraining_dataset = "QM9"
             self.dataset, self.train_loader, self.valid_loader, self.test_loader, self.data_loader = self.preprocess_QM_data()
-            self.pretrain_num_tasks = self.dataset.y.shape[1]
-
+            self.num_tasks = self.dataset.y.shape[1]
         self.model = self.setup_model(pretrain=True) # Set the model to use pre-training number of tasks
         self.optimizer = self.setup_optimizers()
         trainable_params = sum(p.numel() for p in self.model.parameters() if p.requires_grad)
@@ -135,13 +134,14 @@ class GNNPreTrainer():
     def preprocess_QM_data(self):
         # Preprocess data
         dataloader = DatasetLoader(
-            name=self.dataset, text='', feature=self.feature,
+            name=self.pretraining_dataset, text='', feature=self.feature,
             lm_model_name=self.lm_model_name, seed=self.seed
         )
         dataset = dataloader.dataset
-
-        PEMP_props_idx = [3, 4, 7, 10, 14]
-        dataset.y = dataset.y[:,PEMP_props_idx]
+        
+        print(dataset[0].x)
+        
+        
 
         dataset._data.y = torch.cat(
             (dataset.y,

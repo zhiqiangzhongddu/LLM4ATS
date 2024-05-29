@@ -10,6 +10,7 @@ from torch_geometric.datasets import QM9
 from torch_geometric.data.dataset import Dataset
 
 
+
 class DatasetLoader():
     def __init__(
             self, name="ogbg-moltox21", text='raw',
@@ -28,7 +29,9 @@ class DatasetLoader():
     def load_data(self):
         # Download and process data at root
         if self.name == "QM9":
-            dataset = QM9(root=PurePath(project_root_path, "data"))
+            #dataset = QM9(root=PurePath(project_root_path, "data"))
+            dataset = PygGraphPropPredDataset(name = "QM9", root = PurePath(project_root_path, "data/QM9"))
+            print(dataset)
         else:
             dataset = PygGraphPropPredDataset(
                 name=self.name, root=PurePath(project_root_path, "data")
