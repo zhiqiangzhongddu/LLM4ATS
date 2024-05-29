@@ -1,0 +1,312 @@
+
+Biological target NR-AR has 7265 labeled molecules
+
+Average value of 'moreau-broto autocorrelation of lag 8 weighted by atomic number' for non-toxic mols: 801.1614433582519
+Average value of 'moreau-broto autocorrelation of lag 8 weighted by atomic number' for toxic mols: 1476.8252427184466
+Difference: 184.34%
+
+Average value of 'moreau-broto autocorrelation of lag 0 weighted by intrinsic state' for non-toxic mols: 179.82594533015097
+Average value of 'moreau-broto autocorrelation of lag 0 weighted by intrinsic state' for toxic mols: 251.9624618621617
+Difference: 140.11%
+
+Average value of 'moran coefficient of lag 6 weighted by sanderson en' for non-toxic mols: -0.02807876200449284
+Average value of 'moran coefficient of lag 6 weighted by sanderson en' for toxic mols: -0.011134156803436481
+Difference: 39.65%
+
+Average value of 'logarithmic coefficient sum of the last eigenvector from barysz matrix weighted by allred-rocow en' for non-toxic mols: 1.772411078373203
+Average value of 'logarithmic coefficient sum of the last eigenvector from barysz matrix weighted by allred-rocow en' for toxic mols: 2.3636123113220053
+Difference: 133.36%
+
+Average value of '4-ordered averaged chi path weighted by valence electrons' for non-toxic mols: 0.07917879446830106
+Average value of '4-ordered averaged chi path weighted by valence electrons' for toxic mols: 0.0693527836710375
+Difference: 87.59%
+
+
+
+----------------------------------------
+
+Biological target NR-AR-LBD has 6758 labeled molecules
+
+Average value of 'moreau-broto autocorrelation of lag 8 weighted by atomic number' for non-toxic mols: 755.218218064714
+Average value of 'moreau-broto autocorrelation of lag 8 weighted by atomic number' for toxic mols: 1259.9789029535864
+Difference: 166.84%
+
+Average value of 'moreau-broto autocorrelation of lag 0 weighted by intrinsic state' for non-toxic mols: 175.9251348829381
+Average value of 'moreau-broto autocorrelation of lag 0 weighted by intrinsic state' for toxic mols: 243.82533293315055
+Difference: 138.60%
+
+Average value of 'moran coefficient of lag 6 weighted by sanderson en' for non-toxic mols: -0.03005841722935704
+Average value of 'moran coefficient of lag 6 weighted by sanderson en' for toxic mols: -0.00257703719369919
+Difference: 8.57%
+
+Average value of 'logarithmic coefficient sum of the last eigenvector from barysz matrix weighted by allred-rocow en' for non-toxic mols: 1.735605022626189
+Average value of 'logarithmic coefficient sum of the last eigenvector from barysz matrix weighted by allred-rocow en' for toxic mols: 2.3394199528351165
+Difference: 134.79%
+
+Average value of '4-ordered averaged chi path weighted by valence electrons' for non-toxic mols: 0.07819115549609548
+Average value of '4-ordered averaged chi path weighted by valence electrons' for toxic mols: 0.08579836694647595
+Difference: 109.73%
+
+
+
+----------------------------------------
+
+Biological target NR-AhR has 6549 labeled molecules
+
+Average value of 'moreau-broto autocorrelation of lag 8 weighted by atomic number' for non-toxic mols: 807.9181802456322
+Average value of 'moreau-broto autocorrelation of lag 8 weighted by atomic number' for toxic mols: 731.42578125
+Difference: 90.53%
+
+Average value of 'moreau-broto autocorrelation of lag 0 weighted by intrinsic state' for non-toxic mols: 183.14536919908375
+Average value of 'moreau-broto autocorrelation of lag 0 weighted by intrinsic state' for toxic mols: 158.62747952102217
+Difference: 86.61%
+
+Average value of 'moran coefficient of lag 6 weighted by sanderson en' for non-toxic mols: -0.01778637102935594
+Average value of 'moran coefficient of lag 6 weighted by sanderson en' for toxic mols: -0.06995961681864492
+Difference: 393.33%
+
+Average value of 'logarithmic coefficient sum of the last eigenvector from barysz matrix weighted by allred-rocow en' for non-toxic mols: 1.7388829210542356
+Average value of 'logarithmic coefficient sum of the last eigenvector from barysz matrix weighted by allred-rocow en' for toxic mols: 1.9372673858190086
+Difference: 111.41%
+
+Average value of '4-ordered averaged chi path weighted by valence electrons' for non-toxic mols: 0.08216568442363603
+Average value of '4-ordered averaged chi path weighted by valence electrons' for toxic mols: 0.056342467057160305
+Difference: 68.57%
+
+
+
+----------------------------------------
+
+Biological target NR-Aromatase has 5821 labeled molecules
+
+Average value of 'moreau-broto autocorrelation of lag 8 weighted by atomic number' for non-toxic mols: 727.8101793153414
+Average value of 'moreau-broto autocorrelation of lag 8 weighted by atomic number' for toxic mols: 1369.5166666666667
+Difference: 188.17%
+
+Average value of 'moreau-broto autocorrelation of lag 0 weighted by intrinsic state' for non-toxic mols: 175.12837651966018
+Average value of 'moreau-broto autocorrelation of lag 0 weighted by intrinsic state' for toxic mols: 220.921106286464
+Difference: 126.15%
+
+Average value of 'moran coefficient of lag 6 weighted by sanderson en' for non-toxic mols: -0.03183385092486026
+Average value of 'moran coefficient of lag 6 weighted by sanderson en' for toxic mols: -0.003344162452759435
+Difference: 10.51%
+
+Average value of 'logarithmic coefficient sum of the last eigenvector from barysz matrix weighted by allred-rocow en' for non-toxic mols: 1.6871208650396594
+Average value of 'logarithmic coefficient sum of the last eigenvector from barysz matrix weighted by allred-rocow en' for toxic mols: 2.302976744738231
+Difference: 136.50%
+
+Average value of '4-ordered averaged chi path weighted by valence electrons' for non-toxic mols: 0.07990146336954125
+Average value of '4-ordered averaged chi path weighted by valence electrons' for toxic mols: 0.07010679468459376
+Difference: 87.74%
+
+
+
+----------------------------------------
+
+Biological target NR-ER has 6193 labeled molecules
+
+Average value of 'moreau-broto autocorrelation of lag 8 weighted by atomic number' for non-toxic mols: 723.3218518518519
+Average value of 'moreau-broto autocorrelation of lag 8 weighted by atomic number' for toxic mols: 885.485498108449
+Difference: 122.42%
+
+Average value of 'moreau-broto autocorrelation of lag 0 weighted by intrinsic state' for non-toxic mols: 175.17523270069069
+Average value of 'moreau-broto autocorrelation of lag 0 weighted by intrinsic state' for toxic mols: 189.01884883063767
+Difference: 107.90%
+
+Average value of 'moran coefficient of lag 6 weighted by sanderson en' for non-toxic mols: -0.027877191961564657
+Average value of 'moran coefficient of lag 6 weighted by sanderson en' for toxic mols: -0.038169241104243995
+Difference: 136.92%
+
+Average value of 'logarithmic coefficient sum of the last eigenvector from barysz matrix weighted by allred-rocow en' for non-toxic mols: 1.6970777020229686
+Average value of 'logarithmic coefficient sum of the last eigenvector from barysz matrix weighted by allred-rocow en' for toxic mols: 1.98498489338251
+Difference: 116.96%
+
+Average value of '4-ordered averaged chi path weighted by valence electrons' for non-toxic mols: 0.07953892582335093
+Average value of '4-ordered averaged chi path weighted by valence electrons' for toxic mols: 0.07169253431111156
+Difference: 90.14%
+
+
+
+----------------------------------------
+
+Biological target NR-ER-LBD has 6955 labeled molecules
+
+Average value of 'moreau-broto autocorrelation of lag 8 weighted by atomic number' for non-toxic mols: 781.1638152914459
+Average value of 'moreau-broto autocorrelation of lag 8 weighted by atomic number' for toxic mols: 1076.6571428571428
+Difference: 137.83%
+
+Average value of 'moreau-broto autocorrelation of lag 0 weighted by intrinsic state' for non-toxic mols: 179.2164839270718
+Average value of 'moreau-broto autocorrelation of lag 0 weighted by intrinsic state' for toxic mols: 203.82575885190417
+Difference: 113.73%
+
+Average value of 'moran coefficient of lag 6 weighted by sanderson en' for non-toxic mols: -0.02822893423356622
+Average value of 'moran coefficient of lag 6 weighted by sanderson en' for toxic mols: 0.004298343536053991
+Difference: -15.23%
+
+Average value of 'logarithmic coefficient sum of the last eigenvector from barysz matrix weighted by allred-rocow en' for non-toxic mols: 1.7528057528314063
+Average value of 'logarithmic coefficient sum of the last eigenvector from barysz matrix weighted by allred-rocow en' for toxic mols: 2.1139626629960007
+Difference: 120.60%
+
+Average value of '4-ordered averaged chi path weighted by valence electrons' for non-toxic mols: 0.07814388463468828
+Average value of '4-ordered averaged chi path weighted by valence electrons' for toxic mols: 0.08662888650697738
+Difference: 110.86%
+
+
+
+----------------------------------------
+
+Biological target NR-PPAR-gamma has 6450 labeled molecules
+
+Average value of 'moreau-broto autocorrelation of lag 8 weighted by atomic number' for non-toxic mols: 703.117337164751
+Average value of 'moreau-broto autocorrelation of lag 8 weighted by atomic number' for toxic mols: 1116.510752688172
+Difference: 158.79%
+
+Average value of 'moreau-broto autocorrelation of lag 0 weighted by intrinsic state' for non-toxic mols: 174.81172466589916
+Average value of 'moreau-broto autocorrelation of lag 0 weighted by intrinsic state' for toxic mols: 199.24445486373273
+Difference: 113.98%
+
+Average value of 'moran coefficient of lag 6 weighted by sanderson en' for non-toxic mols: -0.028358815829119786
+Average value of 'moran coefficient of lag 6 weighted by sanderson en' for toxic mols: -0.043719813997616035
+Difference: 154.17%
+
+Average value of 'logarithmic coefficient sum of the last eigenvector from barysz matrix weighted by allred-rocow en' for non-toxic mols: 1.7067730418126024
+Average value of 'logarithmic coefficient sum of the last eigenvector from barysz matrix weighted by allred-rocow en' for toxic mols: 2.075528471969182
+Difference: 121.61%
+
+Average value of '4-ordered averaged chi path weighted by valence electrons' for non-toxic mols: 0.07881298290119887
+Average value of '4-ordered averaged chi path weighted by valence electrons' for toxic mols: 0.1146096027999765
+Difference: 145.42%
+
+
+
+----------------------------------------
+
+Biological target SR-ARE has 5832 labeled molecules
+
+Average value of 'moreau-broto autocorrelation of lag 8 weighted by atomic number' for non-toxic mols: 554.1249488752557
+Average value of 'moreau-broto autocorrelation of lag 8 weighted by atomic number' for toxic mols: 861.1380042462845
+Difference: 155.41%
+
+Average value of 'moreau-broto autocorrelation of lag 0 weighted by intrinsic state' for non-toxic mols: 159.7896826005347
+Average value of 'moreau-broto autocorrelation of lag 0 weighted by intrinsic state' for toxic mols: 193.18633470498455
+Difference: 120.90%
+
+Average value of 'moran coefficient of lag 6 weighted by sanderson en' for non-toxic mols: -0.027419096618612256
+Average value of 'moran coefficient of lag 6 weighted by sanderson en' for toxic mols: -0.042936151304269365
+Difference: 156.59%
+
+Average value of 'logarithmic coefficient sum of the last eigenvector from barysz matrix weighted by allred-rocow en' for non-toxic mols: 1.6081471899047428
+Average value of 'logarithmic coefficient sum of the last eigenvector from barysz matrix weighted by allred-rocow en' for toxic mols: 1.974959720490287
+Difference: 122.81%
+
+Average value of '4-ordered averaged chi path weighted by valence electrons' for non-toxic mols: 0.08036883506876331
+Average value of '4-ordered averaged chi path weighted by valence electrons' for toxic mols: 0.07524499959714182
+Difference: 93.62%
+
+
+
+----------------------------------------
+
+Biological target SR-ATADS has 7072 labeled molecules
+
+Average value of 'moreau-broto autocorrelation of lag 8 weighted by atomic number' for non-toxic mols: 770.9942714453584
+Average value of 'moreau-broto autocorrelation of lag 8 weighted by atomic number' for toxic mols: 985.7045454545455
+Difference: 127.85%
+
+Average value of 'moreau-broto autocorrelation of lag 0 weighted by intrinsic state' for non-toxic mols: 179.34453023499753
+Average value of 'moreau-broto autocorrelation of lag 0 weighted by intrinsic state' for toxic mols: 186.09848671013242
+Difference: 103.77%
+
+Average value of 'moran coefficient of lag 6 weighted by sanderson en' for non-toxic mols: -0.02935696646995353
+Average value of 'moran coefficient of lag 6 weighted by sanderson en' for toxic mols: -0.0041066122191652675
+Difference: 13.99%
+
+Average value of 'logarithmic coefficient sum of the last eigenvector from barysz matrix weighted by allred-rocow en' for non-toxic mols: 1.758323241881312
+Average value of 'logarithmic coefficient sum of the last eigenvector from barysz matrix weighted by allred-rocow en' for toxic mols: 1.9965317491742687
+Difference: 113.55%
+
+Average value of '4-ordered averaged chi path weighted by valence electrons' for non-toxic mols: 0.07863804622230569
+Average value of '4-ordered averaged chi path weighted by valence electrons' for toxic mols: 0.07435184382034923
+Difference: 94.55%
+
+
+
+----------------------------------------
+
+Biological target SR-HSE has 6467 labeled molecules
+
+Average value of 'moreau-broto autocorrelation of lag 8 weighted by atomic number' for non-toxic mols: 632.9794913863823
+Average value of 'moreau-broto autocorrelation of lag 8 weighted by atomic number' for toxic mols: 887.5725806451613
+Difference: 140.22%
+
+Average value of 'moreau-broto autocorrelation of lag 0 weighted by intrinsic state' for non-toxic mols: 169.32530501647034
+Average value of 'moreau-broto autocorrelation of lag 0 weighted by intrinsic state' for toxic mols: 159.30328186844883
+Difference: 94.08%
+
+Average value of 'moran coefficient of lag 6 weighted by sanderson en' for non-toxic mols: -0.028237048683810037
+Average value of 'moran coefficient of lag 6 weighted by sanderson en' for toxic mols: -0.0388937655285314
+Difference: 137.74%
+
+Average value of 'logarithmic coefficient sum of the last eigenvector from barysz matrix weighted by allred-rocow en' for non-toxic mols: 1.6922174551311178
+Average value of 'logarithmic coefficient sum of the last eigenvector from barysz matrix weighted by allred-rocow en' for toxic mols: 1.8905755231632178
+Difference: 111.72%
+
+Average value of '4-ordered averaged chi path weighted by valence electrons' for non-toxic mols: 0.07730482000222397
+Average value of '4-ordered averaged chi path weighted by valence electrons' for toxic mols: 0.1014651137519605
+Difference: 131.25%
+
+
+
+----------------------------------------
+
+Biological target SR-MMP has 5810 labeled molecules
+
+Average value of 'moreau-broto autocorrelation of lag 8 weighted by atomic number' for non-toxic mols: 672.5433360588717
+Average value of 'moreau-broto autocorrelation of lag 8 weighted by atomic number' for toxic mols: 1140.4477124183006
+Difference: 169.57%
+
+Average value of 'moreau-broto autocorrelation of lag 0 weighted by intrinsic state' for non-toxic mols: 173.0472653145856
+Average value of 'moreau-broto autocorrelation of lag 0 weighted by intrinsic state' for toxic mols: 199.94575648299073
+Difference: 115.54%
+
+Average value of 'moran coefficient of lag 6 weighted by sanderson en' for non-toxic mols: -0.029175941503294615
+Average value of 'moran coefficient of lag 6 weighted by sanderson en' for toxic mols: -0.05160097386101395
+Difference: 176.86%
+
+Average value of 'logarithmic coefficient sum of the last eigenvector from barysz matrix weighted by allred-rocow en' for non-toxic mols: 1.6575445028383955
+Average value of 'logarithmic coefficient sum of the last eigenvector from barysz matrix weighted by allred-rocow en' for toxic mols: 2.1305600128829205
+Difference: 128.54%
+
+Average value of '4-ordered averaged chi path weighted by valence electrons' for non-toxic mols: 0.08115883729196402
+Average value of '4-ordered averaged chi path weighted by valence electrons' for toxic mols: 0.07267993662821769
+Difference: 89.55%
+
+
+
+----------------------------------------
+
+Biological target SR-p53 has 6774 labeled molecules
+
+Average value of 'moreau-broto autocorrelation of lag 8 weighted by atomic number' for non-toxic mols: 726.7148480554243
+Average value of 'moreau-broto autocorrelation of lag 8 weighted by atomic number' for toxic mols: 1414.3640661938534
+Difference: 194.62%
+
+Average value of 'moreau-broto autocorrelation of lag 0 weighted by intrinsic state' for non-toxic mols: 176.75945484022185
+Average value of 'moreau-broto autocorrelation of lag 0 weighted by intrinsic state' for toxic mols: 232.51877816383598
+Difference: 131.55%
+
+Average value of 'moran coefficient of lag 6 weighted by sanderson en' for non-toxic mols: -0.028773160402972797
+Average value of 'moran coefficient of lag 6 weighted by sanderson en' for toxic mols: -0.01230763414737342
+Difference: 42.77%
+
+Average value of 'logarithmic coefficient sum of the last eigenvector from barysz matrix weighted by allred-rocow en' for non-toxic mols: 1.7234465152469653
+Average value of 'logarithmic coefficient sum of the last eigenvector from barysz matrix weighted by allred-rocow en' for toxic mols: 2.205616211174154
+Difference: 127.98%
+
+Average value of '4-ordered averaged chi path weighted by valence electrons' for non-toxic mols: 0.07867576280072444
+Average value of '4-ordered averaged chi path weighted by valence electrons' for toxic mols: 0.07017243612658816
+Difference: 89.19%
+
+
+
+----------------------------------------
