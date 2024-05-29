@@ -18,18 +18,19 @@ class our_LLM_class:
     # The wanted format of the anwser
     anwser_format = "And can you provide the anwser in the format like like shown below? do NOT deviate from this format.\n\n- <anwser>\n- <anwser>\n- <anwser>..."
     
+    # Number of auxiliary tasks to return
+    aux_tasks = 5 
+
     # Max number of properties to get from the LLM
-    aux_tasks = 20 
+    max_props = 10
     
-    # The default prefix string
-    # prefix_str = f"Can you provide a subset of maximum size of {aux_tasks} out of the given list of properties that have the highest correlation with the {target_task} in a given molecule? Please select the properties that are the most important. {anwser_format}\n"
     template_set = query_attempts
     
     message_name = 'default'
     
     message = copy.deepcopy(template_set['default'])
     
-    prefix_str = message[1]['content'].format(aux_tasks, target_task, anwser_format)
+    prefix_str = message[1]['content'].format(max_props, target_task, anwser_format)
     
     # token_encoding = tiktoken.get_encoding("cl100k_base")
 
@@ -102,7 +103,7 @@ class our_LLM_class:
             self.message_name = prefix_name
             self.message = copy.deepcopy(self.template_set[prefix_name])
             if prefix_name != 'form_4':
-                self.prefix_str = self.message[1]['content'].format(self.aux_tasks, self.target_task, self.anwser_format)
+                self.prefix_str = self.message[1]['content'].format(self.max_props, self.target_task, self.anwser_format)
         else:
             print("Invalid prefix name")
 
@@ -134,11 +135,12 @@ class our_LLM_class:
         cnt = dict(sorted(cnt.items(), key=lambda item: item[1], reverse=True))
 
         f = open(self.path+"/LLMqueries/txt_files/counters.txt", "a")
-        f.write(f"Message template: {self.message_name}, Number of tournaments: {self.NO_tournaments}, Target task: {self.target_task}, Number of features: {self.aux_tasks}\n\n")
+        f.write(f"Message template: {self.message_name}, Number of tournaments: {self.NO_tournaments}, Target task: {self.target_task}, Number of features: {self.max_props}\n\n")
         for key in cnt:
             f.write(f"{key}: {cnt[key]}\n")
         f.write("\n\n"+"-"*50+"\n\n")
         f.close()
+        # Return the desired number of aux tasks
         res = []
         for key in cnt:
             res.append(key)
@@ -161,7 +163,7 @@ class our_LLM_class:
         for s in props:
             if (counter % self.props_per_query)==0 and counter != 0:
                 if self.message_name in ['form_4']:
-                    queries.append(query_attempts[self.message_name][1]['content'].format(query,self.aux_tasks, self.target_task,self.aux_tasks))
+                    queries.append(query_attempts[self.message_name][1]['content'].format(query,self.max_props, self.target_task,self.max_props))
                 else: queries.append(self.prefix_str + query)
                 query = s + "\n"
             else:
@@ -170,12 +172,12 @@ class our_LLM_class:
         # append the rest of the properties
         if (counter % self.props_per_query)!=0:
             if self.message_name in ['form_4']:
-                queries.append(query_attempts[self.message_name][1]['content'].format(query,self.aux_tasks, self.target_task, self.aux_tasks))
+                queries.append(query_attempts[self.message_name][1]['content'].format(query,self.max_props, self.target_task, self.max_props))
             else: queries.append(self.prefix_str + query)
         print(f"Number of queries: {len(queries)}")
         return queries
         
-    # Recursively calls chat-GPT until the number of suggested properties is 'aux_tasks'
+    # Recursively calls chat-GPT until the number of suggested properties is 'max_props'
     def __get_final_result(self, queries):
         extracted_responses = ""
         for i, q in enumerate(queries):    
@@ -185,7 +187,7 @@ class our_LLM_class:
             extracted_responses = extracted_responses + self.__extract_response(response)
         tmp = len(extracted_responses.split("\n"))
         print(f"Number of extracted responses {tmp}")
-        if tmp <= self.aux_tasks + 1:
+        if tmp <= self.max_props + 1:
             return extracted_responses
         return self.__get_final_result(self.__get_queries(extracted_responses,False))
     
@@ -223,7 +225,7 @@ class our_LLM_class:
         delimiter = ("Message template: " + self.message_name
                     + ", Number of tournaments: " + str(self.NO_tournaments)
                     + ", Target task: " + self.target_task
-                    + ", Number of features: " + str(self.aux_tasks))
+                    + ", Number of features: " + str(self.max_props))
         ct_split = file_content.split(delimiter)
         print("--------------------------------")
         if ct_split[0] != file_content:
