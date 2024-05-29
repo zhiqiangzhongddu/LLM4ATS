@@ -478,7 +478,7 @@ number of hydrogen bond acceptors: 1
 
 -------------------------------------------------- AUX TASKS IS ACTUALLY 10 BUT SAYS FOR 5 FOR PRETRAINING
 
-Message template: form_4, Number of tournaments: 20, Target task: level of toxicity, Number of features: 5
+Message template: form_4, Number of tournaments: 20, Target task: level of toxicity, Number of features: 10
 
 TPSA: 15
 total polar surface area: 11
@@ -549,7 +549,7 @@ SlogP_VSA4: 1
 
 -------------------------------------------------- AUX TASKS IS ACTUALLY 10 BUT SAYS FOR 5 FOR PRETRAINING
 
-Message template: form_4, Number of tournaments: 20, Target task: solubility, Number of features: 5
+Message template: form_4, Number of tournaments: 20, Target task: solubility, Number of features: 10
 
 NumHAcceptors: 12
 TPSA: 11
@@ -614,7 +614,7 @@ EState VSA Descriptor 8 (2.05 <= x < 4.69): 1
 
 -------------------------------------------------- AUX TASKS IS ACTUALLY 10 BUT SAYS FOR 5 FOR PRETRAINING
 
-Message template: form_4, Number of tournaments: 20, Target task: lipophilicity, Number of features: 5
+Message template: form_4, Number of tournaments: 20, Target task: lipophilicity, Number of features: 10
 
 MolLogP: 17
 total hydrophobic surface area: 10
@@ -772,7 +772,7 @@ fr_Al_OH_noTert: 1
 
 --------------------------------------------------
 
-Message template: form_4, Number of tournaments: 20, Target task: blood-brain barrier permeability, Number of features: 5
+Message template: form_4, Number of tournaments: 20, Target task: blood-brain barrier permeability, Number of features: 10
 
 TPSA: 12
 NumHAcceptors: 12
