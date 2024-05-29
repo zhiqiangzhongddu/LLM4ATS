@@ -772,7 +772,7 @@ fr_Al_OH_noTert: 1
 
 --------------------------------------------------
 
-Message template: form_4, Number of tournaments: 20, Target task: blood-brain barrier permeability, Number of features: 10
+Message template: form_4, Number of tournaments: 20, Target task: blood-brain barrier permeability, Number of features: 5
 
 TPSA: 12
 NumHAcceptors: 12

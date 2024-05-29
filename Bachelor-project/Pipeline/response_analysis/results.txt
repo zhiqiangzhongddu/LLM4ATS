@@ -1,25 +1,25 @@
 
 Biological target NR-AR has 7265 labeled molecules
 
-Average value of 'sum of soh' for non-toxic mols: 6.044910540326289
-Average value of 'sum of soh' for toxic mols: 12.74188438285607
-Difference: 210.79%
+Average value of 'TPSA' for non-toxic mols: 57.976937895342054
+Average value of 'TPSA' for toxic mols: 77.95038834951448
+Difference: 134.45%
 
-Average value of '5-ordered z-modified information content' for non-toxic mols: 26.01145997431418
-Average value of '5-ordered z-modified information content' for toxic mols: 25.490763035030273
-Difference: 98.00%
+Average value of 'MolLogP' for non-toxic mols: 2.3589515138010375
+Average value of 'MolLogP' for toxic mols: 2.9519414563106787
+Difference: 125.14%
 
-Average value of 'moreau-broto autocorrelation of lag 6 weighted by atomic number' for non-toxic mols: 1097.460753306498
-Average value of 'moreau-broto autocorrelation of lag 6 weighted by atomic number' for toxic mols: 1997.0064724919093
-Difference: 181.97%
+Average value of 'NumHAcceptors' for non-toxic mols: 3.4761357101782635
+Average value of 'NumHAcceptors' for toxic mols: 4.524271844660194
+Difference: 130.15%
 
-Average value of 'centered moreau-broto autocorrelation of lag 8 weighted by ionization potential' for non-toxic mols: -1.047412202139186
-Average value of 'centered moreau-broto autocorrelation of lag 8 weighted by ionization potential' for toxic mols: -1.2575684242002485
-Difference: 120.06%
+Average value of 'NumHDonors' for non-toxic mols: 1.1828637147786083
+Average value of 'NumHDonors' for toxic mols: 1.7378640776699028
+Difference: 146.92%
 
-Average value of 'moran coefficient of lag 2 weighted by polarizability' for non-toxic mols: -0.005404345550479526
-Average value of 'moran coefficient of lag 2 weighted by polarizability' for toxic mols: 0.03284800444306579
-Difference: -607.81%
+Average value of 'fr_nitro' for non-toxic mols: 0.05405405405405406
+Average value of 'fr_nitro' for toxic mols: 0.012944983818770227
+Difference: 23.95%
 
 
 
@@ -27,25 +27,25 @@ Difference: -607.81%
 
 Biological target NR-AR-LBD has 6758 labeled molecules
 
-Average value of 'sum of soh' for non-toxic mols: 5.993278626680379
-Average value of 'sum of soh' for toxic mols: 11.489485493553138
-Difference: 191.71%
+Average value of 'TPSA' for non-toxic mols: 57.42607728875934
+Average value of 'TPSA' for toxic mols: 70.58223628691981
+Difference: 122.91%
 
-Average value of '5-ordered z-modified information content' for non-toxic mols: 25.642773275958714
-Average value of '5-ordered z-modified information content' for toxic mols: 25.658850860679898
-Difference: 100.06%
+Average value of 'MolLogP' for non-toxic mols: 2.2417131881613304
+Average value of 'MolLogP' for toxic mols: 2.9710738818565425
+Difference: 132.54%
 
-Average value of 'moreau-broto autocorrelation of lag 6 weighted by atomic number' for non-toxic mols: 1044.117773347646
-Average value of 'moreau-broto autocorrelation of lag 6 weighted by atomic number' for toxic mols: 1847.3586497890296
-Difference: 176.93%
+Average value of 'NumHAcceptors' for non-toxic mols: 3.4270817359300723
+Average value of 'NumHAcceptors' for toxic mols: 4.291139240506329
+Difference: 125.21%
 
-Average value of 'centered moreau-broto autocorrelation of lag 8 weighted by ionization potential' for non-toxic mols: -0.9826386526417163
-Average value of 'centered moreau-broto autocorrelation of lag 8 weighted by ionization potential' for toxic mols: 1.1585611909553817
-Difference: -117.90%
+Average value of 'NumHDonors' for non-toxic mols: 1.1829474007054133
+Average value of 'NumHDonors' for toxic mols: 1.3881856540084387
+Difference: 117.35%
 
-Average value of 'moran coefficient of lag 2 weighted by polarizability' for non-toxic mols: -0.006998602967699959
-Average value of 'moran coefficient of lag 2 weighted by polarizability' for toxic mols: 0.041914402344201705
-Difference: -598.90%
+Average value of 'fr_nitro' for non-toxic mols: 0.048305474620456985
+Average value of 'fr_nitro' for toxic mols: 0.03375527426160337
+Difference: 69.88%
 
 
 
@@ -53,25 +53,25 @@ Difference: -598.90%
 
 Biological target NR-AhR has 6549 labeled molecules
 
-Average value of 'sum of soh' for non-toxic mols: 6.595271157619309
-Average value of 'sum of soh' for toxic mols: 4.624674162417866
-Difference: 70.12%
+Average value of 'TPSA' for non-toxic mols: 58.307479674796845
+Average value of 'TPSA' for toxic mols: 56.64683593749999
+Difference: 97.15%
 
-Average value of '5-ordered z-modified information content' for non-toxic mols: 25.80412792796056
-Average value of '5-ordered z-modified information content' for toxic mols: 25.614660257377825
-Difference: 99.27%
+Average value of 'MolLogP' for non-toxic mols: 2.224051055180772
+Average value of 'MolLogP' for toxic mols: 3.0124999739583305
+Difference: 135.45%
 
-Average value of 'moreau-broto autocorrelation of lag 6 weighted by atomic number' for non-toxic mols: 1100.3864383324685
-Average value of 'moreau-broto autocorrelation of lag 6 weighted by atomic number' for toxic mols: 1064.125
-Difference: 96.70%
+Average value of 'NumHAcceptors' for non-toxic mols: 3.4519979242345613
+Average value of 'NumHAcceptors' for toxic mols: 3.5455729166666665
+Difference: 102.71%
 
-Average value of 'centered moreau-broto autocorrelation of lag 8 weighted by ionization potential' for non-toxic mols: -0.7946394523894729
-Average value of 'centered moreau-broto autocorrelation of lag 8 weighted by ionization potential' for toxic mols: -1.7944337078864185
-Difference: 225.82%
+Average value of 'NumHDonors' for non-toxic mols: 1.1885486939975782
+Average value of 'NumHDonors' for toxic mols: 1.2473958333333333
+Difference: 104.95%
 
-Average value of 'moran coefficient of lag 2 weighted by polarizability' for non-toxic mols: -0.009904392998396867
-Average value of 'moran coefficient of lag 2 weighted by polarizability' for toxic mols: 0.021854575612144277
-Difference: -220.66%
+Average value of 'fr_nitro' for non-toxic mols: 0.04497491783428473
+Average value of 'fr_nitro' for toxic mols: 0.07161458333333333
+Difference: 159.23%
 
 
 
@@ -79,25 +79,25 @@ Difference: -220.66%
 
 Biological target NR-Aromatase has 5821 labeled molecules
 
-Average value of 'sum of soh' for non-toxic mols: 6.222109171427941
-Average value of 'sum of soh' for toxic mols: 7.033135178657122
-Difference: 113.03%
+Average value of 'TPSA' for non-toxic mols: 58.24364607860905
+Average value of 'TPSA' for toxic mols: 63.31976666666661
+Difference: 108.72%
 
-Average value of '5-ordered z-modified information content' for non-toxic mols: 25.26168996131191
-Average value of '5-ordered z-modified information content' for toxic mols: 28.825560700302905
-Difference: 114.11%
+Average value of 'MolLogP' for non-toxic mols: 2.0585130374932112
+Average value of 'MolLogP' for toxic mols: 3.90443526666667
+Difference: 189.67%
 
-Average value of 'moreau-broto autocorrelation of lag 6 weighted by atomic number' for non-toxic mols: 999.3490309726499
-Average value of 'moreau-broto autocorrelation of lag 6 weighted by atomic number' for toxic mols: 1794.8266666666666
-Difference: 179.60%
+Average value of 'NumHAcceptors' for non-toxic mols: 3.4001086759644994
+Average value of 'NumHAcceptors' for toxic mols: 4.183333333333334
+Difference: 123.04%
 
-Average value of 'centered moreau-broto autocorrelation of lag 8 weighted by ionization potential' for non-toxic mols: -0.9093151421061699
-Average value of 'centered moreau-broto autocorrelation of lag 8 weighted by ionization potential' for toxic mols: -4.760280084974495
-Difference: 523.50%
+Average value of 'NumHDonors' for non-toxic mols: 1.213186017025901
+Average value of 'NumHDonors' for toxic mols: 1.1366666666666667
+Difference: 93.69%
 
-Average value of 'moran coefficient of lag 2 weighted by polarizability' for non-toxic mols: -0.011239320332662126
-Average value of 'moran coefficient of lag 2 weighted by polarizability' for toxic mols: 0.038783349599221036
-Difference: -345.07%
+Average value of 'fr_nitro' for non-toxic mols: 0.04437601883716718
+Average value of 'fr_nitro' for toxic mols: 0.07666666666666666
+Difference: 172.77%
 
 
 
@@ -105,25 +105,25 @@ Difference: -345.07%
 
 Biological target NR-ER has 6193 labeled molecules
 
-Average value of 'sum of soh' for non-toxic mols: 5.96865916821368
-Average value of 'sum of soh' for toxic mols: 8.857141800892915
-Difference: 148.39%
+Average value of 'TPSA' for non-toxic mols: 57.59322222222239
+Average value of 'TPSA' for toxic mols: 61.094564943253545
+Difference: 106.08%
 
-Average value of '5-ordered z-modified information content' for non-toxic mols: 25.38900190522047
-Average value of '5-ordered z-modified information content' for toxic mols: 25.963110052370123
-Difference: 102.26%
+Average value of 'MolLogP' for non-toxic mols: 2.1063195759259346
+Average value of 'MolLogP' for toxic mols: 2.762265825977304
+Difference: 131.14%
 
-Average value of 'moreau-broto autocorrelation of lag 6 weighted by atomic number' for non-toxic mols: 1004.8625925925926
-Average value of 'moreau-broto autocorrelation of lag 6 weighted by atomic number' for toxic mols: 1242.7288776796975
-Difference: 123.67%
+Average value of 'NumHAcceptors' for non-toxic mols: 3.419074074074074
+Average value of 'NumHAcceptors' for toxic mols: 3.6078184110970994
+Difference: 105.52%
 
-Average value of 'centered moreau-broto autocorrelation of lag 8 weighted by ionization potential' for non-toxic mols: -0.8127934003670981
-Average value of 'centered moreau-broto autocorrelation of lag 8 weighted by ionization potential' for toxic mols: -2.061663352762194
-Difference: 253.65%
+Average value of 'NumHDonors' for non-toxic mols: 1.175185185185185
+Average value of 'NumHDonors' for toxic mols: 1.4047919293820934
+Difference: 119.54%
 
-Average value of 'moran coefficient of lag 2 weighted by polarizability' for non-toxic mols: -0.007179471225691742
-Average value of 'moran coefficient of lag 2 weighted by polarizability' for toxic mols: -0.017061917679609538
-Difference: 237.65%
+Average value of 'fr_nitro' for non-toxic mols: 0.04703703703703704
+Average value of 'fr_nitro' for toxic mols: 0.0416141235813367
+Difference: 88.47%
 
 
 
@@ -131,25 +131,25 @@ Difference: 237.65%
 
 Biological target NR-ER-LBD has 6955 labeled molecules
 
-Average value of 'sum of soh' for non-toxic mols: 6.029594143248407
-Average value of 'sum of soh' for toxic mols: 11.477219989002057
-Difference: 190.35%
+Average value of 'TPSA' for non-toxic mols: 58.29747766843288
+Average value of 'TPSA' for toxic mols: 62.79517142857128
+Difference: 107.72%
 
-Average value of '5-ordered z-modified information content' for non-toxic mols: 25.66116796200854
-Average value of '5-ordered z-modified information content' for toxic mols: 28.08613679121765
-Difference: 109.45%
+Average value of 'MolLogP' for non-toxic mols: 2.2512139727479252
+Average value of 'MolLogP' for toxic mols: 3.15501482857143
+Difference: 140.15%
 
-Average value of 'moreau-broto autocorrelation of lag 6 weighted by atomic number' for non-toxic mols: 1075.0867524602575
-Average value of 'moreau-broto autocorrelation of lag 6 weighted by atomic number' for toxic mols: 1479.4514285714286
-Difference: 137.61%
+Average value of 'NumHAcceptors' for non-toxic mols: 3.483118849356548
+Average value of 'NumHAcceptors' for toxic mols: 3.6857142857142855
+Difference: 105.82%
 
-Average value of 'centered moreau-broto autocorrelation of lag 8 weighted by ionization potential' for non-toxic mols: -1.009170080201893
-Average value of 'centered moreau-broto autocorrelation of lag 8 weighted by ionization potential' for toxic mols: -1.0842856333183708
-Difference: 107.44%
+Average value of 'NumHDonors' for non-toxic mols: 1.1838001514004541
+Average value of 'NumHDonors' for toxic mols: 1.5457142857142858
+Difference: 130.57%
 
-Average value of 'moran coefficient of lag 2 weighted by polarizability' for non-toxic mols: -0.005644230651003478
-Average value of 'moran coefficient of lag 2 weighted by polarizability' for toxic mols: -0.0019947189788895978
-Difference: 35.34%
+Average value of 'fr_nitro' for non-toxic mols: 0.05253595760787282
+Average value of 'fr_nitro' for toxic mols: 0.05714285714285714
+Difference: 108.77%
 
 
 
@@ -157,25 +157,25 @@ Difference: 35.34%
 
 Biological target NR-PPAR-gamma has 6450 labeled molecules
 
-Average value of 'sum of soh' for non-toxic mols: 6.049704959220204
-Average value of 'sum of soh' for toxic mols: 6.051820034887068
-Difference: 100.03%
+Average value of 'TPSA' for non-toxic mols: 57.21883301404857
+Average value of 'TPSA' for toxic mols: 58.844731182795684
+Difference: 102.84%
 
-Average value of '5-ordered z-modified information content' for non-toxic mols: 25.3634912553263
-Average value of '5-ordered z-modified information content' for toxic mols: 29.632169457977735
-Difference: 116.83%
+Average value of 'MolLogP' for non-toxic mols: 2.1547311590038376
+Average value of 'MolLogP' for toxic mols: 3.4656729569892506
+Difference: 160.84%
 
-Average value of 'moreau-broto autocorrelation of lag 6 weighted by atomic number' for non-toxic mols: 997.5900383141762
-Average value of 'moreau-broto autocorrelation of lag 6 weighted by atomic number' for toxic mols: 1479.5967741935483
-Difference: 148.32%
+Average value of 'NumHAcceptors' for non-toxic mols: 3.380108556832695
+Average value of 'NumHAcceptors' for toxic mols: 3.6021505376344085
+Difference: 106.57%
 
-Average value of 'centered moreau-broto autocorrelation of lag 8 weighted by ionization potential' for non-toxic mols: -0.6150889852283907
-Average value of 'centered moreau-broto autocorrelation of lag 8 weighted by ionization potential' for toxic mols: -2.5417358696853225
-Difference: 413.23%
+Average value of 'NumHDonors' for non-toxic mols: 1.1799169859514687
+Average value of 'NumHDonors' for toxic mols: 1.064516129032258
+Difference: 90.22%
 
-Average value of 'moran coefficient of lag 2 weighted by polarizability' for non-toxic mols: -0.008253309317201996
-Average value of 'moran coefficient of lag 2 weighted by polarizability' for toxic mols: -0.023965978136595078
-Difference: 290.38%
+Average value of 'fr_nitro' for non-toxic mols: 0.04980842911877394
+Average value of 'fr_nitro' for toxic mols: 0.026881720430107527
+Difference: 53.97%
 
 
 
@@ -183,25 +183,25 @@ Difference: 290.38%
 
 Biological target SR-ARE has 5832 labeled molecules
 
-Average value of 'sum of soh' for non-toxic mols: 5.193361377820049
-Average value of 'sum of soh' for toxic mols: 5.619738264889039
-Difference: 108.21%
+Average value of 'TPSA' for non-toxic mols: 52.22198364008208
+Average value of 'TPSA' for toxic mols: 58.71922505307857
+Difference: 112.44%
 
-Average value of '5-ordered z-modified information content' for non-toxic mols: 24.609994655121106
-Average value of '5-ordered z-modified information content' for toxic mols: 28.028968446192103
-Difference: 113.89%
+Average value of 'MolLogP' for non-toxic mols: 2.024090124744384
+Average value of 'MolLogP' for toxic mols: 3.0030890764331186
+Difference: 148.37%
 
-Average value of 'moreau-broto autocorrelation of lag 6 weighted by atomic number' for non-toxic mols: 838.8081799591002
-Average value of 'moreau-broto autocorrelation of lag 6 weighted by atomic number' for toxic mols: 1231.755838641189
-Difference: 146.85%
+Average value of 'NumHAcceptors' for non-toxic mols: 3.0846625766871165
+Average value of 'NumHAcceptors' for toxic mols: 3.6008492569002124
+Difference: 116.73%
 
-Average value of 'centered moreau-broto autocorrelation of lag 8 weighted by ionization potential' for non-toxic mols: -0.3363540220374002
-Average value of 'centered moreau-broto autocorrelation of lag 8 weighted by ionization potential' for toxic mols: -2.2904515030461634
-Difference: 680.96%
+Average value of 'NumHDonors' for non-toxic mols: 1.0494887525562373
+Average value of 'NumHDonors' for toxic mols: 1.0711252653927814
+Difference: 102.06%
 
-Average value of 'moran coefficient of lag 2 weighted by polarizability' for non-toxic mols: -0.008825254150719273
-Average value of 'moran coefficient of lag 2 weighted by polarizability' for toxic mols: -0.003017861600661964
-Difference: 34.20%
+Average value of 'fr_nitro' for non-toxic mols: 0.04171779141104295
+Average value of 'fr_nitro' for toxic mols: 0.11358811040339703
+Difference: 272.28%
 
 
 
@@ -209,25 +209,25 @@ Difference: 34.20%
 
 Biological target SR-ATADS has 7072 labeled molecules
 
-Average value of 'sum of soh' for non-toxic mols: 6.245308504292389
-Average value of 'sum of soh' for toxic mols: 7.034727801948442
-Difference: 112.64%
+Average value of 'TPSA' for non-toxic mols: 57.862501468859996
+Average value of 'TPSA' for toxic mols: 66.01416666666663
+Difference: 114.09%
 
-Average value of '5-ordered z-modified information content' for non-toxic mols: 25.67429845611602
-Average value of '5-ordered z-modified information content' for toxic mols: 27.891493379553943
-Difference: 108.64%
+Average value of 'MolLogP' for non-toxic mols: 2.292603760282027
+Average value of 'MolLogP' for toxic mols: 2.6615934469696967
+Difference: 116.09%
 
-Average value of 'moreau-broto autocorrelation of lag 6 weighted by atomic number' for non-toxic mols: 1074.9848707403055
-Average value of 'moreau-broto autocorrelation of lag 6 weighted by atomic number' for toxic mols: 1310.2954545454545
-Difference: 121.89%
+Average value of 'NumHAcceptors' for non-toxic mols: 3.443448883666275
+Average value of 'NumHAcceptors' for toxic mols: 4.215909090909091
+Difference: 122.43%
 
-Average value of 'centered moreau-broto autocorrelation of lag 8 weighted by ionization potential' for non-toxic mols: -0.8877725297190219
-Average value of 'centered moreau-broto autocorrelation of lag 8 weighted by ionization potential' for toxic mols: -3.3826242435287175
-Difference: 381.02%
+Average value of 'NumHDonors' for non-toxic mols: 1.187279670975323
+Average value of 'NumHDonors' for toxic mols: 1.356060606060606
+Difference: 114.22%
 
-Average value of 'moran coefficient of lag 2 weighted by polarizability' for non-toxic mols: -0.005168452068574105
-Average value of 'moran coefficient of lag 2 weighted by polarizability' for toxic mols: -0.003969338554268536
-Difference: 76.80%
+Average value of 'fr_nitro' for non-toxic mols: 0.05096944770857814
+Average value of 'fr_nitro' for toxic mols: 0.045454545454545456
+Difference: 89.18%
 
 
 
@@ -235,25 +235,25 @@ Difference: 76.80%
 
 Biological target SR-HSE has 6467 labeled molecules
 
-Average value of 'sum of soh' for non-toxic mols: 5.423642280396483
-Average value of 'sum of soh' for toxic mols: 4.895311439091738
-Difference: 90.26%
+Average value of 'TPSA' for non-toxic mols: 54.568777686628565
+Average value of 'TPSA' for toxic mols: 45.30844086021502
+Difference: 83.03%
 
-Average value of '5-ordered z-modified information content' for non-toxic mols: 25.102629393194313
-Average value of '5-ordered z-modified information content' for toxic mols: 29.94055807948317
-Difference: 119.27%
+Average value of 'MolLogP' for non-toxic mols: 2.174353801476626
+Average value of 'MolLogP' for toxic mols: 3.5144653225806453
+Difference: 161.63%
 
-Average value of 'moreau-broto autocorrelation of lag 6 weighted by atomic number' for non-toxic mols: 936.7246923707958
-Average value of 'moreau-broto autocorrelation of lag 6 weighted by atomic number' for toxic mols: 1231.6935483870968
-Difference: 131.49%
+Average value of 'NumHAcceptors' for non-toxic mols: 3.2497128794093517
+Average value of 'NumHAcceptors' for toxic mols: 3.139784946236559
+Difference: 96.62%
 
-Average value of 'centered moreau-broto autocorrelation of lag 8 weighted by ionization potential' for non-toxic mols: -0.6713957913226725
-Average value of 'centered moreau-broto autocorrelation of lag 8 weighted by ionization potential' for toxic mols: -1.3222070513592388
-Difference: 196.93%
+Average value of 'NumHDonors' for non-toxic mols: 1.077932731747334
+Average value of 'NumHDonors' for toxic mols: 0.8978494623655914
+Difference: 83.29%
 
-Average value of 'moran coefficient of lag 2 weighted by polarizability' for non-toxic mols: -0.006272790445676444
-Average value of 'moran coefficient of lag 2 weighted by polarizability' for toxic mols: 0.006300313055241431
-Difference: -100.44%
+Average value of 'fr_nitro' for non-toxic mols: 0.052830188679245285
+Average value of 'fr_nitro' for toxic mols: 0.06720430107526881
+Difference: 127.21%
 
 
 
@@ -261,25 +261,25 @@ Difference: -100.44%
 
 Biological target SR-MMP has 5810 labeled molecules
 
-Average value of 'sum of soh' for non-toxic mols: 6.177475525737391
-Average value of 'sum of soh' for toxic mols: 8.35103866371987
-Difference: 135.19%
+Average value of 'TPSA' for non-toxic mols: 58.63655764513499
+Average value of 'TPSA' for toxic mols: 59.12864923747283
+Difference: 100.84%
 
-Average value of '5-ordered z-modified information content' for non-toxic mols: 24.922119749269118
-Average value of '5-ordered z-modified information content' for toxic mols: 28.51916085333306
-Difference: 114.43%
+Average value of 'MolLogP' for non-toxic mols: 1.8794670850367987
+Average value of 'MolLogP' for toxic mols: 3.7514675925925935
+Difference: 199.60%
 
-Average value of 'moreau-broto autocorrelation of lag 6 weighted by atomic number' for non-toxic mols: 946.5466067048242
-Average value of 'moreau-broto autocorrelation of lag 6 weighted by atomic number' for toxic mols: 1510.0588235294117
-Difference: 159.53%
+Average value of 'NumHAcceptors' for non-toxic mols: 3.4239574816026166
+Average value of 'NumHAcceptors' for toxic mols: 3.582788671023965
+Difference: 104.64%
 
-Average value of 'centered moreau-broto autocorrelation of lag 8 weighted by ionization potential' for non-toxic mols: -0.47871950821269516
-Average value of 'centered moreau-broto autocorrelation of lag 8 weighted by ionization potential' for toxic mols: -1.466465723167229
-Difference: 306.33%
+Average value of 'NumHDonors' for non-toxic mols: 1.2170891251022078
+Average value of 'NumHDonors' for toxic mols: 1.3071895424836601
+Difference: 107.40%
 
-Average value of 'moran coefficient of lag 2 weighted by polarizability' for non-toxic mols: -0.013646439809215658
-Average value of 'moran coefficient of lag 2 weighted by polarizability' for toxic mols: 0.012436548615459434
-Difference: -91.13%
+Average value of 'fr_nitro' for non-toxic mols: 0.03556827473426002
+Average value of 'fr_nitro' for toxic mols: 0.13616557734204793
+Difference: 382.83%
 
 
 
@@ -287,25 +287,25 @@ Difference: -91.13%
 
 Biological target SR-p53 has 6774 labeled molecules
 
-Average value of 'sum of soh' for non-toxic mols: 6.0667387773264565
-Average value of 'sum of soh' for toxic mols: 10.360952286489711
-Difference: 170.78%
+Average value of 'TPSA' for non-toxic mols: 57.74676113997798
+Average value of 'TPSA' for toxic mols: 79.1608510638297
+Difference: 137.08%
 
-Average value of '5-ordered z-modified information content' for non-toxic mols: 25.29526917727585
-Average value of '5-ordered z-modified information content' for toxic mols: 29.995510319047995
-Difference: 118.58%
+Average value of 'MolLogP' for non-toxic mols: 2.1722974681152647
+Average value of 'MolLogP' for toxic mols: 2.9568612293144247
+Difference: 136.12%
 
-Average value of 'moreau-broto autocorrelation of lag 6 weighted by atomic number' for non-toxic mols: 1025.4630766808377
-Average value of 'moreau-broto autocorrelation of lag 6 weighted by atomic number' for toxic mols: 1805.1583924349882
-Difference: 176.03%
+Average value of 'NumHAcceptors' for non-toxic mols: 3.4193040466068334
+Average value of 'NumHAcceptors' for toxic mols: 4.91725768321513
+Difference: 143.81%
 
-Average value of 'centered moreau-broto autocorrelation of lag 8 weighted by ionization potential' for non-toxic mols: -0.8163042991524792
-Average value of 'centered moreau-broto autocorrelation of lag 8 weighted by ionization potential' for toxic mols: -3.1487117307927113
-Difference: 385.73%
+Average value of 'NumHDonors' for non-toxic mols: 1.1760352700362147
+Average value of 'NumHDonors' for toxic mols: 1.7943262411347518
+Difference: 152.57%
 
-Average value of 'moran coefficient of lag 2 weighted by polarizability' for non-toxic mols: -0.007477081571238042
-Average value of 'moran coefficient of lag 2 weighted by polarizability' for toxic mols: 0.019747502831447834
-Difference: -264.11%
+Average value of 'fr_nitro' for non-toxic mols: 0.04991339946465124
+Average value of 'fr_nitro' for toxic mols: 0.06619385342789598
+Difference: 132.62%
 
 
 
