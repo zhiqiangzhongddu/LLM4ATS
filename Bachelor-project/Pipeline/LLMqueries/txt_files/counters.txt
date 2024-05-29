@@ -476,9 +476,9 @@ moreau-broto autocorrelation of lag 5 weighted by sanderson EN: 1
 number of hydrogen bond acceptors: 1
 
 
---------------------------------------------------
+-------------------------------------------------- AUX TASKS IS ACTUALLY 10 BUT SAYS FOR 5 FOR PRETRAINING
 
-Message template: form_4, Number of tournaments: 20, Target task: level of toxicity, Number of features: 10
+Message template: form_4, Number of tournaments: 20, Target task: level of toxicity, Number of features: 5
 
 TPSA: 15
 total polar surface area: 11
@@ -547,7 +547,7 @@ NumRotatableBonds: 1
 SlogP_VSA4: 1
 
 
---------------------------------------------------
+-------------------------------------------------- AUX TASKS IS ACTUALLY 10 BUT SAYS FOR 5 FOR PRETRAINING
 
 Message template: form_4, Number of tournaments: 20, Target task: solubility, Number of features: 5
 
@@ -612,7 +612,7 @@ MOE MR VSA Descriptor 9 (3.80 <= x < 4.00): 1
 EState VSA Descriptor 8 (2.05 <= x < 4.69): 1
 
 
---------------------------------------------------
+-------------------------------------------------- AUX TASKS IS ACTUALLY 10 BUT SAYS FOR 5 FOR PRETRAINING
 
 Message template: form_4, Number of tournaments: 20, Target task: lipophilicity, Number of features: 5
 
@@ -653,6 +653,178 @@ Number of C atoms: 1
 Number of H atoms: 1
 NumRotatableBonds: 1
 MolMR: 1
+
+
+-------------------------------------------------- 
+
+Message template: form_4, Number of tournaments: 20, Target task: blood-brain barrier permeability, Number of features: 20
+
+TPSA: 8
+NumHAcceptors: 7
+NumHDonors: 7
+MolLogP: 6
+fr_nitro: 5
+NumRotatableBonds: 4
+LabuteASA: 4
+acidic group count: 3
+NumHeteroatoms: 3
+fr_amide: 3
+Lipinski rule of five: 3
+SlogP_VSA4: 3
+fr_nitro_arom: 3
+number of hetero atoms: 2
+number of N atoms: 2
+number of O atoms: 2
+moreau-broto autocorrelation of lag 0 weighted by valence electrons: 2
+relative polar surface area: 2
+relative hydrophobic surface area: 2
+fr_phenol_noOrthoHbond: 2
+fr_methoxy: 2
+fr_halogen: 2
+fr_lactam: 2
+number of heavy atoms: 2
+NumAromaticRings: 2
+fr_aldehyde: 2
+SlogP_VSA5: 2
+fr_sulfonamd: 2
+fr_sulfone: 2
+moreau-broto autocorrelation of lag 1 weighted by valence electrons: 1
+moreau-broto autocorrelation of lag 2 weighted by valence electrons: 1
+moreau-broto autocorrelation of lag 3 weighted by valence electrons: 1
+moreau-broto autocorrelation of lag 4 weighted by valence electrons: 1
+moreau-broto autocorrelation of lag 5 weighted by valence electrons: 1
+moreau-broto autocorrelation of lag 0 weighted by ionization potential: 1
+moreau-broto autocorrelation of lag 1 weighted by ionization potential: 1
+moreau-broto autocorrelation of lag 2 weighted by ionization potential: 1
+moreau-broto autocorrelation of lag 3 weighted by ionization potential: 1
+moreau-broto autocorrelation of lag 4 weighted by ionization potential: 1
+SpMAD of adjacency matrix: 1
+SpMax of adjacency matrix: 1
+centered moreau-broto autocorrelation of lag 1 weighted by gasteiger charge: 1
+centered moreau-broto autocorrelation of lag 8 weighted by gasteiger charge: 1
+moran coefficient of lag 1 weighted by valence electrons: 1
+total polar surface area: 1
+relative positive charge: 1
+relative negative charge: 1
+total hydrophobic surface area: 1
+number of hydrogen bond acceptor: 1
+number of hydrogen bond donor: 1
+molecular framework ratio: 1
+fragment complexity: 1
+fr_amine: 1
+hybridization ratio: 1
+MOE Charge VSA Descriptor 12 (0.20 <= x < 0.25): 1
+MOE MR VSA Descriptor 9 (3.80 <= x < 4.00): 1
+number of H atoms: 1
+number of C atoms: 1
+number of halogen atoms: 1
+aromatic atoms count: 1
+aromatic bonds count: 1
+MOE Charge VSA Descriptor 9 ( 0.05 <= x <  0.10): 1
+MOE logP VSA Descriptor 2 (-0.40 <= x < -0.20): 1
+MOE logP VSA Descriptor 11 ( 0.50 <= x <  0.60): 1
+moreau-broto autocorrelation of lag 4 weighted by gasteiger charge: 1
+centered moreau-broto autocorrelation of lag 4 weighted by gasteiger charge: 1
+centered moreau-broto autocorrelation of lag 6 weighted by gasteiger charge: 1
+averaged moreau-broto autocorrelation of lag 8 weighted by valence electrons: 1
+3D-MoRSE weighted by mass (distance = 30): 1
+3D-MoRSE weighted by polarizability (distance = 29): 1
+Labute's Approximate Surface Area: 1
+MolWT: 1
+Chi0v: 1
+Chi1v: 1
+Chi2v: 1
+fr_aniline: 1
+PEOE_VSA1: 1
+PEOE_VSA2: 1
+SlogP_VSA6: 1
+fr_thiazole: 1
+fr_thiophene: 1
+fr_nitroso: 1
+fr_pyridine: 1
+fr_urea: 1
+fr_N_O: 1
+fr_esters: 1
+fr_ether: 1
+fr_imide: 1
+fr_isocyan: 1
+fr_ketone: 1
+fr_oxazole: 1
+EState_VSA2: 1
+fr_ArN: 1
+fr_imidazole: 1
+PEOE_VSA3: 1
+PEOE_VSA13: 1
+EState_VSA3: 1
+fr_tetrazole: 1
+MQNs: 1
+NumValenceElectrons: 1
+ExactMolWT: 1
+SlogP_VSA2: 1
+EState_VSA1: 1
+EState_VSA4: 1
+Min of aaN: 1
+3D-MoRSE weighted by mass (distance = 7): 1
+Min of aaaC: 1
+fr_Al_OH: 1
+fr_Al_OH_noTert: 1
+
+
+--------------------------------------------------
+
+Message template: form_4, Number of tournaments: 20, Target task: blood-brain barrier permeability, Number of features: 10
+
+TPSA: 12
+NumHAcceptors: 12
+NumHDonors: 12
+MolLogP: 11
+Lipinski rule of five: 6
+NumRotatableBonds: 5
+NumAromaticRings: 5
+LabuteASA: 4
+fr_nitro_arom: 4
+total polar surface area: 4
+NumHeteroatoms: 3
+SlogP_VSA1: 3
+SlogP_VSA2: 3
+fr_nitro: 3
+fr_sulfonamd: 3
+number of hetero atoms: 3
+number of hydrogen bond acceptor: 3
+relative polar surface area: 3
+SlogP_VSA4: 2
+Ghose filter: 2
+fr_halogen: 2
+fr_tetrazole: 2
+number of halogen atoms: 2
+SlogP_VSA6: 1
+fr_aldehyde: 1
+fr_lactam: 1
+fr_nitro_arom_nonortho: 1
+SlogP_VSA7: 1
+SlogP_VSA8: 1
+fr_sulfone: 1
+fr_thiophene: 1
+fr_amide: 1
+NumValenceElectrons: 1
+MolWT: 1
+fr_Al_OH: 1
+number of F atoms: 1
+number of Cl atoms: 1
+total hydrophobic surface area: 1
+relative hydrophobic surface area: 1
+Estrada-like index from Barysz matrix weighted by atomic number: 1
+SMR_VSA3: 1
+number of hydrogen bond donor: 1
+number of heavy atoms: 1
+MolMR: 1
+Filter-it™ LogS: 1
+PEOE_VSA2: 1
+PEOE_VSA4: 1
+SlogP_VSA3: 1
+fr_N_O: 1
+number of O atoms: 1
+number of N atoms: 1
 
 
 --------------------------------------------------
