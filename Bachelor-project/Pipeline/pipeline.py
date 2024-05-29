@@ -42,6 +42,7 @@ def str2bool(v):
 if __name__ == "__main__":
     parser = ap.ArgumentParser(description='PyTorch implementation of pre-training of graph neural networks')
     parser.add_argument('--aux_tasks', type=int, default=5, help=f'Number of auxiliary tasks, type=int')
+    parser.add_argument('--max_props', type=int, default=10, help='Maximum number of properties to be returned by the LLM')
     parser.add_argument('--target_task', type=str, default="tox21", help='Abbreviated name of the target task. Possible tasks: tox21, bbbp, esol, lipo. type=str')
     parser.add_argument('--pretrain', type=bool, default=False, action=ap.BooleanOptionalAction, help='Whether to pretrain the model, type=bool')
     parser.add_argument('--train', type=bool, default=False, action=ap.BooleanOptionalAction, help='Whether to train the model, type=bool')
@@ -61,7 +62,7 @@ if __name__ == "__main__":
     parser.add_argument('--save_conversation', type=bool, default=False, action=ap.BooleanOptionalAction, help="Whether to save the conversation with the LLM, type=bool")
     parser.add_argument('--conversation_file', type=str, default='conversation', help="Name of the conversation file, type=str")
     parser.add_argument('--use_prev_llm_props', type=bool, default=False, action=ap.BooleanOptionalAction, help="Whether to use the properties from the previous LLM attempts, type=bool")
-    parser.add_argument('--NOTour' , type=int, default=10, help="# of tournaments, type=int")
+    parser.add_argument('--NOTour' , type=int, default=20, help="# of tournaments, type=int")
     parser.add_argument('--rand_props_seed', type=int, default=random.randint(1, 10000), help="Seed to be used when selecting random properties, type=int")
 
 
@@ -73,6 +74,7 @@ if __name__ == "__main__":
     
     # LLMClass = our_LLM_class(path_to_dir)
     LLMClass.aux_tasks = args.aux_tasks
+    LLMClass.max_props =args.max_props
     LLMClass.set_message(args.msg_form)
     LLMClass.target_task = get_task_description(args.target_task)
     LLMClass.all_desc_inc['Mordred 2D descriptors'] = args.Mordred

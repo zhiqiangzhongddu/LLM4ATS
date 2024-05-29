@@ -1,0 +1,5 @@
+Results of pre-training and finetuning of ogbg-molesol with 200 epochs
+Best epoch: 193
+Best validation score: 1.8245
+Test score: 1.9168
+
