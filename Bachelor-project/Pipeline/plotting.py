@@ -9,6 +9,7 @@ from rdkit import Chem
 import pathlib
 import string
 
+
 path_to_dir = pathlib.Path(__file__).parent.resolve()
 
 # (OLD) only works for tox21
@@ -173,7 +174,7 @@ def one_label_reg_plot(labels, smiles, aux_tasks, all_mord_descriptors, target_t
     for i in smiles:
         mols.append(Chem.MolFromSmiles(i))
     
-    # v has size 'number of mols' x 'number of aux tasks'
+    # mord_vals and rdkit_vals has size 'number of mols' x 'number of aux tasks'
     MordClass = OurMordredClass(aux_tasks[0], all_mord_descriptors)
     mord_vals = MordClass.get_mordred_values(mols)
     rdkit_vals = get_RDKit_values(mols, aux_tasks[1])
@@ -185,12 +186,18 @@ def one_label_reg_plot(labels, smiles, aux_tasks, all_mord_descriptors, target_t
     v = np.concatenate((v1, v2), axis=0)
     print(v.shape)
     colors = ["b","g","r","c","m","y","k"]
+    print(calc_correlation(labels, [v[0],v[2],v[3],v[4]]))
     for j, p in enumerate(total_tasks):
         values = v[j]
         # Skip if value is an error msg
         if is_value_valid(values[0]):
+            if j == 1: continue
+            m, b = np.polyfit(labels/np.amax(labels), (values/np.amax(values)).astype('float'), 1)     
+            print(m)     
+            m, b = np.polyfit(labels, values.astype('float'), 1)
             p = shorten_prop_name(p, total_tasks)
             axs[j].scatter(x=labels, y=values, s=2, label=p, color=colors[j%len(colors)])
+            axs[j].axline(xy1=(0, b), slope=m, color='k')
             axs[j].legend()
 
     # Plot the value of the pre_training task as a function of the molecule label
@@ -265,9 +272,60 @@ def analyse(aux_tasks, all_mord_descriptors, target_task, form, random_props, se
         labels_and_smiles = np.transpose(np.array(sorted(ccat.T, key=lambda x: x[0])))
         one_label_reg_plot(labels_and_smiles[0], labels_and_smiles[1], aux_tasks, all_mord_descriptors, target_task, form, random_props, seed)
 
+# Input: Some list of numbers
+# Returns: Sum(list)/len(list)
+def calc_sample_avg(list):
+    sum = 0
+    for num in list:
+        sum += num
+    return sum/len(list)
+
+# Input: Two lists of number
+def calc_covariance(x, y):
+    # Calculate sample averages
+    x_avg = calc_sample_avg(x)
+    y_avg = calc_sample_avg(y)
+
+    # Calculate the difference between sample avg and the actual value
+    def helper(list, avg):
+        out = []
+        for i in list: 
+            out.append((i - avg))
+        return out
     
+    x_diff = helper(x, x_avg)
+    y_diff = helper(y, y_avg)
+
+    # Multiply the elements of each list together
+    temp = []
+    for i in range(len(x_diff)):
+        temp.append(x_diff[i] * y_diff[i])
+    
+    # Take the average of the resulting list to obtain the covariance
+    # This is all inspired by probabilitycourse.com, where the definition of covariance is described
+    return calc_sample_avg(temp)
 
 
+# Input: Expects a list of the target labels and a matrix of all the aux_target values.
+# Matrix should be sorted in the same manner that we sort the list of aux_target names.
+# Returns a list of correlation co-efficients between the aux_task value and the target task value.
+def calc_correlation(labels, aux_tasks):
 
+    # By definition, covariance(x, x) = Var(x)
+    label_variance = calc_covariance(labels, labels)
 
+    # List definitions
+    aux_variances = []
+    aux_correlation_coefficients = []
+
+    # Calculation loop
+    for i in range(len(aux_tasks)):
+        # By definition, covariance(x, x) = Var(x)
+        aux_variances.append(calc_covariance(aux_tasks[i], aux_tasks[i]))
+
+        # By definition, sqrt(Var(x)) = sigma(x)
+        aux_correlation_coefficients.append(
+            calc_covariance(labels, aux_tasks[i])/((label_variance*aux_variances[i])**0.5)
+        )
+    return aux_correlation_coefficients
 
