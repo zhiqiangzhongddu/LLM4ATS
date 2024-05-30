@@ -105,7 +105,7 @@ def tox21_plot(labels, smiles, aux_tasks, all_mord_descriptors, form, random_pro
     results = []
     targets = []
     total_tasks = aux_tasks[0] + aux_tasks[1]
-    f = open(str(path_to_dir) + "/response_analysis/results.txt", "w")
+    f = open(str(path_to_dir) + "/response_analysis/tox21/results.txt", "w+")
     all_results_str = ""
     for i, t_labels in enumerate(labels):
         # v has size 'number of aux tasks' x 'number of mols'
@@ -186,20 +186,27 @@ def one_label_reg_plot(labels, smiles, aux_tasks, all_mord_descriptors, target_t
     v = np.concatenate((v1, v2), axis=0)
     print(v.shape)
     colors = ["b","g","r","c","m","y","k"]
-    print(calc_correlation(labels, [v[0],v[2],v[3],v[4]]))
+    slopes = []
+    v_wo_nan_vals = []
+    l_wo_nan_vals = []
     for j, p in enumerate(total_tasks):
         values = v[j]
-        # Skip if value is an error msg
-        if is_value_valid(values[0]):
-            if j == 1: continue
-            m, b = np.polyfit(labels/np.amax(labels), (values/np.amax(values)).astype('float'), 1)     
-            print(m)     
-            m, b = np.polyfit(labels, values.astype('float'), 1)
-            p = shorten_prop_name(p, total_tasks)
-            axs[j].scatter(x=labels, y=values, s=2, label=p, color=colors[j%len(colors)])
-            axs[j].axline(xy1=(0, b), slope=m, color='k')
-            axs[j].legend()
-
+        # Skip if all values is an error msg
+        if not is_value_valid(values[0]) and not is_value_valid(values[1]) and not is_value_valid(values[2]): continue
+        vals_wo_nans = []
+        labs_wo_nan_vals = []
+        for i, val in enumerate(values):
+            if is_value_valid(val):vals_wo_nans.append(val); labs_wo_nan_vals.append(labels[i])
+        vals_wo_nans = np.array(vals_wo_nans); v_wo_nan_vals.append(vals_wo_nans)
+        labs_wo_nan_vals = np.array(labs_wo_nan_vals); l_wo_nan_vals.append(labs_wo_nan_vals)
+        m, b = np.polyfit(labs_wo_nan_vals/np.amax(labs_wo_nan_vals), (vals_wo_nans/np.amax(vals_wo_nans)).astype('float'), 1)     
+        slopes.append(m)    
+        m, b = np.polyfit(labs_wo_nan_vals, vals_wo_nans.astype('float'), 1)
+        p = shorten_prop_name(p, total_tasks)
+        axs[j].scatter(x=labels, y=values, s=2, label=p, color=colors[j%len(colors)])
+        axs[j].axline(xy1=(0, b), slope=m, color='k')
+        axs[j].legend()
+    
     # Plot the value of the pre_training task as a function of the molecule label
     fig.suptitle(f"Auxiliary task value as a function of {get_task_description(target_task)} of molecules."); plt.xlabel(f"{get_task_description(target_task)} of molecules")
     amax = np.amax(np.array(labels))
@@ -209,8 +216,22 @@ def one_label_reg_plot(labels, smiles, aux_tasks, all_mord_descriptors, target_t
     deci = 2
     ticks = [round(amin,deci), round(get_mid(mid,amin),deci), round(mid,deci), round(get_mid(amax,mid),deci), round(amax,deci)]
     plt.xticks(ticks=np.array(ticks), labels=np.array(ticks))
-    if random_props: plt.savefig(str(path_to_dir) + f"/response_analysis/{target_task}/seed_{seed}.png", bbox_inches='tight')
-    else: plt.savefig(str(path_to_dir) + f"/response_analysis/{target_task}/{form}_tasks_{len(total_tasks)}.png", bbox_inches='tight')
+    if random_props:
+        plt.savefig(str(path_to_dir) + f"/response_analysis/{target_task}/seed_{seed}.png", bbox_inches='tight')
+        f = open(str(path_to_dir) + f"/response_analysis/{target_task}/seed_{seed}.txt", "w+")
+    else:
+        plt.savefig(str(path_to_dir) + f"/response_analysis/{target_task}/{form}_tasks_{len(total_tasks)}.png", bbox_inches='tight')
+        f = open(str(path_to_dir) + f"/response_analysis/{target_task}/results.txt", "w+")
+    # Create a string containing the results and write to file
+    if len(total_tasks) != len(slopes): f.write("One or more auxiliary properties cannot be computed")
+    else:
+        res_str = ""
+        for i, p in enumerate(total_tasks):
+            # Compute the correlation coefficients
+            correlation_coefficients = calc_correlation(l_wo_nan_vals[i], [v_wo_nan_vals[i]])
+            res_str += f"{p}\nSlope: {slopes[i]:.4f}\nCorrelation coefficient: {correlation_coefficients[0]:.4f}\n\n"
+        f.write(res_str)
+    f.close()
     plt.show()
 
 

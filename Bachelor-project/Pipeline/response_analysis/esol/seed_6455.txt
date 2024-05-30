@@ -1,0 +1,20 @@
+moreau-broto autocorrelation of lag 6 weighted by atomic number
+Slope: -0.0578
+Correlation coefficient: -0.5448
+
+moran coefficient of lag 5 weighted by ionization potential
+Slope: 0.0116
+Correlation coefficient: 0.1203
+
+number of i atoms
+Slope: -0.0009
+Correlation coefficient: -0.0177
+
+spectral diamiter from barysz matrix weighted by vdw volume
+Slope: -0.0226
+Correlation coefficient: -0.4111
+
+spectral mean absolute diviation from barysz matrix weighted by polarizability
+Slope: -0.0283
+Correlation coefficient: -0.3176
+
