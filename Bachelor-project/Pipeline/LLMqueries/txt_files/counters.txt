@@ -829,3 +829,66 @@ number of N atoms: 1
 
 --------------------------------------------------
 
+Message template: form_4, Number of tournaments: 20, Target task: level of toxicity, Number of features: 10
+
+basic group count: 19
+number of hydrogen bond acceptor: 18
+number of hydrogen bond donor: 18
+total polar surface area: 14
+number of O atoms: 14
+number of N atoms: 13
+number of halogen atoms: 8
+relative negative charge: 6
+number of hetero atoms: 4
+fr_nitroacidic group count: 4
+relative positive charge: 3
+valence electron mobile countacidic group count: 3
+NumHeteroatomsacidic group count: 3
+number of S atoms: 3
+acidic group count: 2
+ExactMolWT: 2
+fr_nitro_arom: 2
+number of aromatic atoms: 2
+partial negative surface area (version 1): 2
+partial positive surface area (version 1): 2
+Lipinski rule of five: 2
+fragment complexity: 1
+NumRotatableBondsacidic group count: 1
+TPSA: 1
+fr_thiazole: 1
+fr_alkyl_halideacidic group count: 1
+logP (octanol-water partition coefficient): 1
+number of acceptor atoms for H bonds (HBA): 1
+Lipinski rule of fivenumber of nitrogen atoms: 1
+number of oxygen atoms: 1
+fr_halogen: 1
+fr_nitro: 1
+basic group countacidic group count: 1
+partial positive surface area: 1
+relative negative charge surface area: 1
+NumRotatableBonds: 1
+Heavy Atom Count: 1
+moran coefficient of lag 4 weighted by ionization potential: 1
+ionization potential: 1
+relative positive charge surface area: 1
+aromatic atoms count: 1
+MolLogP: 1
+number of hydrogen bond donoracidic group count: 1
+McGowan volumeacidic group count: 1
+NumHAcceptors: 1
+NumHDonorsacidic group count: 1
+TPSAacidic group count: 1
+MOE logP VSA Descriptor 1 (-inf < x < -0.40): 1
+partial negative surface area (version 3): 1
+partial positive surface area (version 3): 1
+Log Pacidic group count: 1
+hydrogen bond donors: 1
+hydrogen bond acceptors: 1
+molecular weight: 1
+log P: 1
+fr_COO: 1
+fr_NH2: 1
+
+
+--------------------------------------------------
+

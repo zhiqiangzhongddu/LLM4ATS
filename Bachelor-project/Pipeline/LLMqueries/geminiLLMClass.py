@@ -22,6 +22,8 @@ class our_gemini_LLM_class:
     # Max number of properties to get from the LLM
     aux_tasks = 20 
     
+    max_props = 0
+    
     # The default prefix string
     # prefix_str = f"Can you provide a subset of maximum size of {aux_tasks} out of the given list of properties that have the highest correlation with the {target_task} in a given molecule? Please select the properties that are the most important. {anwser_format}\n"
     template_set = query_attempts
@@ -130,11 +132,10 @@ class our_gemini_LLM_class:
         if prefix_name in self.template_set:
             self.message_name = prefix_name
             self.message = copy.deepcopy(self.template_set[prefix_name])
-            
             self.model = genai.GenerativeModel('gemini-1.5-pro-latest', generation_config=self.gen_config, safety_settings=self.safety_settings, system_instruction=query_attempts[self.message_name][0]['content'])
-
-            if self.message_name != 'form_4':
-                self.prefix_str = self.message[1]['content'].format(self.aux_tasks, self.target_task, self.anwser_format)
+            if self.message_name not in[ 'form_4', 'g_form_4']:
+                self.prefix_str = self.message[1]['content'].format(self.max_props, self.target_task, self.anwser_format)
+            
         else:
             print("Invalid prefix name")
 
@@ -192,8 +193,8 @@ class our_gemini_LLM_class:
         counter = 0
         for s in props:
             if (counter % self.props_per_query)==0 and counter != 0:
-                if self.message_name in ['form_4']:
-                    queries.append(query_attempts[self.message_name][1]['content'].format(query,self.aux_tasks, self.target_task,self.aux_tasks))
+                if self.message_name in ['form_4', 'g_form_4']:
+                    queries.append(query_attempts[self.message_name][1]['content'].format(query,self.max_props, self.target_task,self.max_props))
                 else: queries.append(self.prefix_str + query)
                 query = s + "\n"
             else:
@@ -201,8 +202,8 @@ class our_gemini_LLM_class:
             counter += 1
         # append the rest of the properties
         if (counter % self.props_per_query)!=0:
-            if self.message_name in ['form_4']:
-                queries.append(query_attempts[self.message_name][1]['content'].format(query,self.aux_tasks, self.target_task, self.aux_tasks))
+            if self.message_name in ['form_4', 'g_form_4']:
+                queries.append(query_attempts[self.message_name][1]['content'].format(query,self.max_props, self.target_task, self.max_props))
             else: queries.append(self.prefix_str + query)
         print(f"Number of queries: {len(queries)}")
 
@@ -245,7 +246,7 @@ class our_gemini_LLM_class:
     # Function that reuses previous LLM filtered properties
     def use_prev_prop(self):
         print("Using previous properties")
-        file = open(self.path+"/LLMqueries/txt_files/counters.txt", "r", encoding="utf8")
+        file = open(self.path+"/LLMqueries/txt_files/googlecounters.txt", "r", encoding="utf8")
         file_content = file.read()
         delimiter = ("Message template: " + self.message_name
                     + ", Number of tournaments: " + str(self.NO_tournaments)

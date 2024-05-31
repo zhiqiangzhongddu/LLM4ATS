@@ -103,4 +103,13 @@ query_attempts = {
             "{}\n"
         }
     ],
+            "g_form_4":[ # descriptor, aux_tasks, target_task
+        system_instruction_2,
+        {
+            "role": "user",
+            "content": "Here is a list of molecular descriptors:\n<descriptors>\n{}</descriptors>\n\n"
+            "Please carefully review this list of descriptors and select an absolut maximum of {} descriptors that you think are most likely to have a correlation with the {} of a molecule. Focus on selecting the descriptors with the highest potential correlation to toxicity.\nDo not provide any explanations for your selections. Just list out the descriptors you have chosen.\n"
+            "Please format your output with the selected descriptors listed one per line inside <selected_descriptors> tags, like this:\n\n<selected_descriptors>\n- Descriptor 1\n- Descriptor 2\n...\n- Descriptor {}\n</selected_descriptors>\n do not deviate from this anwser format."
+        }
+    ],
 }

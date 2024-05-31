@@ -86,7 +86,7 @@ class our_LLM_class:
         # )
         chat_completion = self.client.chat.completions.create(
             messages=self.message,
-            model="gpt-3.5-turbo",
+            model="gpt-4o" #"gpt-3.5-turbo",
         )
         
         output = chat_completion.choices[0].message.content
@@ -184,7 +184,7 @@ class our_LLM_class:
             print(f"Query {i+1}") # , Token length: {len(self.token_encoding.encode(q))}
             self.message[1]['content'] = q
             response = self.queryOpenAI()
-            extracted_responses = extracted_responses + self.__extract_response(response)
+            extracted_responses = extracted_responses + self.__extract_response(response)[:-1]
         tmp = len(extracted_responses.split("\n"))
         print(f"Number of extracted responses {tmp}")
         if tmp <= self.max_props + 1:
