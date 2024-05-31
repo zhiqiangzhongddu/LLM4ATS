@@ -1,4 +1,4 @@
-from code.GNNs.gnn_pretrainer import GNNRunner
+from code.GNNs.gnn_runner import GNNRunner
 from code.utils import set_seed
 from code.config import cfg, update_cfg
 
