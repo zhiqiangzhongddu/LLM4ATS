@@ -10,8 +10,6 @@ def set_cfg(cfg):
     # ------------------------------------------------------------------------ #
     # Dataset name
     cfg.dataset = 'ogbg-molbbbp'
-    # Model name
-    # cfg.model = 'gnn'
     # Cuda device number, used for machine with multiple gpus
     cfg.device = 0
     # Whether to use Demo Test mode
@@ -22,22 +20,15 @@ def set_cfg(cfg):
     cfg.seed = 42
     # Number of runs with random init
     cfg.runs = 1
-    # OPENAI_API_KEY
-    cfg.OPENAI_API_KEY = ""
-    cfg.data = CN()
+    cfg.task = CN()
     cfg.gnn = CN()
-    cfg.lm = CN()
     cfg.llm = CN()
 
     # ------------------------------------------------------------------------ #
-    # Data options
+    # Task options
     # ------------------------------------------------------------------------ #
-    # Load which text as input text
-    # Available options: 'raw', 'IF', 'FSC-1'
-    cfg.data.text = 'raw'
-    # Load which feature as input text
-    # Available options: 'raw', 'IF', 'FSC-1'
-    cfg.data.feature = 'raw'
+    # Task name
+    cfg.task.name = "train" # train, pretrain
 
     # ------------------------------------------------------------------------ #
     # GNN Model options
@@ -75,54 +66,16 @@ def set_cfg(cfg):
     cfg.gnn.train.wd = 0.0
 
     # ------------------------------------------------------------------------ #
-    # LM Model options
-    # ------------------------------------------------------------------------ #
-    cfg.lm.model = CN()
-    # LM model name (microsoft/deberta-base, microsoft/deberta-v3-base)
-    cfg.lm.model.name = 'microsoft/deberta-base'
-    cfg.lm.model.feat_shrink = ""
-
-    # ------------------------------------------------------------------------ #
-    # LM Training options
-    # ------------------------------------------------------------------------ #
-    cfg.lm.train = CN()
-    # Number of samples computed once per batch per device
-    cfg.lm.train.batch_size = 9
-    # Number of training steps for which the gradients should be accumulated
-    cfg.lm.train.grad_acc_steps = 1
-    # Base learning rate
-    cfg.lm.train.lr = 2e-5
-    # Maximal number of epochs
-    cfg.lm.train.epochs = 4
-    # The number of warmup steps
-    cfg.lm.train.warmup_epochs = 0.6
-    # Number of update steps between two evaluations
-    cfg.lm.train.eval_patience = 50000
-    # The weight decay to apply (if not zero) to all layers except all bias and LayerNorm weights
-    cfg.lm.train.weight_decay = 0.0
-    # The dropout probability for all fully connected layers in the embeddings, encoder, and pooler
-    cfg.lm.train.dropout = 0.3
-    # The dropout ratio for the attention probabilities
-    cfg.lm.train.att_dropout = 0.1
-    # The dropout ratio for the classifier
-    cfg.lm.train.cla_dropout = 0.4
-
-    # ------------------------------------------------------------------------ #
     # LLM provider options
     # ------------------------------------------------------------------------ #
     cfg.llm.provider = 'openai'
-    # # The role of LLM, e.g., predictor or corrector
-    # cfg.llm.role = "predictor"
-    # Template name
-    cfg.llm.template = 'raw'
-    cfg.llm.operate = "gnn"
 
     # ------------------------------------------------------------------------ #
     # LLM Model options
     # ------------------------------------------------------------------------ #
     cfg.llm.model = CN()
     # LLM model name
-    cfg.llm.model.name = "gpt-3.5-turbo-1106"
+    cfg.llm.model.name = "gpt-4o"
     cfg.llm.model.temperature = 1.
     cfg.llm.model.top_p = 1.
     cfg.llm.model.frequency_penalty = 0.
@@ -146,22 +99,6 @@ def set_cfg(cfg):
     #               talk about new topics.
     #               [See more information about frequency and presence penalties.]
     #               (https://platform.openai.com/docs/guides/text-generation/parameter-details)
-
-    # ------------------------------------------------------------------------ #
-    # LLM RaG options
-    # ------------------------------------------------------------------------ #
-    cfg.llm.rag = CN()
-    # Template name
-    cfg.llm.rag.add_knowledge = None
-    # Warm up LLM
-    cfg.llm.rag.warm_up = None
-
-    # ------------------------------------------------------------------------ #
-    # LLM Embed options
-    # ------------------------------------------------------------------------ #
-    cfg.llm.emb = CN()
-    cfg.llm.emb.model = "text-embedding-3-large" # text-embedding-3-large
-    cfg.llm.emb.data = "des"
 
     return cfg
 

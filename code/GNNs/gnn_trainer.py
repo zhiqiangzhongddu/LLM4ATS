@@ -15,8 +15,6 @@ from code.utils import time_logger, project_root_path, init_path
 class GNNTrainer():
     def __init__(self, cfg):
         self.dataset = cfg.dataset
-        self.feature = cfg.data.feature
-        self.lm_model_name = cfg.lm.model.name
         self.seed = cfg.seed
         self.device = cfg.device if torch.cuda.is_available() else torch.device('cpu')
 
@@ -33,16 +31,10 @@ class GNNTrainer():
 
         self.epochs = cfg.gnn.train.epochs
 
-        if self.feature == 'raw':
-            self.output_dir = PurePath(
-                project_root_path, "output", "gnns", self.dataset,
-                "{}-{}-seed{}".format(self.model_name, self.feature, self.seed)
-            )
-        else:
-            self.output_dir = PurePath(
-                project_root_path, "output", "gnns", self.dataset,
-                "{}-{}-{}-seed{}".format(self.model_name, self.feature, self.lm_model_name, self.seed)
-            )
+        self.output_dir = PurePath(
+            project_root_path, "output", "gnns", self.dataset,
+            "{}-seed{}".format(self.model_name, self.seed)
+        )
 
         self.dataset, self.train_loader, self.valid_loader, self.test_loader, self.data_loader = self.preprocess_data()
         self.eval_metric = self.dataset.eval_metric
@@ -59,8 +51,7 @@ class GNNTrainer():
     def preprocess_data(self):
         # Preprocess data
         dataloader = DatasetLoader(
-            name=self.dataset, text='', feature=self.feature,
-            lm_model_name=self.lm_model_name, seed=self.seed
+            name=self.dataset
         )
         dataset = dataloader.dataset
         split_idx = dataset.get_idx_split()
@@ -108,7 +99,6 @@ class GNNTrainer():
             )
         else:
             raise ValueError('Invalid GNN type')
-        # print(summary(model=model, list(train_loader)[0].x, edge_index))
 
         return model
 
