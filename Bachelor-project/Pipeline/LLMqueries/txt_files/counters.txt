@@ -476,7 +476,6 @@ moreau-broto autocorrelation of lag 5 weighted by sanderson EN: 1
 number of hydrogen bond acceptors: 1
 
 
--------------------------------------------------- AUX TASKS IS ACTUALLY 10 BUT SAYS FOR 5 FOR PRETRAINING
 
 Message template: form_4, Number of tournaments: 20, Target task: level of toxicity, Number of features: 10
 
@@ -547,7 +546,6 @@ NumRotatableBonds: 1
 SlogP_VSA4: 1
 
 
--------------------------------------------------- AUX TASKS IS ACTUALLY 10 BUT SAYS FOR 5 FOR PRETRAINING
 
 Message template: form_4, Number of tournaments: 20, Target task: solubility, Number of features: 10
 
@@ -612,7 +610,6 @@ MOE MR VSA Descriptor 9 (3.80 <= x < 4.00): 1
 EState VSA Descriptor 8 (2.05 <= x < 4.69): 1
 
 
--------------------------------------------------- AUX TASKS IS ACTUALLY 10 BUT SAYS FOR 5 FOR PRETRAINING
 
 Message template: form_4, Number of tournaments: 20, Target task: lipophilicity, Number of features: 10
 
