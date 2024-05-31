@@ -165,7 +165,7 @@ class our_gemini_LLM_class:
         cnt = dict(sorted(cnt.items(), key=lambda item: item[1], reverse=True))
 
         f = open(self.path+"/LLMqueries/txt_files/googlecounters.txt", "a")
-        f.write(f"Message template: {self.message_name}, Number of tournaments: {self.NO_tournaments}, Target task: {self.target_task}, Number of features: {self.aux_tasks}\n\n")
+        f.write(f"Message template: {self.message_name}, Number of tournaments: {self.NO_tournaments}, Target task: {self.target_task}, Number of features: {self.max_props}\n\n")
         for key in cnt:
             f.write(f"{key}: {cnt[key]}\n")
         f.write("\n\n"+"-"*50+"\n\n")
@@ -220,7 +220,11 @@ class our_gemini_LLM_class:
             extracted_responses = extracted_responses + self.__extract_response(response)
         tmp = len(extracted_responses.split("\n"))
         print(f"Number of extracted responses {tmp}")
-        if tmp <= self.aux_tasks + 1:
+        print(tmp <= 15 and tmp > 10)
+        if tmp <= 15 and tmp > 10:
+            print(extracted_responses.split("\n"))
+            
+        if tmp <= self.max_props + 1:
             return extracted_responses
         return self.__get_final_result(self.__get_queries(extracted_responses,False))
     
@@ -228,12 +232,16 @@ class our_gemini_LLM_class:
     def __extract_response(self,response : str):
         resp = response.split("\n")
         result = ""
+        flag = False
         for s in resp:
-            if s == '' or s[0] != "-":
-                continue
-            result = result + s[2:] + "\n"
-                
-        return result[:-2]
+            if s == "<selected_descriptors>":
+                flag = True
+            elif "</selected_descriptors>" in s:
+                break
+            elif flag:
+                result = result + s + "\n"
+            
+        return result[:-1]
 
     # Selects random properties. Does not call chat-GPT.
     def get_random_properties(self):
@@ -251,7 +259,7 @@ class our_gemini_LLM_class:
         delimiter = ("Message template: " + self.message_name
                     + ", Number of tournaments: " + str(self.NO_tournaments)
                     + ", Target task: " + self.target_task
-                    + ", Number of features: " + str(self.aux_tasks))
+                    + ", Number of features: " + str(self.max_props))
         ct_split = file_content.split(delimiter)
         print("--------------------------------")
         if ct_split[0] != file_content:
