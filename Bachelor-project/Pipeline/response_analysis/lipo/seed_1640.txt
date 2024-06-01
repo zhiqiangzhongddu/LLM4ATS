@@ -1,0 +1,20 @@
+sum of do
+Slope: -0.0350
+Correlation coefficient: -0.1693
+
+spectral diamiter from barysz matrix weighted by mass
+Slope: 0.0246
+Correlation coefficient: 0.1275
+
+sum of aaac
+Slope: 0.0995
+Correlation coefficient: 0.1676
+
+sum of ddssse
+Slope: nan
+Correlation coefficient: nan
+
+Chi4n
+Slope: 0.0602
+Correlation coefficient: 0.1649
+

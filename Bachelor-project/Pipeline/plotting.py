@@ -264,6 +264,7 @@ def one_label_clas_plot(labels, smiles, aux_tasks, all_mord_descriptors, target_
     ax.grid(True)
     alphabet = [(f"prop {p}") for p in string.ascii_lowercase]
     ax.scatter(x=alphabet[:len(total_tasks)], y=np.log(results))
+    #ax.scatter(x=total_tasks, y=np.log(results))
     plt.title(f"Relative difference in computed value of labeled data from {target_task}"); plt.xlabel("Auxiliary targets"); plt.ylabel("The relative difference of aux. props.")
     ticks = [3.4, 3.6, 3.8, 4.0, 4.2, 4.4, 4.6, 4.8, 5.0, 5.2]
     plt.xticks(rotation=45, ha='right'); plt.yticks(ticks=np.array(ticks), labels=[f"{np.exp(i):.2f}%" for i in ticks])

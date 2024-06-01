@@ -1,0 +1,20 @@
+SlogP_VSA2
+Slope: -0.0005
+Correlation coefficient: -0.0017
+
+SlogP_VSA4
+Slope: 0.0359
+Correlation coefficient: 0.0548
+
+SlogP_VSA1
+Slope: -0.0115
+Correlation coefficient: -0.0406
+
+SlogP_VSA3
+Slope: -0.0180
+Correlation coefficient: -0.0592
+
+SlogP_VSA5
+Slope: 0.0102
+Correlation coefficient: 0.0230
+

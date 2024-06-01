@@ -1,411 +1,118 @@
-Message template: con_att_1, Number of tournaments: 3, Target task: level of toxicity, Number of features: 10
+Message template: form_5, Number of tournaments: 20, Target task: solubility, Number of features: 10
 
-LogP: 2
-VR1 of adjacency matrix: 1
-VE1 of adjacency matrix: 1
-VE2 of adjacency matrix: 1
-LogEE of adjacency matrix: 1
-relative negative charge: 1
-aromaticity: 1
-VE3 of adjacency matrix: 1
-VR2 of adjacency matrix: 1
-VR3 of adjacency matrix: 1
-atomic number of most abundant heavy atom: 1
-number of halogen atoms: 1
-valence electron mobile count: 1
-NumHeteroatoms: 1
-NumRotatableBonds: 1
-NumAmideBonds: 1
-NumAromaticRings: 1
-Polarizability: 1
-SurfaceArea: 1
-Volume: 1
-total hydrophobic surface area: 1
-relative hydrophobic surface area: 1
-Molecular Weight: 1
-HBA Count: 1
-HBD Count: 1
-QPlogPo/W: 1
-XLogP3: 1
-MR: 1
-TPSA: 1
-
-
---------------------------------------------------
-
-Message template: default, Number of tournaments: 10, Target task: level of toxicity, Number of features: 25
-
-number of heavy atoms: 10
-number of hetero atoms: 10
-number of H atoms: 10
-number of C atoms: 10
-number of N atoms: 10
-number of O atoms: 10
-number of S atoms: 10
-number of P atoms: 10
-number of F atoms: 10
-number of Cl atoms: 10
-number of Br atoms: 10
-number of I atoms: 10
-number of halogen atoms: 10
-averaged and centered moreau-broto autocorrelation of lag 0 weighted by gasteiger charge: 5
-averaged and centered moreau-broto autocorrelation of lag 1 weighted by gasteiger charge: 4
-averaged and centered moreau-broto autocorrelation of lag 2 weighted by gasteiger charge: 4
-acidic group count: 3
-basic group count: 3
-aromatic atoms count: 3
-aromatic bonds count: 3
-number of all atoms: 3
-number of aromatic atoms: 3
-number of aromatic bonds: 3
-centered moreau-broto autocorrelation of lag 8 weighted by sanderson EN: 2
-centered moreau-broto autocorrelation of lag 7 weighted by sanderson EN: 2
-centered moreau-broto autocorrelation of lag 6 weighted by sanderson EN: 2
-centered moreau-broto autocorrelation of lag 5 weighted by sanderson EN: 2
-moreau-broto autocorrelation of lag 0 weighted by valence electrons: 2
-moreau-broto autocorrelation of lag 1 weighted by valence electrons: 2
-moreau-broto autocorrelation of lag 2 weighted by valence electrons: 2
-moreau-broto autocorrelation of lag 3 weighted by valence electrons: 2
-averaged and centered moreau-broto autocorrelation of lag 3 weighted by gasteiger charge: 2
-averaged and centered moreau-broto autocorrelation of lag 4 weighted by gasteiger charge: 2
-averaged and centered moreau-broto autocorrelation of lag 5 weighted by gasteiger charge: 2
-averaged and centered moreau-broto autocorrelation of lag 6 weighted by gasteiger charge: 2
-centered moreau-broto autocorrelation of lag 8 weighted by ionization potential: 1
-centered moreau-broto autocorrelation of lag 7 weighted by ionization potential: 1
-centered moreau-broto autocorrelation of lag 6 weighted by ionization potential: 1
-centered moreau-broto autocorrelation of lag 5 weighted by ionization potential: 1
-centered moreau-broto autocorrelation of lag 4 weighted by ionization potential: 1
-centered moreau-broto autocorrelation of lag 3 weighted by ionization potential: 1
-centered moreau-broto autocorrelation of lag 2 weighted by ionization potential: 1
-number of spiro atoms: 1
-number of bridgehead atoms: 1
-number of B atoms: 1
-centered moreau-broto autocorrelation of lag 4 weighted by sanderson EN: 1
-centered moreau-broto autocorrelation of lag 3 weighted by sanderson EN: 1
-centered moreau-broto autocorrelation of lag 2 weighted by sanderson EN: 1
-
-
---------------------------------------------------
-
-Message template: form_4, Number of tournaments: 10, Target task: level of toxicity, Number of features: 5
-
-averaged moreau-broto autocorrelation of lag 4 weighted by ionization potential: 8
-averaged moreau-broto autocorrelation of lag 0 weighted by ionization potential: 7
-averaged moreau-broto autocorrelation of lag 1 weighted by ionization potential: 7
-averaged moreau-broto autocorrelation of lag 2 weighted by ionization potential: 7
-averaged moreau-broto autocorrelation of lag 3 weighted by ionization potential: 7
-averaged moreau-broto autocorrelation of lag 0 weighted by gasteiger charge: 1
-averaged moreau-broto autocorrelation of lag 1 weighted by gasteiger charge: 1
-averaged moreau-broto autocorrelation of lag 2 weighted by gasteiger charge: 1
-averaged moreau-broto autocorrelation of lag 3 weighted by gasteiger charge: 1
-averaged moreau-broto autocorrelation of lag 4 weighted by gasteiger charge: 1
-averaged moreau-broto autocorrelation of lag 8 weighted by ionization potential: 1
-averaged moreau-broto autocorrelation of lag 7 weighted by ionization potential: 1
-averaged moreau-broto autocorrelation of lag 6 weighted by ionization potential: 1
-averaged moreau-broto autocorrelation of lag 5 weighted by ionization potential: 1
-moreau-broto autocorrelation of lag 0 weighted by ionization potential: 1
-moreau-broto autocorrelation of lag 1 weighted by ionization potential: 1
-moreau-broto autocorrelation of lag 2 weighted by ionization potential: 1
-moreau-broto autocorrelation of lag 3 weighted by ionization potential: 1
-moreau-broto autocorrelation of lag 4 weighted by ionization potential: 1
-
-
---------------------------------------------------
-
-Message template: form_4, Number of tournaments: 10, Target task: level of toxicity, Number of features: 20
-
-Graovac-Ghorbani atom-bond connectivity index: 10
-acidic group count: 10
-basic group count: 10
-SpAbs of adjacency matrix: 10
-SpMax of adjacency matrix: 10
-SpDiam of adjacency matrix: 10
-SpAD of adjacency matrix: 10
-SpMAD of adjacency matrix: 10
-LogEE of adjacency matrix: 10
-VE1 of adjacency matrix: 10
-VE2 of adjacency matrix: 10
-VE3 of adjacency matrix: 10
-VR1 of adjacency matrix: 10
-VR2 of adjacency matrix: 10
-VR3 of adjacency matrix: 10
-aromatic atoms count: 10
-aromatic bonds count: 10
-number of all atoms: 10
-number of heavy atomatom-bond connectivity index: 9
-atom-bond connectivity index: 1
-
-
---------------------------------------------------
-
-Message template: form_4, Number of tournaments: 10, Target task: level of toxicity, Number of features: 20
-
-total polar surface area: 2
-relative hydrophobic surface area: 2
-relative polar surface area: 2
-partial negative surface area (version 1): 2
-partial positive surface area (version 1): 2
-difference in charged partial surface area (version 1): 2
-fractional charged partial negative surface area (version 1): 2
-fractional charged partial positive surface area (version 1): 2
-relative negative charge: 2
-relative positive charge: 2
-relative negative charge surface area: 2
-relative positive charge surface area: 2
-number of sOH: 2
-number of ssO: 2
-number of hetero atoms: 2
-number of halogen atoms: 2
-moreau-broto autocorrelation of lag 2 weighted by sanderson EN: 2
-moreau-broto autocorrelation of lag 1 weighted by pauling EN: 2
-moreau-broto autocorrelation of lag 2 weighted by pauling EN: 2
-moreau-broto autocorrelation of lag 1 weighted by allred-rocow EN: 2
-moreau-broto autocorrelation of lag 2 weighted by allred-rocow EN: 2
-averaged moreau-broto autocorrelation of lag 1 weighted by sanderson EN: 2
-total hydrophobic surface area: 1
-surface weighted charged partial negative surface area (version 1): 1
-surface weighted charged partial positive surface area (version 1): 1
-number of dO: 1
-number of aaacidic group count: 1
-basic group count: 1
-moreau-broto autocorrelation of lag 0 weighted by sanderson EN: 1
-moreau-broto autocorrelation of lag 1 weighted by sanderson EN: 1
-moreau-broto autocorrelation of lag 0 weighted by pauling EN: 1
-moreau-broto autocorrelation of lag 0 weighted by allred-rocow EN: 1
-averaged moreau-broto autocorrelation of lag 0 weighted by sanderson EN: 1
-averaged moreau-broto autocorrelation of lag 2 weighted by sanderson EN: 1
-averaged moreau-broto autocorrelation of lag 0 weighted by pauling EN: 1
-averaged moreau-broto autocorrelation of lag 1 weighted by pauling EN: 1
-averaged moreau-broto autocorrelation of lag 2 weighted by pauling Etotal hydrophobic surface area: 1
-number of sNH2: 1
-TPSA: 1
-NumHAcceptors: 1
-NumHDonorLogEE of adjacency matrix: 1
-aromatic atoms count: 1
-moreau-broto autocorrelation of lag 3 weighted by sanderson EN: 1
-averaged moreau-broto autocorrelation of lag 2 weighted by pauling EN: 1
-averaged moreau-broto autocorrelation of lag 1 weighted by allred-rocow EN: 1
-centered moreau-broto autocorrelation of lag 1 weighted by sanderson EN: 1
-centered moreau-broto autocorrelation of lag 2 weighted by pauling EN: 1
-centered moreau-broto autocorrelation of lag 1 weighted by allred-rocow EN: 1
-averaged and centered moreau-broto autocorrelation of lag 2 weighted by sanderson EN: 1
-averaged and centered moreau-broto autocorrelation of lag 1 weighted by pauling EN: 1
-moran coefficient of lag 2 weighted by sanderson EN: 1
-
-
---------------------------------------------------
-
-Message template: form_4, Number of tournaments: 20, Target task: level of toxicity, Number of features: 5
-
-LogEE of adjacency matrix: 12
-averaged moreau-broto autocorrelation of lag 2 weighted by sanderson EN: 7
-moran coefficient of lag 3 weighted by atomic numbenumber of halogen atoms: 7
-averaged and centered moreau-broto autocorrelation of lag 8 weighted by mass: 6
-averaged moreau-broto autocorrelation of lag 8 weighted by sanderson EN: 3
-averaged moreau-broto autocorrelation of lag 1 weighted by sanderson EN: 2
-number of halogen atoms: 1
-averaged and centered moreau-broto autocorrelation of lag 2 weighted by polarizability: 1
-averaged and centered moreau-broto autocorrelation of lag 2 weighted by mass: 1
-moran coefficient of lag 3 weighted by atomic numbeSlogP_VSA1: 1
-LabuteASA: 1
-TPSA: 1
-MolLogP: 1
-NumHAcceptornumber of halogen atoms: 1
-SpMax of adjacency matrix: 1
-number of hetero atomnumber of halogen atoms: 1
-averaged and centered moreau-broto autocorrelation of lag 8 weighted by polarizability: 1
-moran coefficient of lag 3 weighted by masnumber of halogen atoms: 1
-number of hetero atoms: 1
-SpAD of adjacency matrinumber of halogen atoms: 1
-averaged and centered moreau-broto autocorrelation of lag 1 weighted by gasteiger charge: 1
-
-
---------------------------------------------------
-
-Message template: g_form_4, Number of tournaments: 20, Target task: level of toxicity, Number of features: 10
-
-SlogP_VSA1: 14
-SlogP_VSA2: 14
-MolLogP: 13
-SlogP_VSA3: 12
-number of hetero atoms: 11
-number of halogen atoms: 11
-SlogP_VSA4: 7
-SlogP_VSA5: 7
-SlogP_VSALogEE of adjacency matrix: 7
-TPSA: 6
-MolMR: 5
-SlogP_VSALabuteASA: 3
+LogP VSA Descriptor 2 (-0.40 <= x < -0.20): 17
+LogP VSA Descriptor 3 (-0.20 <= x <  0.00): 17
+LogP VSA Descriptor 4 ( 0.00 <= x <  0.10): 17
+LogP VSA Descriptor 5 ( 0.10 <= x <  0.15): 17
+LogP VSA Descriptor 6 ( 0.15 <= x <  0.20): 17
+LogP VSA Descriptor 7 ( 0.20 <= x <  0.25): 17
+LogP VSA Descriptor 8 ( 0.25 <= x <  0.30): 17
+LogP VSA Descriptor 9 ( 0.30 <= x <  0.40): 17
+LogP VSA Descriptor 10 ( 0.40 <= x <  0.50)LogP VSA Descriptor 1 (-inf < x < -0.40): 14
+total polar surface area: 3
+relative hydrophobic surface area: 3
+relative polar surface area: 3
+TPSA: 3
+LogP VSA Descriptor 10 ( 0.40 <= x <  0.50)LogEE of adjacency matrix: 2
+total hydrophobic surface area: 2
+hybridization ratio: 2
 LabuteASA: 2
-Lipinski rule of five: 2
-moreau-broto autocorrelation of lag 2 weighted by sanderson EN: 2
-moreau-broto autocorrelation of lag 1 weighted by pauling EN: 2
-centered moreau-broto autocorrelation of lag 1 weighted by pauling EN: 2
-SlogP_VSA6: 2
-LogEE of adjacency matrix: 1
-SlogP_VSALogS: 1
+MolLogP: 2
+LogP VSA Descriptor 1 (-inf < x < -0.40): 1
+the fraction of C atoms that are SP3 hybridized: 1
+LogP VSA Descriptor 10 ( 0.40 <= x <  0.50)total hydrophobic surface area: 1
 McGowan volume: 1
-number of hydrogen bond acceptor: 1
-number of hydrogen bond donor: 1
+Labute's Approximate Surface Area: 1
 Filter-it™ LogS: 1
-averaged moreau-broto autocorrelation of lag 2 weighted by sanderson EN: 1
-averaged moreau-broto autocorrelation of lag 1 weighted by pauling EN: 1
-centered moreau-broto autocorrelation of lag 2 weighted by sanderson EN: 1
-averaged and centered moreau-broto autocorrelation of lag 1 weighted by pauling ELogEE of adjacency matrix: 1
-SlogP_VSLogEE of adjacency matrix: 1
-averaged moreau-broto autocorrelation of lag 1 weighted by sanderson EN: 1
-averaged moreau-broto autocorrelation of lag 2 weighted by pauling EN: 1
-averaged and centered moreau-broto autocorrelation of lag 2 weighted by sanderson EN: 1
-moran coefficient of lag 2 weighted by pauling ELogEE of adjacency matrix: 1
-fr_Al_OH: 1
-fr_halogLabuteASA: 1
-SlogP_VSA7: 1
-ESate_VSA1: 1
-ESate_VSA2: 1
-ESate_VSA3: 1
-fr_aldehyde: 1
+SlogP_VSA1: 1
+SlogP_VSA2: 1
 
 
 --------------------------------------------------
 
-Message template: g_form_4, Number of tournaments: 20, Target task: level of toxicity, Number of features: 10
+Message template: form_5, Number of tournaments: 20, Target task: level of toxicity, Number of features: 10
 
-total hydrophobic surface area: 16
-total polar surface area: 11
-relative hydrophobic surface area: 10
-number of hydrogen bond acceptor: 10
-relative polar surface area: 8
-number of hydrogen bond donor: 8
-LabuteASA: 8
-EState_VSA1: 8
-EState_VSA2: 7
-number of OH: 6
-fractional charged partial positive surface area (version 1): 5
-Lipinski rule of five: 5
-averaged moreau-broto autocorrelation of lag 2 weighted by sanderson EN: 4
-SpMax of adjacency matrix: 4
-McGowan volume: 4
-EState_VSA3: 4
-EState_VSA4: 4
-fractional charged partial negative surface area (version 1): 3
-Ghose filter: 3
-SlogP_VSA1: 3
-number of aromatic bonds in non-kekulized structure: 3
-partial negative surface area (version 1): 3
-relative negative charge: 3
+I am not confident that I can provide a definitive answer to your request. While many of the descriptors you listed could potentially relate to toxicity, selecting the 10 "most likely" to correlate with
+toxicity without any context about the specific type of toxicity or the chemical space being considered would be speculative. 
+
+My expertise lies in understanding the properties and behavior of molecules,
+but predicting toxicity is a complex field that often requires more specific information and considerations. 
+
+Providing a potentially inaccurate or incomplete answer would go against my principles of consistency
+and accuracy. 
+
+
+--------------------------------------------------
+
+Message template: form_5, Number of tournaments: 20, Target task: lipophilicity, Number of features: 10
+
+SlogP_VSA1: 20
+SlogP_VSA2: 20
+SlogP_VSA3: 20
+SlogP_VSA4: 20
+SlogP_VSA5: 20
+SlogP_VSA6: 20
+SlogP_VSA7: 20
+SlogP_VSA8: 20
+SlogP_VSA9: 18
+MolLogP: 1
+
+
+--------------------------------------------------
+
+Message template: form_5, Number of tournaments: 20, Target task: blood-brain barrier permeability, Number of features: 10
+
+TPSA: 14
+total hydrophobic surface area: 12
+number of all atoms: 11
+number of hetero atoms: 11
+Labute's Approximate Surface Area: 8
+total polar surface area: 7
+relative hydrophobic surface area: 6
+relative polar surface area: 6
+Lipinski rule of five: 6
+McGowan volume: 6
+LabuteASA: 6
+number of H atoms: 5
+relative polar surface areaLogEE of adjacency matrix: 5
+MolLogP: 5
+MolMR: 5
+NumHAcceptors: 5
+NumHDonors: 5
+hybridization ratio: 4
+MolWT: 4
+NumHeteroatoms: 4
+- TPSA: 3
+- LabuteASA: 3
+- McGowan volume: 3
+NumRotatableBonds: 3
+Heavy Atom Count: 3
 LogEE of adjacency matrix: 2
 McGowan volumeLogEE of adjacency matrix: 2
-Filter-it™ LogS: 2
-number of hydrogen bond donorLogEE of adjacency matrix: 2
-aromatic atoms count: 2
-EState_VSA5: 2
-EState_VSA6: 2
-partial positive surface area (version 1): 2
-SpAbs of adjacency matrix: 1
-VE1 of adjacency matrix: 1
-VE2 of adjacency matrix: 1
-VE3 of adjacency matrix: 1
-VR1 of adjacency matrix: 1
-VR2 of adjacency matrix: 1
-VR3 of adjacency matrix: 1
-logarithmic Randic-like eigenvector-based index from Barysz matrix weighted by polarizability: 1
-partial negative surface area (version 1)LogEE of adjacency matrix: 1
-number of aaO: 1
-McGowan volumenumber of halogen atoms: 1
-relative positive charge: 1
-averaged moreau-broto autocorrelation of lag 8 weighted by sanderson EN: 1
-number of hetero atoms: 1
-ETA functionality index: 1
-number of halogen atoms: 1
-partial negative surface area (version 2): 1
-moreau-broto autocorrelation of lag 1 weighted by atomic number: 1
-averaged and centered moreau-broto autocorrelation of lag 8 weighted by polarizability: 1
-moreau-broto autocorrelation of lag 3 weighted by vdw volume: 1
-SpAD of adjacency matrix: 1
-logarithmic coefficient sum of the last eigenvector from Barysz matrix weighted by polarizability: 1
-number of sOH: 1
-EState_VSA7: 1
-
-
---------------------------------------------------
-
-Message template: g_form_4, Number of tournaments: 20, Target task: blood-brain barrier permeability, Number of features: 10
-
-TPSA: 19
-MolLogP: 16
-number of hetero atoms: 15
-McGowan volume: 12
-NumHAcceptors: 11
-LabuteASA: 10
-Lipinski rule of five: 9
-Ghose filter: 9
-moreau-broto autocorrelation of lag 1 weighted by vdw volume: 7
-NumHDonors: 7
-averaged moreau-broto autocorrelation of lag 1 weighted by vdw volume: 6
-averaged moreau-broto autocorrelation of lag 0 weighted by vdw volume: 5
-MolMR: 5
-moreau-broto autocorrelation of lag 1 weighted by mass: 5
-NumHeteroatoms: 4
-number of all atoms: 4
-MolWT: 4
-moreau-broto autocorrelation of lag 2 weighted by mass: 4
-NumRotatableBonds: 3
-geometric diameter: 2
-geometric diameterLogEE of adjacency matrix: 2
-Filter-it™ LogS: 2
-LogEE of adjacency matrix: 1
-geometric radius: 1
-McGowan volumeLogP: 1
-Molecular weight: 1
-moreau-broto autocorrelation of lag 2 weighted by vdw volume: 1
-moreau-broto autocorrelation of lag 3 weighted by mass: 1
-number of heavy atoms: 1
-number of hydrogen bond acceptor: 1
-number of hydrogen bond donor: 1
-averaged moreau-broto autocorrelation of lag 1 weighted by mass: 1
-
-
---------------------------------------------------
-
-Message template: g_form_4, Number of tournaments: 20, Target task: lipophilicity, Number of features: 10
-
-SlogP_VSA1: 20
-SlogP_VSA2: 20
-SlogP_VSA3: 20
-SlogP_VSA4: 19
-relative hydrophobic surface area: 11
-relative polar surface area: 11
-McGowan volume: 11
-Filter-it™ LogS: 11
-MolLogP: 11
-SlogP_VSA5: 9
-SlogP_VSA6: 9
-SlogP_VSA7: 9
-SlogP_VSA8: 9
-SlogP_VSA9: 9
-total hydrophobic surface area: 1
-
-
---------------------------------------------------
-
-Message template: g_form_4, Number of tournaments: 20, Target task: solubility, Number of features: 10
-
-SlogP_VSA1: 20
-SlogP_VSA2: 20
-SlogP_VSA3: 20
-SlogP_VSA4: 18
-SlogP_VSA5: 18
-SlogP_VSA6: 18
-SlogP_VSA7: 18
-SlogP_VSA8: 18
-SlogP_VSA9: 17
-total polar surface area: 2
-relative hydrophobic surface area: 2
-relative polar surface area: 2
-McGowan volume: 2
-Filter-it™ LogS: 2
-MolLogP: 2
-total hydrophobic surface area: 1
+Labute's Approximate Surface Area- MolLogP: 2
+FractionCSP3: 2
+- NumHDonors: 1
+- NumHAcceptors: 1
+- Number of hydrogen bond acceptor: 1
+- Number of hydrogen bond donor: 1
+- Molecular weight: 1
+- Heavy Atom Count: 1
+RingCount: 1
+the fraction of C atoms that are SP3 hybridized: 1
+McGowan volumeTPSA: 1
+- number of hydrogen bond acceptor: 1
+- number of hydrogen bond donor: 1
+- Lipinski rule of five: 1
+- Ghose filter: 1
+- Filter-it™ LogS: 1
+- relative polar surface area- MolLogP: 1
+- Number of H atoms: 1
+- Number of hetero atoms: 1
+- SpDiam of adjacency matrix: 1
+- Balaban's J index: 1
+- Kappa shape index 1: 1
+- Hydrogen bond acceptor countLogEE of adjacency matrix: 1
+EState_VSA1: 1
 
 
 --------------------------------------------------
