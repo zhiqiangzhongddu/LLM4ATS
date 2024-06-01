@@ -43,8 +43,6 @@ def get_name_of_target(target):
     elif target == 11: return "SR-p53"
 
 def is_value_valid(val):
-    try: val.astype(np.float64)
-    except: pass
     if type(val) == float or type(val) == int or type(val) == np.float64 or type(val) == bool: return True
     else: return False
 
