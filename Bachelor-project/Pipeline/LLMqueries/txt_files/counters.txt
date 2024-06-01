@@ -824,7 +824,7 @@ number of O atoms: 1
 number of N atoms: 1
 
 
---------------------------------------------------
+-------------------------------------------------- THIS WAS RAN BY "gpt-4o" MODEL
 
 Message template: form_4, Number of tournaments: 20, Target task: level of toxicity, Number of features: 10
 
@@ -885,6 +885,189 @@ molecular weight: 1
 log P: 1
 fr_COO: 1
 fr_NH2: 1
+
+
+-------------------------------------------------- THIS WAS RAN BY "gpt-4o" MODEL
+
+Message template: form_4, Number of tournaments: 20, Target task: lipophilicity, Number of features: 10
+
+relative hydrophobic surface area: 17
+total polar surface area: 15
+relative polar surface area: 13
+MOE logP VSA Descriptor 1 (-inf < x < -0.40): 11
+total hydrophobic surface area: 10
+MOE logP VSA Descriptor 4 (0.00 <= x < 0.10): 8
+MOE logP VSA Descriptor 3 (-0.20 <= x < 0.00): 7
+SlogP_VSA1: 7
+MolLogP: 6
+MOE logP VSA Descriptor 2 (-0.40 <= x < -0.20): 5
+number of O atoms: 5
+number of C atoms: 4
+MOE logP VSA Descriptor 9 (0.30 <= x < 0.40): 4
+SlogP_VSA2: 3
+surface weighted charged partial negative surface area (version 1): 3
+surface weighted charged partial positive surface area (version 1): 3
+number of halogen atoms: 3
+MolMR: 2
+SlogP_VSA4total hydrophobic surface area: 2
+MOE logP VSA Descriptor 3 (-0.20 <= x <  0.00): 2
+MOE logP VSA Descriptor 10 (0.40 <= x < 0.50): 2
+SlogP_VSA2number of C atoms: 2
+MOE logP VSA Descriptor 4 ( 0.00 <= x < 0.10): 2
+MOE logP VSA Descriptor 5 ( 0.10 <= x < 0.15): 2
+MOE logP VSA Descriptor 6 ( 0.15 <= x < 0.20): 2
+MOE logP VSA Descriptor 7 ( 0.20 <= x < 0.25): 2
+fractional charged partial positive surface area (version 1): 1
+fractional charged partial negative surface area (version 1): 1
+MolLogParomatic atoms count: 1
+SlogP_VSA3: 1
+Filter-it™ LogS: 1
+MOE logP: 1
+3D-MoRSE weighted by polarizability (distance = 7)aromatic atoms count: 1
+MOE logP VSA Descriptor 11 (0.50 <= x < 0.60): 1
+SlogP_VSA2logP (octanol-water partition coefficient): 1
+molecular weight: 1
+NumHAcceptorstotal hydrophobic surface area: 1
+SlogP_VSA3total hydrophobic surface area: 1
+SlogP_VSA1total hydrophobic surface area: 1
+relative negative charge: 1
+relative positive charge: 1
+MOE logP VSA Descriptor 9 ( 0.30 <= x < 0.40): 1
+MOE logP VSA Descriptor 10 ( 0.40 <= x < 0.50)number of C atoms: 1
+MOE logP VSA Descriptor 5 (0.10 <= x < 0.15): 1
+MOE logP VSA Descriptor 7 (0.20 <= x < 0.25): 1
+MOE logP VSA Descriptor 6 (0.15 <= x < 0.20): 1
+fraction of C atoms that are SP3 hybridizednumber of C atoms: 1
+MOE logP VSA Descriptor 7 (0.20 <= x < 0.25)relative hydrophobic surface area: 1
+MOE logP VSA Descriptor 8 ( 0.25 <= x < 0.30)number of C atoms: 1
+SlogP_VSA2total hydrophobic surface area: 1
+MolLogPFractionCSP3: 1
+MolLogPtotal hydrophobic surface area: 1
+relative negative charge surface area: 1
+relative positive charge surface area: 1
+SlogP_VSA2relative hydrophobic surface area: 1
+MOE logP VSA Descriptor 9 ( 0.30 <= x < 0.40)total hydrophobic surface area: 1
+MOE logP VSA Descriptor 8 (0.25 <= x < 0.30): 1
+MOE logP VSA Descriptor 11 (0.50 <= x < 0.60)total hydrophobic surface area: 1
+logP: 1
+MOE logP VSA Descriptor 4 ( 0.00 <= x <  0.10): 1
+MOE logP VSA Descriptor 5 ( 0.10 <= x <  0.15): 1
+
+
+--------------------------------------------------
+
+Message template: form_4, Number of tournaments: 20, Target task: lipophilicity, Number of features: 10
+
+SlogP_VSA2: 6
+SlogP_VSA6: 6
+relative hydrophobic surface area: 6
+MolLogP: 5
+SlogP_VSA4: 4
+SlogP_VSA1: 4
+MOE logP VSA Descriptor 2 (-0.40 <= x < -0.20): 3
+SlogP_VSA8: 3
+NumHAcceptors: 3
+NumHDonors: 3
+TPSA: 3
+total hydrophobic surface area: 2
+SP3 carbon bound to 4 other carbons: 2
+SlogP_VSA3: 2
+Lipinski rule of five: 2
+SlogP_VSA5: 2
+SlogP_VSA7: 2
+NumRotatableBonds: 2
+MOE logP VSA Descriptor 10: 2
+MOE logP VSA Descriptor 1 (-inf < x < -0.40): 2
+MOE logP VSA Descriptor 3 (-0.20 <= x < 0.00): 2
+MOE logP VSA Descriptor 4 (0.00 <= x < 0.10): 2
+MOE logP: 2
+MOE logP VSA Descriptor 10 (0.40 <= x < 0.50): 2
+sum of sOH: 2
+MOE logP VSA Descriptor 7 ( 0.20 <= x < 0.25): 1
+MOE logP VSA Descriptor 8 ( 0.25 <= x < 0.30): 1
+MOE logP VSA Descriptor 9 ( 0.30 <= x < 0.40): 1
+MOE logP VSA Descriptor 10 ( 0.40 <= x < 0.50): 1
+MolWTSlogP_VSA1: 1
+SlogP_VSA10MOE logP VSA Descriptor 1 (-inf < x < -0.40): 1
+MolWT: 1
+ExactMolWTfr_ether: 1
+fr_benzeneLipinski rule of five: 1
+Filter-it™ LogS: 1
+Moreau-broto autocorrelation of lag 1 weighted by mass: 1
+Geary coefficient of lag 1 weighted by gasteiger charge: 1
+Mean of constitutional weighted by mass: 1
+3D-MoRSE weighted by mass (distance = 2): 1
+Number of aromatic bonds in non-kekulized structure: 1
+Number of double bonds in non-kekulized structure: 1
+MOE logP VSA Descriptor 10 (0.40 <= x < 0.50)total hydrophobic surface area: 1
+SlogP_VSA5fr_halogen: 1
+fr_sulfide: 1
+fr_thiophenetotal hydrophobic surface area: 1
+total hydrophobic surface area (again): 1
+MOE logP : 1
+SlogP_VSA9EState VSA Descriptor 10: 1
+SlogP_VSA4number of C atoms: 1
+number of H atoms: 1
+number of O atoms: 1
+LabuteASA: 1
+ExactMolWT: 1
+MolWTfr_alkyl_carbamate: 1
+fr_alkyl_halidetotal hydrophobic surface area: 1
+Filter-it™ LogSLipinski rule of five: 1
+SlogP_VSA3total hydrophobic surface area: 1
+3D-MoRSE weighted by mass (distance = 29): 1
+3D-MoRSE weighted by vdw volume (distance = 31)Lipinski rule of five: 1
+MOE logP VSA Descriptor 3: 1
+MOE logP VSA Descriptor 4: 1
+MOE logP VSA Descriptor 5: 1
+MOE logP VSA Descriptor 6: 1
+SlogP_VSA2fr_aldehyde: 1
+fr_esters: 1
+fr_methoxytotal hydrophobic surface area: 1
+total polar surface area: 1
+relative polar surface area: 1
+MOE logP VSA Descriptor 10 ( 0.40 <= x <  0.50): 1
+MOE MR VSA Descriptor 9 ( 3.80 <= x <  4.00): 1
+MOE MR VSA Descriptor 8 ( 3.63 <= x <  3.80): 1
+MOE logP VSA Descriptor 9 ( 0.30 <= x <  0.40): 1
+SlogP_VSA1MOE logP VSA Descriptor 4 (0.00 <= x < 0.10): 1
+MOE logP VSA Descriptor 5 (0.10 <= x < 0.15): 1
+MOE logP VSA Descriptor 6 (0.15 <= x < 0.20): 1
+MOE logP VSA Descriptor 7 (0.20 <= x < 0.25): 1
+MOE logP VSA Descriptor 8 (0.25 <= x < 0.30): 1
+MOE logP VSA Descriptor 9 (0.30 <= x < 0.40): 1
+SlogP_VSA10fr_C_O: 1
+fr_etherFilter-it™ LogS: 1
+sum of sCH3: 1
+sum of ssssC: 1
+max of sCl: 1
+max of sBr: 1
+max of sSeH: 1
+SMR_VSA2Filter-it™ LogS: 1
+MOE logP VSA Descriptor 9: 1
+MOE logP VSA Descriptor 8: 1
+MOE logP VSA Descriptor 7: 1
+ExactMolWTSlogP_VSA4: 1
+SlogP_VSA7MolLogP: 1
+MolMR: 1
+TPSA(logP)_VSA5: 1
+total hydrophobic surface areaFilter-it™ LogS: 1
+Partial negative surface area (version 1): 1
+Number of SP3 carbons bound to 4 other carbons: 1
+Total hydrophobic surface area: 1
+fr_alkyl_halideLabuteASA: 1
+SlogP_VSA9: 1
+SlogP_VSA10: 1
+fr_benzene: 1
+fr_ethertotal hydrophobic surface area: 1
+fractional charged partial negative surface area (version 5): 1
+fractional charged partial positive surface area (version 5): 1
+surface weighted charged partial negative surface area (version 5): 1
+mean of constitutional weighted by vdw volume: 1
+sum of aaS: 1
+hybridization ratio: 1
+sum of sCH3MOE logP VSA Descriptor 1 (-inf < x < -0.40): 1
+moreau-broto autocorrelation of lag 0 weighted by valence electrons: 1
 
 
 --------------------------------------------------
