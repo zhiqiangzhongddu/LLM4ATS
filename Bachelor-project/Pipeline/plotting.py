@@ -161,6 +161,7 @@ def get_task_description(target):
     if target == "bbbp": return "blood-brain barrier permeability"
     if target == "esol": return "solubility"
     if target == "lipo": return "lipophilicity"
+    else: raise ValueError("Invalid target task")
 
 
 

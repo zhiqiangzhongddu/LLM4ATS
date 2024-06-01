@@ -86,7 +86,7 @@ class our_LLM_class:
         # )
         chat_completion = self.client.chat.completions.create(
             messages=self.message,
-            model="gpt-3.5-turbo"#"gpt-4o" #"gpt-3.5-turbo",
+            model="gpt-4o" #"gpt-3.5-turbo",
         )
         
         output = chat_completion.choices[0].message.content

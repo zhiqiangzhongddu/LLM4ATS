@@ -1252,5 +1252,201 @@ EState VSA Descriptor 3 (0.29 <= x < 0.72)NumHAcceptors: 1
 SlogP_VSA9: 1
 
 
+-------------------------------------------------- THIS WAS RAN BY "gpt-4o" MODEL
+
+Message template: form_5, Number of tournaments: 20, Target task: lipophilicity, Number of features: 10
+
+relative hydrophobic surface area: 13
+total polar surface area: 12
+relative polar surface area: 12
+total hydrophobic surface area: 10
+MOE logP VSA Descriptor 1 (-inf < x < -0.40): 10
+SlogP_VSA2: 9
+SlogP_VSA1: 8
+MOE logP VSA Descriptor 3 (-0.20 <= x < 0.00): 8
+MOE logP VSA Descriptor 2 (-0.40 <= x < -0.20): 7
+MOE logP VSA Descriptor 4 (0.00 <= x < 0.10): 7
+MolLogP: 6
+SlogP_VSA4: 6
+SlogP_VSA3: 5
+SlogP_VSA5: 4
+SlogP_VSA6: 4
+number of C atoms: 3
+number of O atoms: 3
+FractionCSP3: 3
+Filter-it™ LogS: 3
+SlogP_VSA7: 3
+MOE logP VSA Descriptor 5 (0.10 <= x < 0.15): 3
+MOE logP VSA Descriptor 10 ( 0.40 <= x <  0.50): 2
+MOE logP VSA Descriptor 9 (0.30 <= x < 0.40): 2
+MOE logP VSA Descriptor 10 (0.40 <= x < 0.50): 2
+MOE logP VSA Descriptor 11 (0.50 <= x < 0.60): 2
+number of H atoms: 2
+number of N atoms: 1
+MOE logP VSA Descriptor 4 ( 0.00 <= x <  0.10): 1
+mean of constitutional weighted by vdw volume Lipinski rule of fiveFilter-it™ LogSMolLogP: 1
+MOE logP VSA Descriptor 7 (0.20 <= x < 0.25): 1
+relative hydrophobic surface areanumber of C atoms: 1
+max of aaaCMolLogP: 1
+LabuteASA: 1
+NumHAcceptors: 1
+moreau-broto autocorrelation of lag 0 weighted by vdw volumetotal hydrophobic surface area: 1
+SlogP_VSA8: 1
+SlogP_VSA9: 1
+Filter-it™ LogSlogP: 1
+logD: 1
+MOE logP VSA Descriptor 8 ( 0.25 <= x <  0.30): 1
+MOE logP VSA Descriptor 9 ( 0.30 <= x <  0.40)relative hydrophobic surface area: 1
+sum of constitutional weighted by polarizability: 1
+Lipinski rule of fiveFilter-it™ LogSMolLogP: 1
+mean of constitutional weighted by vdw volumeMolLogP: 1
+number of halogen atoms: 1
+sum of constitutional weighted by vdw volume: 1
+sum of constitutional weighted by polarizabilityrelative hydrophobic surface area: 1
+PBFMolLogP: 1
+LogP: 1
+TPSA: 1
+MOE logP VSA Descriptor 9 (0.30 <= x < 0.40)countMolLogP: 1
+surface weighted charged partial negative surface area (version 1): 1
+relative hydrophobic surface areatotal hydrophobic surface area: 1
+MOE logP VSA Descriptor 4 (0.00 <= x < 0.10)aromatic atoms count: 1
+Filter-it™ LogStotal hydrophobic surface area: 1
+MOE logP VSA Descriptor 4 (0.00 <= x < 0.10)total hydrophobic surface area: 1
+
+
+-------------------------------------------------- THIS WAS RAN BY "gpt-4o" MODEL
+
+Message template: form_5, Number of tournaments: 20, Target task: solubility, Number of features: 10
+
+total polar surface area: 14
+number of hydrogen bond acceptor: 14
+number of hydrogen bond donor: 13
+TPSA: 12
+number of N atoms: 8
+Labute's Approximate Surface Area: 8
+number of O atoms: 7
+total hydrophobic surface area: 7
+LabuteASA: 6
+NumHAcceptors: 6
+NumHDonors: 6
+basic group count: 6
+MolLogP: 5
+relative polar surface area: 4
+Filter-it™ LogS: 4
+MolWT: 3
+FractionCSP3: 3
+partial positive surface area (version 1): 3
+partial negative surface area (version 1): 3
+NumHeteroatoms: 2
+sum of dOFilter-it™ LogS: 2
+PBFMolLogP: 2
+SlogP_VSA1: 2
+MOE logP VSA Descriptor 3 (-0.20 <= x <  0.00)number of O atoms: 2
+MOE logP VSA Descriptor 1 (-inf < x < -0.40): 2
+MOE logP VSA Descriptor 2 (-0.40 <= x < -0.20): 2
+MOE logP VSA Descriptor 3 (-0.20 <= x < 0.00): 2
+NumRotatableBonds: 2
+Lipinski rule of five: 2
+Labute's Approximate Surface AreaTPSA: 1
+number of H atoms: 1
+MOE logPacidic group count: 1
+McGowan volume: 1
+Heavy Atom Count: 1
+Filter-it™ LogSLipinski rule of fivetotal polar surface area: 1
+EState VSA Descriptor 2 (-0.39 <= x < 0.29): 1
+MOE logP VSA Descriptor 4 (0.00 <= x < 0.10)acidic group count: 1
+LogP: 1
+Filter-it™ LogSnumber of H atoms: 1
+acidic group count: 1
+logKow: 1
+number of hydrogen bond donors: 1
+relative hydrophobic surface areatotal polar surface area: 1
+sum of dO: 1
+Filter-it™ LogStotal hydrophobic surface area: 1
+fractional charged partial positive surface area (version 1): 1
+MOE logP VSA Descriptor 4 ( 0.00 <= x <  0.10): 1
+MOE logP VSA Descriptor 5 ( 0.10 <= x <  0.15): 1
+MOE logP VSA Descriptor 10 ( 0.40 <= x <  0.50): 1
+MolWt: 1
+MOE logP VSA Descriptor 4 ( 0.00 <= x < 0.10): 1
+fr_Al_OH: 1
+fr_OH: 1
+ExactMolWT: 1
+EState VSA Descriptor 2 (-0.39 <= x < 0.29)number of O atoms: 1
+sOHFilter-it™ LogS: 1
+MOE logP VSA Descriptor 4 (0.00 <= x < 0.10): 1
+
+
+--------------------------------------------------
+
+Message template: form_5, Number of tournaments: 20, Target task: blood-brain barrier permeability, Number of features: 10
+
+TPSA: 12
+total polar surface area: 9
+relative polar surface area: 9
+FractionCSP3: 9
+MolLogP: 8
+total hydrophobic surface area: 7
+NumHAcceptors: 7
+NumHDonors: 7
+ExactMolWT: 6
+number of O atoms: 6
+number of hydrogen bond donor: 6
+number of hydrogen bond acceptor: 5
+NumRotatableBonds: 4
+SlogP_VSA1: 4
+number of N atoms: 4
+LabuteASA: 4
+relative hydrophobic surface area: 4
+relative positive charge: 3
+relative negative charge: 3
+Filter-it™ LogS: 3
+Labute's Approximate Surface Area: 3
+MolWT: 3
+partial positive surface area (version 1): 3
+SlogP_VSA2: 2
+acidic group count: 2
+basic group count: 2
+number of heavy atoms: 2
+McGowan volume: 2
+partial negative surface area (version 1): 2
+partial positive surface area (version 5): 1
+PBFMolLogP: 1
+number of hydrogen bond acceptors: 1
+number of hydrogen bond donors: 1
+fractional charged partial positive surface area (version 1): 1
+Lipinski rule of fiveFilter-it™ LogStotal polar surface area: 1
+LogP: 1
+Molecular weight: 1
+Polarizability: 1
+kappa shape index 3: 1
+MOE logP VSA Descriptor 3 (-0.20 <= x <  0.00): 1
+MOE logP VSA Descriptor 7 ( 0.20 <= x <  0.25)total polar surface area: 1
+Wildman-Crippen LogP for a molecule: 1
+Topological Polar Surface Area: 1
+surface weighted charged partial positive surface area (version 1)total polar surface area: 1
+Morans coefficient of lag 1 weighted by ionization potential: 1
+LogD: 1
+number of aromatic atomstotal polar surface area: 1
+number of hydrogen bond donortotal polar surface area: 1
+moreau-broto autocorrelation of lag 2 weighted by polarizability: 1
+sum of sOH: 1
+Filter-it™ LogSMolLogP: 1
+number of halogen atoms: 1
+sum of dOnumber of hydrogen bond acceptor: 1
+MOE logP VSA Descriptor 1 (-inf < x < -0.40): 1
+Labute's Approximate Surface Areatotal polar surface area: 1
+molecular weight: 1
+fractionCSP3: 1
+Lipinski rule of five: 1
+logP (octanol-water partition coefficient): 1
+relative positive chargetotal polar surface area: 1
+partial negative surface area (version 2): 1
+relative positive charge surface area: 1
+SlogP_VSA3: 1
+logP: 1
+hbond_donors: 1
+
+
 --------------------------------------------------
 
