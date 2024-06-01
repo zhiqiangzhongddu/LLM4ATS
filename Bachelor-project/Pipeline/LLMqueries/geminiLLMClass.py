@@ -38,7 +38,7 @@ class our_gemini_LLM_class:
 
     
     # 45 properties per query
-    props_per_query = 500
+    props_per_query = 2000
     
     # Number of tournaments
     NO_tournaments = 10
@@ -114,6 +114,7 @@ class our_gemini_LLM_class:
             output = self.model.generate_content(query)
         
         if str(output.candidates[0].finish_reason) != "FinishReason.STOP":
+            print(self.message[1]['content'])
             raise Exception(f"The model did not finish generating the content. Please try again. Error code: ",str(output.candidates[0].finish_reason))            
 
         output = output.candidates[0].content.parts[0].text
@@ -133,7 +134,7 @@ class our_gemini_LLM_class:
             self.message_name = prefix_name
             self.message = copy.deepcopy(self.template_set[prefix_name])
             self.model = genai.GenerativeModel('gemini-1.5-pro-latest', generation_config=self.gen_config, safety_settings=self.safety_settings, system_instruction=query_attempts[self.message_name][0]['content'])
-            if self.message_name not in[ 'form_4', 'g_form_4']:
+            if self.message_name not in[ 'form_4', 'g_form_4', 'form_5']:
                 self.prefix_str = self.message[1]['content'].format(self.max_props, self.target_task, self.anwser_format)
             
         else:
@@ -193,8 +194,8 @@ class our_gemini_LLM_class:
         counter = 0
         for s in props:
             if (counter % self.props_per_query)==0 and counter != 0:
-                if self.message_name in ['form_4', 'g_form_4']:
-                    queries.append(query_attempts[self.message_name][1]['content'].format(query,self.max_props, self.target_task,self.max_props))
+                if self.message_name in ['form_4', 'g_form_4', 'form_5']:
+                    queries.append(query_attempts[self.message_name][1]['content'].format(query,self.max_props, self.target_task,self.target_task, self.max_props))
                 else: queries.append(self.prefix_str + query)
                 query = s + "\n"
             else:
@@ -202,8 +203,8 @@ class our_gemini_LLM_class:
             counter += 1
         # append the rest of the properties
         if (counter % self.props_per_query)!=0:
-            if self.message_name in ['form_4', 'g_form_4']:
-                queries.append(query_attempts[self.message_name][1]['content'].format(query,self.max_props, self.target_task, self.max_props))
+            if self.message_name in ['form_4', 'g_form_4', 'form_5']:
+                queries.append(query_attempts[self.message_name][1]['content'].format(query,self.max_props, self.target_task,self.target_task, self.max_props))
             else: queries.append(self.prefix_str + query)
         print(f"Number of queries: {len(queries)}")
 
@@ -212,15 +213,17 @@ class our_gemini_LLM_class:
     # Recursively calls chat-GPT until the number of suggested properties is 'aux_tasks'
     def __get_final_result(self, queries):
         extracted_responses = ""
+        print(f"Number of queries: {len(queries)}")
         for i, q in enumerate(queries):    
+            
+            time.sleep(5)
             print(f"Query {i+1}, Token length: {len(self.token_encoding.encode(q))}")
+            
             self.message[1]['content'] = q
-            time.sleep(1)
             response = self.__query_gemini()
             extracted_responses = extracted_responses + self.__extract_response(response)
         tmp = len(extracted_responses.split("\n"))
         print(f"Number of extracted responses {tmp}")
-        print(tmp <= 15 and tmp > 10)
         if tmp <= 15 and tmp > 10:
             print(extracted_responses.split("\n"))
             
