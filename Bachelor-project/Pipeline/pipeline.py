@@ -46,7 +46,7 @@ if __name__ == "__main__":
     parser.add_argument('--target_task', type=str, default="tox21", help='Abbreviated name of the target task. Possible tasks: tox21, bbbp, esol, lipo. type=str')
     parser.add_argument('--pretrain', type=bool, default=False, action=ap.BooleanOptionalAction, help='Whether to pretrain the model, type=bool')
     parser.add_argument('--train', type=bool, default=False, action=ap.BooleanOptionalAction, help='Whether to train the model, type=bool')
-    parser.add_argument('--msg_form', type=str, default="form_4", help="Which message format to use when talking to the LLM, type=str")
+    parser.add_argument('--msg_form', type=str, default="form_5", help="Which message format to use when talking to the LLM, type=str")
     parser.add_argument('--print_time', type=bool, default=True, action=ap.BooleanOptionalAction, help="Whether to print the time, type=bool")
     parser.add_argument('--epochs', type=int, default=10, help="Specify the number of epochs to train over, type=int")
     parser.add_argument('--model', type=str, default="gin-v", help="Specify the model type to train, type=str")

@@ -102,7 +102,7 @@ class our_LLM_class:
         if prefix_name in self.template_set:
             self.message_name = prefix_name
             self.message = copy.deepcopy(self.template_set[prefix_name])
-            if prefix_name not in  ['form_4', 'g_form_4']:
+            if prefix_name not in  ['form_4', 'g_form_4', 'form_5']:
                 self.prefix_str = self.message[1]['content'].format(self.max_props, self.target_task, self.anwser_format)
         else:
             print("Invalid prefix name")
@@ -162,7 +162,7 @@ class our_LLM_class:
         counter = 0
         for s in props:
             if (counter % self.props_per_query)==0 and counter != 0:
-                if self.message_name in ['form_4', 'g_form_4']:
+                if self.message_name in ['form_4', 'g_form_4', 'form_5']:
                     queries.append(query_attempts[self.message_name][1]['content'].format(query,self.max_props, self.target_task,self.target_task,self.max_props))
                 else: queries.append(self.prefix_str + query)
                 query = s + "\n"
@@ -171,7 +171,7 @@ class our_LLM_class:
             counter += 1
         # append the rest of the properties
         if (counter % self.props_per_query)!=0:
-            if self.message_name in ['form_4', 'g_form_4']:
+            if self.message_name in ['form_4', 'g_form_4', 'form_5']:
                 queries.append(query_attempts[self.message_name][1]['content'].format(query,self.max_props, self.target_task,self.target_task, self.max_props))
             else: queries.append(self.prefix_str + query)
         print(f"Number of queries: {len(queries)}")
