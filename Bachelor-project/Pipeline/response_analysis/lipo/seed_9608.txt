@@ -1,0 +1,20 @@
+moreau-broto autocorrelation of lag 1 weighted by ionization potential
+Slope: 0.0399
+Correlation coefficient: 0.1545
+
+number of sspbh2
+Slope: nan
+Correlation coefficient: nan
+
+estate vsa descriptor 5 ( 1.17 <= x <  1.54)
+Slope: -0.0025
+Correlation coefficient: -0.0048
+
+averaged and centered moreau-broto autocorrelation of lag 2 weighted by atomic number
+Slope: 0.0035
+Correlation coefficient: 0.0100
+
+fr_NH2
+Slope: -0.0750
+Correlation coefficient: -0.1297
+

@@ -1,0 +1,20 @@
+averaged molecular id on h atoms
+Slope: -0.0743
+Correlation coefficient: -0.1768
+
+averaged moreau-broto autocorrelation of lag 1 weighted by sigma electrons
+Slope: 0.0233
+Correlation coefficient: 0.1011
+
+sum of sssssp
+Slope: nan
+Correlation coefficient: nan
+
+moe logp vsa descriptor 4 ( 0.00 <= x <  0.10)
+Slope: 0.0359
+Correlation coefficient: 0.0548
+
+moran coefficient of lag 1 weighted by atomic number
+Slope: -0.0110
+Correlation coefficient: -0.0143
+

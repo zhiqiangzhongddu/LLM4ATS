@@ -1,0 +1,20 @@
+centered moreau-broto autocorrelation of lag 1 weighted by gasteiger charge
+Slope: -28.7905
+Correlation coefficient: 0.1166
+
+averaged and centered moreau-broto autocorrelation of lag 3 weighted by sigma electrons
+Slope: 0.0501
+Correlation coefficient: 0.0407
+
+moran coefficient of lag 4 weighted by mass
+Slope: 0.0213
+Correlation coefficient: 0.0366
+
+averaged moreau-broto autocorrelation of lag 4 weighted by atomic number
+Slope: -0.0017
+Correlation coefficient: -0.0141
+
+spectral mean absolute diviation from barysz matrix weighted by vdw volume
+Slope: 0.0504
+Correlation coefficient: 0.1344
+

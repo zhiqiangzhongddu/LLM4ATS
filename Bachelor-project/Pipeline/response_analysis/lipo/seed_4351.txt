@@ -1,0 +1,20 @@
+moe mr vsa descriptor 8 ( 3.63 <= x <  3.80)
+Slope: nan
+Correlation coefficient: nan
+
+coefficient sum of the last eigenvector from barysz matrix weighted by allred-rocow en
+Slope: 0.0493
+Correlation coefficient: 0.1952
+
+moreau-broto autocorrelation of lag 7 weighted by mass
+Slope: 0.0350
+Correlation coefficient: 0.1345
+
+sum of dsss
+Slope: nan
+Correlation coefficient: 0.0043
+
+BertzCT
+Slope: 0.0621
+Correlation coefficient: 0.2028
+
