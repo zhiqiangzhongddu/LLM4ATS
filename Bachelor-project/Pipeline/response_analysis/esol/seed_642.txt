@@ -1,0 +1,20 @@
+ghose filter
+Slope: -0.1174
+Correlation coefficient: -0.3169
+
+moran coefficient of lag 4 weighted by pauling en
+Slope: -0.0107
+Correlation coefficient: -0.0738
+
+5-ordered chi path-cluster weighted by valence electrons
+Slope: -0.0163
+Correlation coefficient: -0.3595
+
+sum of ssnh
+Slope: 0.0020
+Correlation coefficient: 0.0123
+
+fr_phos_ester
+Slope: 0.0023
+Correlation coefficient: 0.0413
+

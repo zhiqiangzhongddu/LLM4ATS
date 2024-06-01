@@ -1,0 +1,20 @@
+centered moreau-broto autocorrelation of lag 8 weighted by polarizability
+Slope: 0.0031
+Correlation coefficient: 0.0368
+
+logarithmic coefficient sum of the last eigenvector from distance matrix
+Slope: -0.1023
+Correlation coefficient: -0.6082
+
+moran coefficient of lag 2 weighted by intrinsic state
+Slope: 0.0145
+Correlation coefficient: 0.0687
+
+moreau-broto autocorrelation of lag 7 weighted by ionization potential
+Slope: -0.0309
+Correlation coefficient: -0.3941
+
+SlogP_VSA1
+Slope: 0.0017
+Correlation coefficient: 0.0121
+

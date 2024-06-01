@@ -1,0 +1,20 @@
+sum of sssp
+Slope: nan
+Correlation coefficient: nan
+
+number of aasc
+Slope: -0.0584
+Correlation coefficient: -0.4826
+
+number of dse
+Slope: nan
+Correlation coefficient: nan
+
+SlogP_VSA7
+Slope: -0.0331
+Correlation coefficient: -0.4031
+
+HeavyAtomMolWt
+Slope: -0.0668
+Correlation coefficient: -0.6395
+

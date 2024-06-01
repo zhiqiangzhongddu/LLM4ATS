@@ -1,0 +1,20 @@
+sum of ssih3
+Slope: nan
+Correlation coefficient: nan
+
+sum of sssssp
+Slope: nan
+Correlation coefficient: nan
+
+logarithmic coefficient sum of the last eigenvector from barysz matrix weighted by ionization potential
+Slope: -0.1023
+Correlation coefficient: -0.6081
+
+sum of sssch
+Slope: -0.0206
+Correlation coefficient: -0.1073
+
+4-ordered chi cluster weighted by sigma electrons
+Slope: -0.0190
+Correlation coefficient: -0.1579
+

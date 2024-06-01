@@ -206,7 +206,8 @@ class GNN_node_Virtualnode(torch.nn.Module):
         virtualnode_embedding = self.virtualnode_embedding(
             torch.zeros(batch[-1].item() + 1).to(edge_index.dtype).to(edge_index.device)
         )
-        x = x.type(torch.LongTensor)
+        if str(edge_index.device) == "cpu": x = x.type(torch.LongTensor)
+        else: x = x.type(torch.cuda.LongTensor)
         h_list = [self.atom_encoder(x)]
         for layer in range(self.num_layer):
             ### add message from virtual nodes to graph nodes
