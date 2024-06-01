@@ -6,7 +6,7 @@ import copy
 import tiktoken
 
 # List of properties that, for some reason, results in errors for all molecules
-fyfy = ["total hydrophobic surface area", "total polar surface area"]
+fyfy = ["total hydrophobic surface area", "total polar surface area", "NumAromaticRings"]
 
 class our_LLM_class:
     # Filepath
