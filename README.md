@@ -1,5 +1,15 @@
 # Large Language Model for Auxiliary Task Selection
 
+## Preparation
+
+### Benchmark Datasets
+
+1. Molecular Datasets
+   - We adopt datasets from [OGB Graph Property Prediction Benchmark](https://ogb.stanford.edu/docs/graphprop/), including ogbg-mollipo, ogbg-molesol, ogbg-moltox21 and ogbg-bbbp.
+   - The public splits and evaluation metrics are integrated in. 
+2. More?
+
+
 ## Instruction to execution
 
 1. Auxiliary Task Collection
@@ -11,8 +21,8 @@
    2. Train
    3. Pre-train
 
-## Example execution code
 
+## Example execution code
 
 ### Query LLMs for Auxiliary Task Selection
 Example: 

@@ -1,7 +1,7 @@
 import torch
 from torch_geometric.nn import global_add_pool, global_mean_pool, global_max_pool, GlobalAttention, Set2Set
 
-from code.GNNs.gnn_conv import GNN_node, GNN_node_Virtualnode
+from code.gnns.gnn_conv import GnnNode, GnnNodeVirtualNode
 
 
 class HierarchicalGNNEncoder(torch.nn.Module):
@@ -29,19 +29,19 @@ class HierarchicalGNNEncoder(torch.nn.Module):
         if self.num_layer < 2:
             raise ValueError("Number of GNN layers must be greater than 1.")
 
-        ### GNN to generate node embeddings
+        # GNN to generate node embeddings
         if virtual_node:
-            self.gnn_node = GNN_node_Virtualnode(
+            self.gnn_node = GnnNodeVirtualNode(
                 num_layer, emb_dim, JK=JK, drop_ratio=drop_ratio,
                 residual=residual, gnn_type=gnn_type
             )
         else:
-            self.gnn_node = GNN_node(
+            self.gnn_node = GnnNode(
                 num_layer, emb_dim, JK=JK, drop_ratio=drop_ratio,
                 residual=residual, gnn_type=gnn_type
             )
 
-        ### Pooling function to generate whole-graph embeddings
+        # Pooling function to generate whole-graph embeddings
         if self.graph_pooling == "sum":
             self.pool = global_add_pool
         elif self.graph_pooling == "mean":
@@ -84,13 +84,9 @@ class HierarchicalGNN(torch.nn.Module):
 
         super(HierarchicalGNN, self).__init__()
 
-        # self.num_layer = num_layer
-        # self.drop_ratio = drop_ratio
-        # self.JK = JK
         self.emb_dim = emb_dim
         self.g_emb_dim = g_emb_dim
         self.num_tasks = num_tasks
-        # self.graph_pooling = graph_pooling
 
         self.encoder = HierarchicalGNNEncoder(
             num_tasks=num_tasks, num_layer=num_layer, emb_dim=emb_dim,

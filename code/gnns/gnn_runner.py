@@ -8,7 +8,7 @@ from torch_geometric.loader import DataLoader
 from ogb.graphproppred import Evaluator
 
 from code.data_utils.dataset import DatasetLoader
-from code.GNNs.hierarchical_gnn import HierarchicalGNN
+from code.gnns.hierarchical_gnn import HierarchicalGNN
 from code.utils import time_logger, project_root_path, init_path
 
 
@@ -55,10 +55,6 @@ class GNNRunner():
         )
         dataset = dataloader.dataset
         split_idx = dataset.get_idx_split()
-        dataset._data.y = torch.cat(
-            (dataset.y,
-             torch.rand_like(dataset.y)), dim=1 # replace it with pretrain target
-        )
 
         train_loader = DataLoader(
             dataset[split_idx["train"]], batch_size=self.batch_size, shuffle=True,
@@ -110,6 +106,7 @@ class GNNRunner():
         optimizer = optim.Adam(params=self.model.parameters(), lr=self.lr)
         return optimizer
 
+
     def _get_evaluator(self):
         self.evaluator = Evaluator(name=self.dataset)
 
@@ -117,6 +114,7 @@ class GNNRunner():
     @torch.no_grad()
     def get_pred(self, loader):
         self.model.eval()
+
         y_pred = []
 
         for step, batch in enumerate(tqdm(loader, desc="Iteration")):
@@ -134,7 +132,7 @@ class GNNRunner():
 
         return y_pred
 
-    def _train(self, loader, task):
+    def _train(self, loader):
         self.model.train()
 
         for step, batch in enumerate(tqdm(loader, desc="Iteration")):
@@ -145,23 +143,23 @@ class GNNRunner():
             else:
                 pred = self.model.to(self.device)(batch)
                 self.optimizer.zero_grad()
-                is_labeled = batch.y[:, 1] == batch.y[:, 1]
+                is_labeled = batch.y == batch.y
                 if "classification" in self.task_type:
                     loss = self.cls_criterion(
                         pred.to(torch.float32)[is_labeled],
-                        batch.y[:, task].to(torch.float32)[is_labeled]
+                        batch.y.to(torch.float32)[is_labeled]
                     )
                 else:
                     loss = self.reg_criterion(
                         pred.to(torch.float32)[is_labeled],
-                        batch.y[:, task].to(torch.float32)[is_labeled]
+                        batch.y.to(torch.float32)[is_labeled]
                     )
                 loss.backward()
                 self.optimizer.step()
 
     @time_logger
     @torch.no_grad()
-    def _eval(self, loader, task):
+    def _eval(self, loader):
         self.model.eval()
         y_true = []
         y_pred = []
@@ -175,7 +173,7 @@ class GNNRunner():
                 with torch.no_grad():
                     pred = self.model.to(self.device)(batch)
 
-                y_true.append(batch.y[:, task].view(pred.shape).detach().cpu())
+                y_true.append(batch.y.view(pred.shape).detach().cpu())
                 y_pred.append(pred.detach().cpu())
 
         y_true = torch.cat(y_true, dim=0).numpy()
@@ -186,22 +184,22 @@ class GNNRunner():
         return self.evaluator.eval(input_dict)
 
     @time_logger
-    def train_and_eval(self, task=0):
+    def train_and_eval(self):
 
         train_curve = []
         valid_curve = []
         test_curve = []
-        pred_list = []
+        prediction_list = []
 
         for epoch in range(1, self.epochs + 1):
             print("=====Epoch {}=====".format(epoch))
             print('Training...')
-            self._train(loader=self.train_loader,task=task)
+            self._train(loader=self.train_loader)
 
             print('Evaluating...')
-            train_perf = self._eval(loader=self.train_loader, task=task)
-            valid_perf = self._eval(loader=self.valid_loader, task=task)
-            test_perf = self._eval(loader=self.test_loader, task=task)
+            train_perf = self._eval(loader=self.train_loader)
+            valid_perf = self._eval(loader=self.valid_loader)
+            test_perf = self._eval(loader=self.test_loader)
 
             print('Train: ', train_perf, 'Validation: ', valid_perf, 'Test: ', test_perf)
             train_curve.append(train_perf[self.eval_metric])
@@ -209,8 +207,8 @@ class GNNRunner():
             test_curve.append(test_perf[self.eval_metric])
 
             print('Obtaining predictions...')
-            pred = self.get_pred(self.data_loader)
-            pred_list.append(pred)
+            prediction = self.get_pred(self.data_loader)
+            prediction_list.append(prediction)
 
         if 'classification' in self.task_type:
             best_val_epoch = np.argmax(np.array(valid_curve))
@@ -220,11 +218,11 @@ class GNNRunner():
         print('Best epoch: ', best_val_epoch)
         print('Best validation score: {:.4f}'.format(valid_curve[best_val_epoch]))
         print('Test score: {:.4f}'.format(test_curve[best_val_epoch]))
-        self.save_predictions(pred=pred_list[best_val_epoch])
+        self.save_predictions(prediction=prediction_list[best_val_epoch])
 
     @torch.no_grad()
-    def save_predictions(self, pred):
+    def save_predictions(self, prediction):
         file_path = "{}/predictions.pt".format(self.output_dir)
 
         init_path(dir_or_file=file_path)
-        torch.save(pred, file_path)
+        torch.save(prediction, file_path)

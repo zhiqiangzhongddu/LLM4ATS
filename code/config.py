@@ -28,7 +28,10 @@ def set_cfg(cfg):
     # Task options
     # ------------------------------------------------------------------------ #
     # Task name
-    cfg.task.name = "train" # train, pretrain
+    # train: use auxiliary tasks for train
+    # pretrain: use auxiliary tasks for pretrain
+    # scratch: it does not use any auxiliary tasks
+    cfg.task.mode = "scratch"
 
     # ------------------------------------------------------------------------ #
     # GNN Model options
