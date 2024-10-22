@@ -1,10 +1,15 @@
-# LLM-augmented Auxiliary Task Selection for Molecular Property Prediction
+# Large Language Model for Auxiliary Task Selection
 
 ## Instruction to execution
 
 1. Auxiliary Task Collection
+   1. Molecular Auxiliary Tasks
+   2. More?
 2. Query LLMs for Auxiliary Task Selection
-3. Auxiliary Task-enhanced Molecular Property Prediction
+3. Auxiliary Task-enhanced Property Prediction
+   1. Scratch
+   2. Train
+   3. Pre-train
 
 ## Example execution code
 
@@ -14,8 +19,8 @@ Example:
 ```
 ```
 
-### Auxiliary Task-enhanced Molecular Property Prediction
+### Auxiliary Task-enhanced Property Prediction
 Example: 
 ```
-python -m code.main_GNN dataset ogbg-molbace seed 42
+python -m code.main_GNN dataset ogbg-molbace task.mode scratch seed 42
 ```
