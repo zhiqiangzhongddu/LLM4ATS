@@ -18,18 +18,18 @@ class GNNRunner():
         self.seed = cfg.seed
         self.device = cfg.device if torch.cuda.is_available() else torch.device('cpu')
 
-        self.model_name = cfg.gnn.model.name
-        self.hidden_dim = cfg.gnn.model.hidden_dim
-        self.num_layers = cfg.gnn.model.num_layers
-        self.batch_size = cfg.gnn.train.batch_size
-        self.dropout = cfg.gnn.train.dropout
-        self.lr = cfg.gnn.train.lr
+        self.model_name = cfg.model.name
+        self.hidden_dim = cfg.model.gnn.hidden_dim
+        self.num_layers = cfg.model.gnn.num_layers
+        self.batch_size = cfg.model.gnn.batch_size
+        self.dropout = cfg.model.gnn.dropout
+        self.lr = cfg.model.gnn.lr
 
         self._get_evaluator()
         self.cls_criterion = torch.nn.BCEWithLogitsLoss()
         self.reg_criterion = torch.nn.MSELoss()
 
-        self.epochs = cfg.gnn.train.epochs
+        self.epochs = cfg.model.gnn.epochs
 
         self.output_dir = PurePath(
             project_root_path, "output", "gnns", self.dataset,

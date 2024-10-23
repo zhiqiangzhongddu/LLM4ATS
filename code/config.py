@@ -21,7 +21,7 @@ def set_cfg(cfg):
     # Number of runs with random init
     cfg.runs = 1
     cfg.task = CN()
-    cfg.gnn = CN()
+    cfg.model = CN()
     cfg.llm = CN()
 
     # ------------------------------------------------------------------------ #
@@ -34,55 +34,48 @@ def set_cfg(cfg):
     cfg.task.mode = "scratch"
 
     # ------------------------------------------------------------------------ #
-    # GNN Model options
+    # Model options
     # ------------------------------------------------------------------------ #
-    cfg.gnn.model = CN()
-    # GNN model name
-    cfg.gnn.model.name = 'gin-v'
+    # Model name
+    # gcn, gin, gcn-v, gin-v
+    cfg.model.name = 'gin-v'
+
+    # ------------------------------------------------------------------------ #
+    # GNN model options
+    # ------------------------------------------------------------------------ #
+    cfg.model.gnn = CN()
     # Number of gnn layers
-    cfg.gnn.model.num_layers = 4
+    cfg.model.gnn.num_layers = 4
     # Hidden size of the model
-    cfg.gnn.model.hidden_dim = 128
-
-    # ------------------------------------------------------------------------ #
-    # GNN PreTraining options
-    # ------------------------------------------------------------------------ #
-    cfg.gnn.pretrain = CN()
-
+    cfg.model.gnn.hidden_dim = 128
     # ------------------------------------------------------------------------ #
     # GNN Training options
     # ------------------------------------------------------------------------ #
-    cfg.gnn.train = CN()
     # Number of samples computed once per batch per device
-    cfg.gnn.train.batch_size = 32
+    cfg.model.gnn.batch_size = 32
     # Base learning rate
-    cfg.gnn.train.lr = 1e-3
+    cfg.model.gnn.lr = 1e-3
     # Dropout rate
-    cfg.gnn.train.dropout = 0.0
+    cfg.model.gnn.dropout = 0.0
     # The weight decay to apply (if not zero) to all layers except all bias and LayerNorm weights
-    cfg.gnn.train.weight_decay = 0.0
+    cfg.model.gnn.weight_decay = 0.0
     # Maximal number of epochs
-    cfg.gnn.train.epochs = 200
+    cfg.model.gnn.epochs = 200
     # Number of epochs with no improvement after which training will be stopped
-    cfg.gnn.train.early_stop = 50
+    cfg.model.gnn.early_stop = 50
     # L2 regularization, weight decay
-    cfg.gnn.train.wd = 0.0
-
-    # ------------------------------------------------------------------------ #
-    # LLM provider options
-    # ------------------------------------------------------------------------ #
-    cfg.llm.provider = 'openai'
+    cfg.model.gnn.wd = 0.0
 
     # ------------------------------------------------------------------------ #
     # LLM Model options
     # ------------------------------------------------------------------------ #
-    cfg.llm.model = CN()
+    cfg.llm.provider = 'openai'
     # LLM model name
-    cfg.llm.model.name = "gpt-4o"
-    cfg.llm.model.temperature = 1.
-    cfg.llm.model.top_p = 1.
-    cfg.llm.model.frequency_penalty = 0.
-    cfg.llm.model.presence_penalty = 0.
+    cfg.llm.name = "gpt-4o"
+    cfg.llm.temperature = 1.
+    cfg.llm.top_p = 1.
+    cfg.llm.frequency_penalty = 0.
+    cfg.llm.presence_penalty = 0.
     # temperature: Defaults to 1 (suggest 0.6?)
     #               What sampling temperature to use, between 0 and 2. Higher values like 0.8 will
     #               make the output more random, while lower values like 0.2 will make it more

@@ -32,5 +32,5 @@ Example:
 ### Auxiliary Task-enhanced Property Prediction
 Example: 
 ```
-python -m code.main_GNN dataset ogbg-molbace task.mode scratch seed 42
+python -m code.main_GNN dataset ogbg-molbace task.mode scratch gnn.model.name gin-v seed 42
 ```
