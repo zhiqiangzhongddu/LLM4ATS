@@ -1,5 +1,41 @@
 # Large Language Model for Auxiliary Task Selection
 
+## Project Description
+
+The performance of Machine Learning (ML) models is often limited by the availability of labeled data. 
+In many real-world scenarios, labeling data is both expensive and time-consuming, particularly 
+in fields such as biology and chemistry. 
+To address this, some recent studies suggest using computable properties as auxiliary tasks to 
+enhance ML models during pre-training and training. 
+However, selecting these auxiliary tasks often requires domain expertise, which may not always 
+be readily available.
+
+This project aims to create an automated pipeline that leverages Large Language Models (LLMs) 
+to select auxiliary tasks effectively. 
+The proposed project consists of the following steps:
+1. **Auxiliary Task Collection**: 
+   Gather a comprehensive set of available auxiliary tasks.
+2. **LLM-based Auxiliary Task Selection**:
+   Use LLMs to identify the most suitable auxiliary tasks.
+3. **Enhanced Property Prediction**: 
+   Use selected auxiliary tasks to boost the prediction of key molecular properties. 
+
+### Challenges:
+
+1. **Unstable LLM-based Auxiliary Task Selection**:
+   Our previous results indicate that LLMs often select auxiliary tasks in a seemingly random manner, 
+   lacking consistency. 
+   To mitigate this issue, integrating Retrieval-Augmented Generation (RAG) or 
+   multi-agent frameworks may help achieve more reliable task selection.
+2. **Learning from Noisy Signals**: 
+   Even when LLM agents consistently identify auxiliary tasks, a significant amount of noise remains. 
+   Specifically, assessing the correlation between the selected auxiliary tasks and the primary 
+   target tasks is challenging. 
+   Additionally, determining which information is useful and how to effectively use it adds further complexity. 
+   To tackle this, we plan to employ Partial Label Learning techniques to better handle noisy labels 
+   and extract valuable signals.
+
+
 ## Preparation
 
 ### Benchmark Datasets
