@@ -36,12 +36,14 @@ class GNNRunner():
             "{}-seed{}".format(self.model_name, self.seed)
         )
 
-        self.dataset, self.train_loader, self.valid_loader, self.test_loader, self.data_loader = self.preprocess_data()
+        (self.dataset, self.text, self.train_loader, self.valid_loader,
+         self.test_loader, self.data_loader) = self.preprocess_data()
         self.eval_metric = self.dataset.eval_metric
         self.num_tasks = self.dataset.num_tasks
         self.task_type = self.dataset.task_type
         self.num_classes = self.dataset.num_classes
-        self.g_emb_dim = self.dataset.data.g_x.size(1) if hasattr(self.dataset._data, 'graph_x') else 0
+        self.g_emb_dim = self.dataset.data.g_x.size(1) \
+            if hasattr(self.dataset._data, 'graph_x') else 0
 
         self.model = self.setup_model()
         self.optimizer = self.setup_optimizers()
@@ -50,7 +52,7 @@ class GNNRunner():
 
     def preprocess_data(self):
         # Preprocess data
-        dataloader = DatasetLoader(
+        dataloader, text = DatasetLoader(
             name=self.dataset
         )
         dataset = dataloader.dataset
@@ -70,7 +72,7 @@ class GNNRunner():
             dataset, batch_size=self.batch_size, shuffle=False,
         )
 
-        return dataset, train_loader, valid_loader, test_loader, data_loader
+        return dataset, text, train_loader, valid_loader, test_loader, data_loader
 
     def setup_model(self):
         if self.model_name == 'gin':

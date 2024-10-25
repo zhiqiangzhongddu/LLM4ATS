@@ -1,4 +1,4 @@
-import torch
+import pandas as pd
 from ogb.graphproppred import PygGraphPropPredDataset
 from pathlib import PurePath
 
@@ -16,7 +16,17 @@ class DatasetLoader():
     def load_data(self):
         # Download and process data at root
         dataset = PygGraphPropPredDataset(
-            name=self.name, root=PurePath(project_root_path, "data")
+            name=self.name, root=str(PurePath(project_root_path, "data"))
         )
 
-        return dataset
+        df = pd.read_csv(
+            filepath_or_buffer=PurePath(
+                project_root_path, "data",
+                "ogbg_{}".format(self.name.split("-")[1]),
+                "mapping", "mol.csv.gz"
+            ),
+            compression='gzip'
+        )
+        text = df.smiles.tolist()
+
+        return dataset, text
