@@ -29,9 +29,10 @@ class PropertyDescriptor:
 
             try:
                 value = rdkit_property_tool[self.property_name]["method"](mol)
-                if isinstance(value, float):
+                if isinstance(value, (float, int)):
                     pass
                 else:
+                    # print(f"Value is {value}", type(value))
                     value = None
             except Exception as e:
                 value = None
@@ -42,12 +43,14 @@ class PropertyDescriptor:
         elif self.property_name in physical_molecular_property_book.keys():
             mol = PhysicalMolecularProperties(smiles)
             properties = mol.get_all_properties()
+
             try:
                 value = properties[self.property_name]
             except KeyError:
                 print(f"\nProperty name: {self.property_name}")
                 for item in properties:
                     print(item)
+                raise KeyError
 
             return value
 
@@ -66,6 +69,7 @@ if __name__ == '__main__':
     from code.data_utils.dataset import DatasetLoader
 
     for prop in properties:
+    # for prop in ["LogP"]:
         descriptor = PropertyDescriptor(property_name=prop)
         dataset = DatasetLoader()
         _, text = dataset.load_data()

@@ -34,10 +34,10 @@ _rdkit_property_book = {
     },
 
     # * Topological descriptors *#
-    "Topological Polar Surface Area (TPSA)": {
+    "Topological Polar Surface Area": {
         "Brief explanation": "Sum of surfaces of all polar atoms (mainly oxygen and nitrogen), correlating with drug absorption, including intestinal absorption and blood-brain barrier penetration.",
     },
-    "Labute Approximate Surface Area (LabuteASA)": {
+    "Labute Approximate Surface Area": {
         "Brief explanation": "Approximate molecular surface area calculated using Labute's method, useful for predicting physical properties and molecular interactions.",
     },
     "Balaban J Index": {
@@ -46,7 +46,7 @@ _rdkit_property_book = {
     "Bertz Complexity": {
         "Brief explanation": "Measure of molecular complexity considering both size and branching patterns. Higher values indicate more complex molecular structures.",
     },
-    "Ipc (Information Content)": {
+    "Information Content": {
         "Brief explanation": "Graph-theoretical index measuring structural complexity based on the distribution of atomic neighborhoods in the molecular graph.",
     },
     "Chi0v": {
@@ -179,10 +179,10 @@ _rdkit_property_tool = {
     },
 
     # * Topological descriptors *#
-    "Topological Polar Surface Area (TPSA)": {
+    "Topological Polar Surface Area": {
         "method": MolSurf.TPSA
     },
-    "Labute Approximate Surface Area (LabuteASA)": {
+    "Labute Approximate Surface Area": {
         "method": MolSurf.LabuteASA
     },
     "Balaban J Index": {
@@ -191,7 +191,7 @@ _rdkit_property_tool = {
     "Bertz Complexity": {
         "method": Descriptors.BertzCT
     },
-    "Ipc (Information Content)": {
+    "Information Content": {
         "method": Descriptors.Ipc
     },
     "Chi0v": {
