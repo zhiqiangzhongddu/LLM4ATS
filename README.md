@@ -1,4 +1,4 @@
-# Large Language Model for Auxiliary Task Selection
+# Large Language Model Agents for Auxiliary Task Selection
 
 ## Project Description
 
