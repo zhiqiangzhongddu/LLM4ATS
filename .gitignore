@@ -1,6 +1,7 @@
 .idea/
-data/*
 __pycache__
+
+data/*
 
 # Files are too large to upload
 input/grover/
